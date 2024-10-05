@@ -12,15 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
+
+        <!-- Đặt TrangchuActivity làm màn hình chính -->
         <activity
-            android:name=".MainActivity"
+            android:name=".TrangchuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity không còn là màn hình chính nữa -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
