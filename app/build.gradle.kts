@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.a3t_appdatvexemphim"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -24,6 +24,9 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+    buildFeatures {
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -46,4 +49,16 @@ dependencies {
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.cardview:cardview:1.0.0")
+
+
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation ("androidx.appcompat:appcompat:1.2.0")
+    implementation ("com.google.android.material:material:1.3.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation ("com.jakewharton.threetenabp:threetenabp:1.4.4")
+
+
+
+
 }

@@ -13,19 +13,26 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
 
-        <!-- Đặt TrangchuActivity làm màn hình chính -->
         <activity
-            android:name=".TrangchuActivity"
-            android:exported="true">
+            android:name=".ChiTietRapActivity"
+            android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- MainActivity không còn là màn hình chính nữa -->
+        </activity> <!-- Các Activity khác không cần exported nếu không cần khởi chạy từ ngoài ứng dụng -->
+        <activity
+            android:name=".DSphimhhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrangchuActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeekViewActivity"
             android:exported="false" />
 
     </application>
