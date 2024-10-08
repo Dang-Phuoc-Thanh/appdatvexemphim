@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
+
     android:layout_width="match_parent"
     android:background="@drawable/gradient_background"
     android:layout_height="match_parent">
@@ -49,7 +49,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:layout_marginTop="120dp">
@@ -64,30 +64,71 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nhập mã voucher"
+            android:layout_gravity="center"
+            android:textColor="@color/white">
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="120dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/write">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Nhập mã voucher"
             android:textColor="@color/white">
 
         </TextView>
 
     </LinearLayout>
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/videography">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Giảm 50% tối đa 100.000đ"
+                android:textColor="@color/white">
+
+            </TextView>
+
+
+        </LinearLayout>
 
 
 
 
 
+    </HorizontalScrollView>
 
-
-
-
-
-
-
-
-
-
-=======
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
->>>>>>> 798b3f30ccc9ec367cbeec0e41b6244ca8cfa06e
 
 </RelativeLayout>
