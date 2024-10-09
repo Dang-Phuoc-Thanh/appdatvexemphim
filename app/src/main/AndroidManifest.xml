@@ -14,7 +14,10 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".ChiTietRapActivity"
+            android:name=".CTRapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuenMKActivity"
             android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +33,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WeekViewActivity"
             android:exported="false" />
 
     </application>
