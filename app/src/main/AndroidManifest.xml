@@ -12,12 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
-
+        <activity
+            android:name=".KhoiPhucTaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuenMKActivity"
+            android:exported="false" />
         <activity
             android:name=".CTRapActivity"
             android:exported="false" />
         <activity
-            android:name=".QuenMKActivity"
+            android:name=".XacThucTaiKhoanActivity"
             android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +39,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
