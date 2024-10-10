@@ -1,0 +1,2512 @@
+Index: app/src/main/java/com/example/a3t_appdatvexemphim/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.a3t_appdatvexemphim;\n\nimport android.os.Bundle;\n\nimport androidx.activity.EdgeToEdge;\nimport androidx.appcompat.app.AppCompatActivity;\nimport androidx.core.graphics.Insets;\nimport androidx.core.view.ViewCompat;\nimport androidx.core.view.WindowInsetsCompat;\n\npublic class MainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        EdgeToEdge.enable(this);\n        setContentView(R.layout.activity_main);\n        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {\n            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());\n            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);\n            return insets;\n        });\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/a3t_appdatvexemphim/MainActivity.java b/app/src/main/java/com/example/a3t_appdatvexemphim/MainActivity.java
+--- a/app/src/main/java/com/example/a3t_appdatvexemphim/MainActivity.java	
++++ b/app/src/main/java/com/example/a3t_appdatvexemphim/MainActivity.java	
+@@ -1,24 +1,44 @@
+ package com.example.a3t_appdatvexemphim;
+ 
++import android.content.Intent;
++import android.graphics.drawable.AnimationDrawable;
+ import android.os.Bundle;
++import android.view.View;
++import android.widget.ImageView;
++import android.widget.TextView;
+ 
+-import androidx.activity.EdgeToEdge;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.core.graphics.Insets;
+ import androidx.core.view.ViewCompat;
+ import androidx.core.view.WindowInsetsCompat;
+ 
+ public class MainActivity extends AppCompatActivity {
++    ImageView imageView;
++    TextView signUp;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        EdgeToEdge.enable(this);
+         setContentView(R.layout.activity_main);
++
++        signUp = findViewById(R.id.textViewSignUp);
++        imageView = findViewById(R.id.myImageView);
++        imageView.setBackgroundResource(R.drawable.animation_movie);
++        AnimationDrawable myAnim = (AnimationDrawable) imageView.getBackground();
++        myAnim.start();
++
+         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+             return insets;
+         });
++        signUp.setOnClickListener( new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(MainActivity.this, formSignIn.class);
++                startActivity(intent);
++            }
++        });
++
+     }
+-}
+\ No newline at end of file
++}
+Index: app/src/main/res/layout/activity_hello.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_hello.xml b/app/src/main/res/layout/activity_hello.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_hello.xml	
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".hello">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/conner_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/conner_4.xml b/app/src/main/res/drawable/conner_4.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/conner_4.xml	
+@@ -0,0 +1,5 @@
++<!-- res/drawable/conner_4.xml -->
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <solid android:color="#FFFFFF" />
++    <corners android:radius="150dp" />
++</shape>
+Index: app/src/main/res/drawable/drawable/background_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/background_main.xml b/app/src/main/res/drawable/drawable/background_main.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/background_main.xml	
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<gradient android:startColor="#273C75" android:endColor="#8E44AD" android:angle="270"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/custom_button_date.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/custom_button_date.xml b/app/src/main/res/drawable/drawable/custom_button_date.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/custom_button_date.xml	
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++ <size android:width="200dp" android:height="45dp"/>
++    <corners android:radius="0dp"/>
++    <solid android:color="#00000000" />
++<stroke android:color="@color/black" android:width="1dp"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_suat_chieu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_suat_chieu.xml b/app/src/main/res/layout/activity_suat_chieu.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_suat_chieu.xml	
+@@ -0,0 +1,624 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@drawable/background_main"
++    android:orientation="vertical"
++    tools:context=".SuatChieu">
++
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="58dp"
++        android:background="@drawable/conner_background"
++
++        >
++
++        <TextView
++            android:id="@+id/textView7"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dp"
++            android:text="Suất chiếu"
++            android:textColor="@color/white"
++            android:textSize="24sp"
++            android:textStyle="bold"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.354"
++            app:layout_constraintStart_toEndOf="@+id/imageView2"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <ImageView
++            android:id="@+id/imageView2"
++            android:layout_width="30dp"
++            android:layout_height="30dp"
++            android:layout_marginTop="8dp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.044"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:srcCompat="@drawable/back" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="180dp">
++
++        <ImageView
++            android:id="@+id/imageView3"
++            android:layout_width="100dp"
++            android:layout_height="130dp"
++            android:scaleType="fitXY"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.051"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            android:background="@drawable/spyxfamily"
++
++
++            />
++
++        <TextView
++            android:id="@+id/textView8"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="20dp"
++            android:text="Gia Đình Điệp Viên :Mã Trắng"
++            android:textColor="@color/white"
++            android:textSize="20sp"
++            android:textStyle="bold"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.972"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <TextView
++            android:id="@+id/textView9"
++            android:layout_width="239dp"
++            android:layout_height="56dp"
++            android:layout_marginStart="9dp"
++            android:text="Dựa trên hình ảnh, bối cảnh của Spy X Family CODE:White sẽ là mùa đông với những lễ hội cuối năm và tuyết."
++            android:textColor="@color/white"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.349"
++            app:layout_constraintStart_toEndOf="@+id/imageView3"
++            app:layout_constraintTop_toBottomOf="@+id/textView8" />
++
++        <TextView
++            android:id="@+id/textView10"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="9dp"
++            android:layout_marginTop="8dp"
++            android:text="Anime Hành động Hài hước Đời thường"
++            android:textColor="@color/white"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.372"
++            app:layout_constraintStart_toEndOf="@+id/imageView3"
++            app:layout_constraintTop_toBottomOf="@+id/textView9" />
++
++        <TextView
++            android:id="@+id/textView11"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="9dp"
++            android:layout_marginTop="4dp"
++            android:text="Mức giá :120.000vnđ"
++            android:textColor="@color/design_default_color_error"
++            android:textSize="20sp"
++            android:textStyle="bold"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.2"
++            app:layout_constraintStart_toEndOf="@+id/imageView3"
++            app:layout_constraintTop_toBottomOf="@+id/textView10" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++    <HorizontalScrollView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content">
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#00BCD4"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Mon"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="1"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Tue"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="2"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Wed"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="3"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Thu"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="4"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Fri"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="5"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Sat"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="6"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++            <androidx.cardview.widget.CardView
++                android:layout_width="80dp"
++                android:layout_height="100dp"
++                android:layout_margin="5dp"
++                app:cardBackgroundColor="#0097E6"
++                app:cardCornerRadius="10dp"
++                app:cardElevation="5dp">
++
++                <LinearLayout
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent"
++                    android:orientation="vertical">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="40dp"
++                            android:layout_marginTop="10dp"
++                            android:text="Sun"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="20dp"
++                            android:textStyle="bold" />
++
++                        <TextView
++                            android:layout_width="match_parent"
++                            android:layout_height="wrap_content"
++                            android:text="7"
++                            android:textAlignment="center"
++                            android:textColor="@color/white"
++                            android:textSize="25dp"
++
++                            android:textStyle="bold" />
++
++                    </LinearLayout>
++
++
++                </LinearLayout>
++
++
++            </androidx.cardview.widget.CardView>
++
++
++            <!-- Add more views inside the LinearLayout if needed -->
++
++        </LinearLayout>
++    </HorizontalScrollView>
++
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:orientation="horizontal">
++
++        <androidx.cardview.widget.CardView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:layout_margin="20dp"
++            app:cardCornerRadius="50dp"
++
++            >
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="match_parent"
++                android:orientation="horizontal">
++
++                <androidx.cardview.widget.CardView
++                    android:layout_width="100dp"
++                    android:layout_height="100dp"
++                    android:layout_margin="10dp"
++                    app:cardBackgroundColor="#EA2027"
++                    app:cardCornerRadius="10dp"
++                    app:cardElevation="5dp"
++
++
++                    >
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <LinearLayout
++                            android:layout_width="match_parent"
++                            android:layout_height="match_parent"
++                            android:orientation="vertical">
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="40dp"
++                                android:layout_marginTop="10dp"
++                                android:text="SCREEN"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="20dp"
++                                android:textStyle="bold" />
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="wrap_content"
++                                android:text="1"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="25dp"
++
++                                android:textStyle="bold" />
++
++                        </LinearLayout>
++
++
++                    </LinearLayout>
++
++
++                </androidx.cardview.widget.CardView>
++
++                <androidx.cardview.widget.CardView
++                    android:layout_width="100dp"
++                    android:layout_height="100dp"
++                    android:layout_margin="10dp"
++                    app:cardBackgroundColor="#EA2027"
++                    app:cardCornerRadius="10dp"
++
++
++                    app:cardElevation="5dp">
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <LinearLayout
++                            android:layout_width="match_parent"
++                            android:layout_height="match_parent"
++                            android:orientation="vertical">
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="40dp"
++                                android:layout_marginTop="10dp"
++                                android:text="SCREEN"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="20dp"
++                                android:textStyle="bold" />
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="wrap_content"
++                                android:text="1"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="25dp"
++
++                                android:textStyle="bold" />
++
++                        </LinearLayout>
++
++
++                    </LinearLayout>
++
++
++                </androidx.cardview.widget.CardView>
++
++                <androidx.cardview.widget.CardView
++                    android:layout_width="100dp"
++                    android:layout_height="100dp"
++                    android:layout_margin="10dp"
++                    app:cardBackgroundColor="#EA2027"
++                    app:cardCornerRadius="10dp"
++                    app:cardElevation="5dp"
++
++
++                    >
++
++                    <LinearLayout
++                        android:layout_width="match_parent"
++                        android:layout_height="match_parent"
++                        android:orientation="vertical">
++
++                        <LinearLayout
++                            android:layout_width="match_parent"
++                            android:layout_height="match_parent"
++                            android:orientation="vertical">
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="40dp"
++                                android:layout_marginTop="10dp"
++                                android:text="SCREEN"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="20dp"
++                                android:textStyle="bold" />
++
++                            <TextView
++                                android:layout_width="match_parent"
++                                android:layout_height="wrap_content"
++                                android:text="1"
++                                android:textAlignment="center"
++                                android:textColor="@color/white"
++                                android:textSize="25dp"
++
++                                android:textStyle="bold" />
++
++                        </LinearLayout>
++
++
++                    </LinearLayout>
++
++
++                </androidx.cardview.widget.CardView>
++            </LinearLayout>
++        </androidx.cardview.widget.CardView>
++    </LinearLayout>
++
++
++</LinearLayout>
+Index: app/src/main/res/drawable/drawable/custom_btn_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/custom_btn_login.xml b/app/src/main/res/drawable/drawable/custom_btn_login.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/custom_btn_login.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size android:width="170px" android:height="40px"/>
++    <corners android:radius="40px"/>
++    <gradient android:startColor="#3498DB" android:endColor="#8E44AD"/>
++    <stroke android:color="@color/black" android:width="1px"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/conner_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/conner_background.xml b/app/src/main/res/drawable/conner_background.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/conner_background.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<corners android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp"/>
++    <solid android:color="#192A56"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_dat_ghe.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_dat_ghe.xml b/app/src/main/res/layout/activity_dat_ghe.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_dat_ghe.xml	
+@@ -0,0 +1,710 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".DatGhe"
++    android:background="@drawable/background_main"
++    app:backgroundTint="@null">
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:id="@+id/constraintLayout2"
++        android:layout_width="match_parent"
++        android:layout_height="58dp"
++        android:background="@drawable/conner_background"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <TextView
++            android:id="@+id/textView7"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="8dp"
++            android:text="Đặt ghế"
++            android:textColor="@color/white"
++            android:textSize="24sp"
++            android:textStyle="bold"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.354"
++            app:layout_constraintStart_toEndOf="@+id/imageView2"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <ImageView
++            android:id="@+id/imageView2"
++            android:layout_width="30dp"
++            android:layout_height="30dp"
++            android:layout_marginTop="8dp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.044"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:srcCompat="@drawable/back" />
++
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++    <ImageView
++        android:id="@+id/imageView"
++        android:layout_width="214dp"
++        android:layout_height="137dp"
++        android:layout_marginTop="20dp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.081"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
++        app:srcCompat="@drawable/anhrap" />
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="820dp"
++        android:layout_height="400dp"
++        android:layout_marginTop="100dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="vertical">
++
++            <TextView
++                android:id="@+id/textView6"
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_weight="1"
++                android:text="Màn hình"
++                android:textAlignment="center"
++                android:textSize="34sp"
++                android:textStyle="bold" />
++
++            <TableLayout
++                android:layout_width="match_parent"
++                android:layout_height="match_parent"
++                android:layout_weight="1">
++
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_A01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A01"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A02"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A03"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A03"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A04"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A04"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A05"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A05"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A06"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A06"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A07"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A07"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A08"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A08"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A09"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_A10"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="A10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                </TableRow>
++
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_B01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B01"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B02"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B03"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B03"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B04"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B04"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B05"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B05"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B06"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B06"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B07"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B07"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B08"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B08"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B09"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B09"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_B10"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="@drawable/button_square"
++                        android:text="B10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                </TableRow>
++
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_C01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#EB2F06"
++                        android:text="C01"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C02"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C03"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C03"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C04"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C04"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C05"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C05"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C06"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C06"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C07"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C07"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C08"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C08"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                    <Button
++                        android:id="@+id/idghe_C09"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C09"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_C10"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="C10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                </TableRow>
++
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_D01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#EB2F06"
++                        android:text="D01"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D02"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D03"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D03"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D04"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D04"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D05"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D05"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D06"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D06"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D07"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D07"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D08"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D08"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                    <Button
++                        android:id="@+id/idghe_D09"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D09"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_D10"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="D10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                </TableRow>
++
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_E01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#EB2F06"
++                        android:text="E01"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E02"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E03"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E03"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E04"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E04"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E05"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E05"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E06"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E06"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E07"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E07"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E08"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E08"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                    <Button
++                        android:id="@+id/idghe_E09"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E09"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_E10"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="E10"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++                </TableRow>
++                <TableRow
++                    android:layout_width="match_parent"
++                    android:layout_height="match_parent">
++
++                    <Button
++                        android:id="@+id/idghe_vd01"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#EB2F06"
++                        android:text="Bassic"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++                    <Button
++                        android:id="@+id/idghe_vd02"
++                        android:layout_width="wrap_content"
++                        android:layout_height="wrap_content"
++                        android:layout_margin="5dp"
++                        android:background="#eb2f06"
++                        android:text="VIP"
++                        android:textSize="20dp"
++                        android:textStyle="bold"
++                        app:backgroundTint="@null" />
++
++
++
++                </TableRow>
++
++            </TableLayout>
++        </LinearLayout>
++
++    </androidx.cardview.widget.CardView>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/res/drawable/animation_movie.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/animation_movie.xml b/app/src/main/res/drawable/animation_movie.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/animation_movie.xml	
+@@ -0,0 +1,28 @@
++<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/mylist"
++    android:oneshot="false">
++    <item android:drawable="@drawable/movie1" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie2" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie3" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie4" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie5" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie6" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_75" android:duration="200"/>
++</animation-list>
+Index: app/src/main/res/drawable/frame_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/frame_login.xml b/app/src/main/res/drawable/frame_login.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/frame_login.xml	
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size  android:height="400dp"/>
++    <corners android:radius="40dp"/>
++    <solid android:color="#A6000000"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/a3t_appdatvexemphim/hello.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/a3t_appdatvexemphim/hello.java b/app/src/main/java/com/example/a3t_appdatvexemphim/hello.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/a3t_appdatvexemphim/hello.java	
+@@ -0,0 +1,24 @@
++package com.example.a3t_appdatvexemphim;
++
++import android.os.Bundle;
++
++import androidx.activity.EdgeToEdge;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.graphics.Insets;
++import androidx.core.view.ViewCompat;
++import androidx.core.view.WindowInsetsCompat;
++
++public class hello extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        EdgeToEdge.enable(this);
++        setContentView(R.layout.activity_hello);
++        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
++            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
++            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
++            return insets;
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_form_sign_in.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_form_sign_in.xml b/app/src/main/res/layout/activity_form_sign_in.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_form_sign_in.xml	
+@@ -0,0 +1,199 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/main"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".formSignIn">
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="420dp"
++        android:layout_height="53dp"
++        android:background="@color/black"
++        android:paddingTop="10dp"
++        android:text="Đăng Ký"
++        android:textAlignment="center"
++        android:textColor="@color/white"
++        android:textSize="20sp"
++        android:textStyle="bold"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintWidth_percent="0.9"
++        tools:ignore="HardcodedText" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="52dp"
++        android:text="THÔNG TIN BẮT BUỘC"
++        android:textSize="20sp"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/textView"
++        tools:ignore="HardcodedText" />
++
++    <EditText
++        android:id="@+id/editTextText"
++        android:layout_width="316dp"
++        android:layout_height="50dp"
++        android:layout_marginTop="32dp"
++        android:ems="10"
++        android:hint="Họ Tên"
++        android:inputType="text"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/textView2"
++        app:layout_constraintWidth_percent="0.75"
++        tools:ignore="HardcodedText" />
++
++    <EditText
++        android:id="@+id/editTextTextEmailAddress"
++        android:layout_width="321dp"
++        android:layout_height="50dp"
++        android:ems="10"
++        android:hint="Gmail"
++        android:inputType="textEmailAddress"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/editTextText"
++        app:layout_constraintWidth_percent="0.75"
++        tools:ignore="HardcodedText" />
++
++    <EditText
++        android:id="@+id/editTextText2"
++        android:layout_width="316dp"
++        android:layout_height="57dp"
++        android:ems="10"
++        android:hint="Mật Khẩu"
++        android:inputType="text"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress"
++        app:layout_constraintWidth_percent="0.75"
++        tools:ignore="HardcodedText" />
++
++    <EditText
++        android:id="@+id/editTextText3"
++        android:layout_width="317dp"
++        android:layout_height="50dp"
++        android:ems="10"
++        android:hint="Nhập Lại Mật Khẩu"
++        android:inputType="text"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@id/editTextText2"
++        app:layout_constraintWidth_percent="0.75"
++        tools:ignore="HardcodedText" />
++
++    <com.google.android.material.textfield.TextInputLayout
++        android:id="@+id/textInputLayout"
++        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_margin="16dp"
++        android:hint="@string/select"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.656"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="0.642">
++
++        <AutoCompleteTextView
++            android:id="@+id/auto_complete_txt"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:inputType="none" />
++    </com.google.android.material.textfield.TextInputLayout>
++
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        tools:context=".MainActivity"
++        tools:layout_editor_absoluteX="0dp"
++        tools:layout_editor_absoluteY="0dp">
++
++        <Button
++            android:id="@+id/calendarButton"
++            android:layout_width="147dp"
++            android:layout_height="50dp"
++            android:background="@drawable/custom_button_date"
++            android:text="Ngày sinh"
++            android:textColor="@color/black"
++            android:textSize="20sp"
++            app:backgroundTint="@null"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.06"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintVertical_bias="0.742" />
++
++        <EditText
++            android:id="@+id/dateEditText"
++            android:layout_width="224dp"
++            android:layout_height="50dp"
++            android:enabled="false"
++            android:hint="Selected Date"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.0"
++            app:layout_constraintStart_toEndOf="@+id/calendarButton"
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintVertical_bias="0.754" />
++
++        <TextView
++            android:id="@+id/textView3"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:text="THÔNG TIN BỔ SUNG"
++            android:textSize="20sp"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.074"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintVertical_bias="0.538"
++            tools:ignore="HardcodedText" />
++
++        <CheckBox
++            android:id="@+id/checkBox2"
++            android:layout_width="365dp"
++            android:layout_height="63dp"
++            android:text="Tôi cam kết tuân theo chính sách bảo mật và điều khoản sử dụng"
++            app:layout_constraintBottom_toBottomOf="@+id/button2"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.347"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent"
++            app:layout_constraintVertical_bias="0.898" />
++
++        <Button
++            android:id="@+id/button2"
++            android:layout_width="211dp"
++            android:layout_height="50dp"
++            android:layout_marginBottom="28dp"
++            android:background="@drawable/custom_btn_login"
++            android:text="Đăng Ký"
++            app:backgroundTint="@null"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent" />
++
++        <ImageButton
++            android:id="@+id/img_button_back"
++            android:layout_width="50dp"
++            android:layout_height="50dp"
++            android:background="@drawable/back"
++            android:backgroundTint="#F8F0F0"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintHorizontal_bias="0.005"
++            app:layout_constraintStart_toStartOf="parent"
++            tools:layout_editor_absoluteY="2dp" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/button_square.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/button_square.xml b/app/src/main/res/drawable/button_square.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/button_square.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <corners android:radius="0dp"/>
++    <size android:width="50dp" android:height="50dp"/>
++    <solid android:color="#ff6b81"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/animation_movie.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/animation_movie.xml b/app/src/main/res/drawable/drawable/animation_movie.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/animation_movie.xml	
+@@ -0,0 +1,28 @@
++<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
++    android:id="@+id/mylist"
++    android:oneshot="false">
++    <item android:drawable="@drawable/movie1" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie1_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie2" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie2_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie3" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie3_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie4" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie4_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie5" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie5_75" android:duration="200"/>
++    <item android:drawable="@drawable/movie6" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_25" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_5" android:duration="200"/>
++    <item android:drawable="@drawable/movie6_75" android:duration="200"/>
++</animation-list>
+Index: app/src/main/res/drawable/custom_btn_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/custom_btn_login.xml b/app/src/main/res/drawable/custom_btn_login.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/custom_btn_login.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size android:width="170px" android:height="40px"/>
++    <corners android:radius="40px"/>
++    <gradient android:startColor="#3498DB" android:endColor="#8E44AD"/>
++    <stroke android:color="@color/black" android:width="1px"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/background_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/background_main.xml b/app/src/main/res/drawable/background_main.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/background_main.xml	
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<gradient android:startColor="#273C75" android:endColor="#8E44AD" android:angle="270"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/list_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/list_item.xml b/app/src/main/res/layout/list_item.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/list_item.xml	
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<TextView xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:padding="16dp"
++    android:ellipsize="end"
++    android:maxLines="1"
++    android:textAppearance="?attr/textAppearanceSubtitle1"
++    >
++</TextView>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/ic_launcher_foreground.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/ic_launcher_foreground.xml b/app/src/main/res/drawable/drawable/ic_launcher_foreground.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/ic_launcher_foreground.xml	
+@@ -0,0 +1,30 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
++        <aapt:attr name="android:fillColor">
++            <gradient
++                android:endX="85.84757"
++                android:endY="92.4963"
++                android:startX="42.9492"
++                android:startY="49.59793"
++                android:type="linear">
++                <item
++                    android:color="#44000000"
++                    android:offset="0.0" />
++                <item
++                    android:color="#00000000"
++                    android:offset="1.0" />
++            </gradient>
++        </aapt:attr>
++    </path>
++    <path
++        android:fillColor="#FFFFFF"
++        android:fillType="nonZero"
++        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
++        android:strokeWidth="1"
++        android:strokeColor="#00000000" />
++</vector>
+\ No newline at end of file
+Index: app/src/main/res/drawable/custom_button_date.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/custom_button_date.xml b/app/src/main/res/drawable/custom_button_date.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/custom_button_date.xml	
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++ <size android:width="200dp" android:height="45dp"/>
++    <corners android:radius="0dp"/>
++    <solid android:color="#00000000" />
++<stroke android:color="@color/black" android:width="1dp"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">3T_appdatvexemphim</string>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	
++++ b/app/src/main/res/values/strings.xml	
+@@ -1,3 +1,4 @@
+ <resources>
+-    <string name="app_name">3T_appdatvexemphim</string>
++    <string name="app_name">form_SignIn</string>
++    <string name="select">Gới Tính</string>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/a3t_appdatvexemphim/DatGhe.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/a3t_appdatvexemphim/DatGhe.java b/app/src/main/java/com/example/a3t_appdatvexemphim/DatGhe.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/a3t_appdatvexemphim/DatGhe.java	
+@@ -0,0 +1,24 @@
++package com.example.a3t_appdatvexemphim;
++
++import android.os.Bundle;
++
++import androidx.activity.EdgeToEdge;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.graphics.Insets;
++import androidx.core.view.ViewCompat;
++import androidx.core.view.WindowInsetsCompat;
++
++public class DatGhe extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        EdgeToEdge.enable(this);
++        setContentView(R.layout.activity_dat_ghe);
++        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
++            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
++            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
++            return insets;
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable/custom_edtemail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/custom_edtemail.xml b/app/src/main/res/drawable/custom_edtemail.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/custom_edtemail.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size android:width="300px" android:height="50dp"/>
++    <stroke android:width="1px" />
++    <corners android:radius="10dp"/>
++    <solid android:color="#9E000000"/>
++    <stroke android:color="@color/black" android:width="1px"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/a3t_appdatvexemphim/formSignIn.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/a3t_appdatvexemphim/formSignIn.java b/app/src/main/java/com/example/a3t_appdatvexemphim/formSignIn.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/a3t_appdatvexemphim/formSignIn.java	
+@@ -0,0 +1,97 @@
++package com.example.a3t_appdatvexemphim;
++
++import android.app.DatePickerDialog;
++import android.content.Intent;
++import android.os.Bundle;
++import android.view.View;
++import android.widget.AdapterView;
++import android.widget.ArrayAdapter;
++import android.widget.AutoCompleteTextView;
++import android.widget.Button;
++import android.widget.DatePicker;
++import android.widget.EditText;
++import android.widget.Toast;
++
++import androidx.activity.EdgeToEdge;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.graphics.Insets;
++import androidx.core.view.ViewCompat;
++import androidx.core.view.WindowInsetsCompat;
++
++import java.util.Calendar;
++
++public class formSignIn extends AppCompatActivity {
++
++    String[] items = {"Nam", "Nữ"};
++    AutoCompleteTextView autoCompleteTextView;
++    ArrayAdapter<String> adapterItem;
++    Button btn_SignIn;
++    private EditText dateEditText;
++    private Button calendarButton;
++
++
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_form_sign_in);
++        dateEditText = findViewById(R.id.dateEditText);
++        calendarButton = findViewById(R.id.calendarButton);
++        btn_SignIn =findViewById(R.id.button2);
++        autoCompleteTextView = findViewById(R.id.auto_complete_txt);
++        adapterItem = new ArrayAdapter<>(this, R.layout.list_item, items);
++        autoCompleteTextView.setAdapter(adapterItem);
++
++        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
++            @Override
++            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
++                String item = adapterView.getItemAtPosition(i).toString();
++                Toast toast = Toast.makeText(formSignIn.this, "Item: " + item, Toast.LENGTH_SHORT);
++                toast.show();
++            }
++        });
++
++        calendarButton.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                showDatePickerDialog();
++            }
++        });
++
++        EdgeToEdge.enable(this);
++
++        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
++            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
++            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
++            return insets;
++        });
++        btn_SignIn.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Intent intent = new Intent(formSignIn.this, MainActivity.class);
++                startActivity(intent);
++                finish();
++            }
++        });
++
++    }
++
++    private void showDatePickerDialog() {
++        final Calendar calendar = Calendar.getInstance();
++        int year = calendar.get(Calendar.YEAR);
++        int month = calendar.get(Calendar.MONTH);
++        int day = calendar.get(Calendar.DAY_OF_MONTH);
++
++        DatePickerDialog datePickerDialog = new DatePickerDialog(
++                formSignIn.this,
++                new DatePickerDialog.OnDateSetListener() {
++                    @Override
++                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
++                        String selectedDate = i2 + "/" + (i1 + 1) + "/" + i;
++                        dateEditText.setText(selectedDate);
++                    }
++                },
++                year, month, day);
++        datePickerDialog.show();
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n        android:fullBackupContent=\"@xml/backup_rules\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme._3T_appdatvexemphim\"\n        tools:targetApi=\"31\">\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"true\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -13,6 +13,18 @@
+         android:theme="@style/Theme._3T_appdatvexemphim"
+         tools:targetApi="31">
+         <activity
++            android:name=".formSignIn"
++            android:exported="false" />
++        <activity
++            android:name=".DatGhe"
++            android:exported="false" />
++        <activity
++            android:name=".SuatChieu"
++            android:exported="false" />
++        <activity
++            android:name=".hello"
++            android:exported="false" />
++        <activity
+             android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+Index: app/src/main/res/drawable/drawable/button_square.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/button_square.xml b/app/src/main/res/drawable/drawable/button_square.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/button_square.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <corners android:radius="0dp"/>
++    <size android:width="50dp" android:height="50dp"/>
++    <solid android:color="#ff6b81"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/drawable/ic_launcher_background.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/ic_launcher_background.xml	
+@@ -0,0 +1,170 @@
++<?xml version="1.0" encoding="utf-8"?>
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="108dp"
++    android:height="108dp"
++    android:viewportWidth="108"
++    android:viewportHeight="108">
++    <path
++        android:fillColor="#3DDC84"
++        android:pathData="M0,0h108v108h-108z" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M9,0L9,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,0L19,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,0L29,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,0L39,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,0L49,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,0L59,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,0L69,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,0L79,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M89,0L89,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M99,0L99,108"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,9L108,9"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,19L108,19"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,29L108,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,39L108,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,49L108,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,59L108,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,69L108,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,79L108,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,89L108,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M0,99L108,99"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,29L89,29"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,39L89,39"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,49L89,49"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,59L89,59"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,69L89,69"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M19,79L89,79"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M29,19L29,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M39,19L39,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M49,19L49,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M59,19L59,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M69,19L69,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++    <path
++        android:fillColor="#00000000"
++        android:pathData="M79,19L79,89"
++        android:strokeWidth="0.8"
++        android:strokeColor="#33FFFFFF" />
++</vector>
+Index: app/src/main/res/drawable/drawable/conner_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/conner_background.xml b/app/src/main/res/drawable/drawable/conner_background.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/conner_background.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<corners android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp"/>
++    <solid android:color="#192A56"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/frame_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/frame_login.xml b/app/src/main/res/drawable/drawable/frame_login.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/frame_login.xml	
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size  android:height="400dp"/>
++    <corners android:radius="40dp"/>
++    <solid android:color="#A6000000"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/conner_4.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/conner_4.xml b/app/src/main/res/drawable/drawable/conner_4.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/conner_4.xml	
+@@ -0,0 +1,5 @@
++<!-- res/drawable/conner_4.xml -->
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++    <solid android:color="#FFFFFF" />
++    <corners android:radius="150dp" />
++</shape>
+Index: app/src/main/java/com/example/a3t_appdatvexemphim/SuatChieu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/a3t_appdatvexemphim/SuatChieu.java b/app/src/main/java/com/example/a3t_appdatvexemphim/SuatChieu.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/a3t_appdatvexemphim/SuatChieu.java	
+@@ -0,0 +1,24 @@
++package com.example.a3t_appdatvexemphim;
++
++import android.os.Bundle;
++
++import androidx.activity.EdgeToEdge;
++import androidx.appcompat.app.AppCompatActivity;
++import androidx.core.graphics.Insets;
++import androidx.core.view.ViewCompat;
++import androidx.core.view.WindowInsetsCompat;
++
++public class SuatChieu extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        EdgeToEdge.enable(this);
++        setContentView(R.layout.activity_suat_chieu);
++        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
++            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
++            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
++            return insets;
++        });
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable/drawable/custom_edtemail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/drawable/custom_edtemail.xml b/app/src/main/res/drawable/drawable/custom_edtemail.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/drawable/drawable/custom_edtemail.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<size android:width="300px" android:height="50dp"/>
++    <stroke android:width="1px" />
++    <corners android:radius="10dp"/>
++    <solid android:color="#9E000000"/>
++    <stroke android:color="@color/black" android:width="1px"/>
++</shape>
+\ No newline at end of file
