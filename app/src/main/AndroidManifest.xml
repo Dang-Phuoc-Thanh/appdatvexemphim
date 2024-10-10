@@ -13,6 +13,18 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
         <activity
+            android:name=".formSignIn"
+            android:exported="false" />
+        <activity
+            android:name=".DatGhe"
+            android:exported="false" />
+        <activity
+            android:name=".SuatChieu"
+            android:exported="false" />
+        <activity
+            android:name=".hello"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
