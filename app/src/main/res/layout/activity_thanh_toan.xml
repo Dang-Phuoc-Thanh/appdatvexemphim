@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@drawable/gradient_background"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".ThanhToan">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="5dp"
+
         android:background="#3F4285"
         android:layout_height="wrap_content">
 
@@ -71,6 +75,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
+
             android:layout_marginTop="5dp"
             android:background="@drawable/button"
             android:textColor="@color/white">
@@ -136,16 +141,18 @@
             </TextView>
 
             <Button
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
-                android:background="A60696"
+                android:id="@+id/button_ChonV"
+                android:background="@color/transparent"
+
                 android:text="Chọn Voucher"
-                android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:textSize="20sp">
 
 
-                ></Button>
+                </Button>
 
 
 
@@ -175,8 +182,6 @@
                 android:text="123456"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-
-
                 ></EditText>
 
 
@@ -209,7 +214,7 @@
 
                 ></EditText>
 
-            
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -242,6 +247,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:id="@+id/ThanhToan"
+            android:background="@color/blue"
+            android:textColor="@color/white"
             android:text="Thanh Toán"
             >
 
@@ -255,7 +263,4 @@
 
     </LinearLayout>
 
-
 </RelativeLayout>
-
-
