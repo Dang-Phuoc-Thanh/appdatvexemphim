@@ -13,6 +13,9 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
         <activity
+            android:name=".Cinema"
+            android:exported="false" />
+        <activity
             android:name=".BapNuoc"
             android:exported="false" />
         <activity
