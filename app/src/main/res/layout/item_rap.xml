@@ -23,8 +23,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CGV Vĩnh Trung Plaza"
+
             android:textSize="18sp"
-            android:textColor="#000" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/rapAddress"
@@ -32,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="255 - 257 đường Hùng Vương Quận Thanh Khê Tp.Đà Nẵng"
             android:textSize="14sp"
-            android:textColor="#888" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
     <TextView
