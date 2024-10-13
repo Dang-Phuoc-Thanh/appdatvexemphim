@@ -131,7 +131,7 @@
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Khuyến mãi"
                 android:textSize="25sp"
@@ -140,21 +140,17 @@
 
             </TextView>
 
-            <Button
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/chonvoucer1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:id="@+id/button_ChonV"
-                android:background="@color/transparent"
-
+                android:gravity="center"
                 android:text="Chọn Voucher"
                 android:textColor="@color/blue"
                 android:textSize="20sp">
 
 
-                </Button>
-
-
+            </EditText>
 
 
         </LinearLayout>
@@ -165,7 +161,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Thành tiền"
                 android:textColor="@color/white"
@@ -176,45 +172,33 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
                 android:gravity="center"
-                android:background="A60696"
                 android:text="123456"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                ></EditText>
-
-
+                >
+            </EditText>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Giảm giá"
                 android:textColor="@color/white"
                 android:textSize="25sp">
-
             </TextView>
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:background="A60696"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-
-
                 ></EditText>
-
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -222,45 +206,30 @@
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Tổng tiền"
                 android:textColor="@color/white"
                 android:textSize="25sp">
-
             </TextView>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:background="A60696"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-
-
                 ></EditText>
-
         </LinearLayout>
         <Button
+            android:id="@+id/ThanhToan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:id="@+id/ThanhToan"
             android:background="@color/blue"
-            android:textColor="@color/white"
             android:text="Thanh Toán"
-            >
-
+            android:textColor="@color/white">
         </Button>
-
-
-
-
-
-
-
     </LinearLayout>
 
 </RelativeLayout>

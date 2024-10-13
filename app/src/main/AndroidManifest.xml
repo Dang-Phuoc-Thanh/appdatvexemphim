@@ -13,19 +13,6 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
         <activity
-            android:name=".test"
-            android:exported="false" />
-        <activity
-            android:name=".VeCuaToi"
-            android:exported="false" />
-        <activity
-            android:name=".thannhtoan_trangchu"
-            android:exported="false" />
-        <activity
-            android:name=".phuongthucthanhtoan"
-            android:exported="false" />
-        <activity
-            android:name=".voucher_trangchu"
             android:name=".BapNuoc"
             android:exported="false" />
         <activity
