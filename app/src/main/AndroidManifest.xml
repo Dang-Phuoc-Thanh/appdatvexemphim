@@ -13,6 +13,9 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
         <activity
+            android:name=".XacThucTaiKhoanActivity"
+            android:exported="false" />
+        <activity
             android:name=".KhoiPhucTaiKhoanActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".CTRapActivity"
             android:exported="false" />
         <activity
-            android:name=".XacThucTaiKhoanActivity"
+            android:name=".RAPActivity"
             android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
