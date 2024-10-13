@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         signUp.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, formSignIn.class);
+                Intent intent = new Intent(MainActivity.this, VeCuaToi.class);
                 startActivity(intent);
             }
         });
