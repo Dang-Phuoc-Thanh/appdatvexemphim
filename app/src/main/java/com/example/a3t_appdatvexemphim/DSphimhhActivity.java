@@ -49,6 +49,16 @@ public class DSphimhhActivity extends AppCompatActivity {
 
             }
         });
+        // Thêm sự kiện click cho ic_quaylai
+        binding.icQuaylai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển về giao diện TrangchuActivity
+                Intent intent = new Intent(DSphimhhActivity.this, TrangchuActivity.class);
+                startActivity(intent);
+                finish(); // Để không giữ lại DSphimhhActivity trong stack
+            }
+        });
     }
 
 }

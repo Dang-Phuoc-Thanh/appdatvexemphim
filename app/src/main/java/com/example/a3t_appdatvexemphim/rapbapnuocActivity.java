@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class rapbapnuocActivity extends AppCompatActivity {
+public class rapbapnuocActivity extends AppCompatActivity implements RapAdapter.OnItemClickListener {
     private TextView cityName;
     private RecyclerView nearbyRapRecyclerView;
     private Spinner spinnerCities;  // Khai báo Spinner
@@ -41,18 +41,17 @@ public class rapbapnuocActivity extends AppCompatActivity {
 
         // Thiết lập RecyclerView
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        nearbyRapRecyclerView.setAdapter(new RapAdapter(getNearbyRaps()));
-// Thay đổi màu chữ thành phố thành trắng
+        // Khởi tạo adapter với cả hai tham số
+        nearbyRapRecyclerView.setAdapter(new RapAdapter(getNearbyRaps(), this));
+
+        // Thay đổi màu chữ thành phố thành trắng
         cityName.setTextColor(getResources().getColor(android.R.color.white));
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.city_list, android.R.layout.simple_spinner_item);
-
-// Thiết lập màu chữ cho mục trong Spinner
-        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adapter.setNotifyOnChange(true);
 
-// Tạo một kiểu cho các mục trong Spinner
+        // Tạo một kiểu cho các mục trong Spinner
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.city_list)) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -71,15 +70,12 @@ public class rapbapnuocActivity extends AppCompatActivity {
         stringArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCities.setAdapter(stringArrayAdapter);
 
-
-
         // Xử lý sự kiện khi người dùng chọn thành phố
         spinnerCities.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedCity = parent.getItemAtPosition(position).toString();
-                // cityName.setText(selectedCity);  // Cập nhật tên thành phố hiển thị
-                // Có thể thêm logic để cập nhật danh sách rạp gần bạn dựa trên thành phố được chọn
+                // Cập nhật tên thành phố hiển thị (nếu cần)
             }
 
             @Override
@@ -89,21 +85,24 @@ public class rapbapnuocActivity extends AppCompatActivity {
         });
 
         // Xử lý khi người dùng nhấn vào "Thay đổi"
-        findViewById(R.id.citySelectorLayout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Logic thay đổi thành phố tại đây
-                // Ví dụ: hiển thị một hộp thoại để chọn thành phố khác
-            }
+        findViewById(R.id.citySelectorLayout).setOnClickListener(v -> {
+            // Logic thay đổi thành phố tại đây
         });
     }
 
     // Phương thức giả lập dữ liệu rạp gần bạn
     private List<Rap> getNearbyRaps() {
         List<Rap> rapList = new ArrayList<>();
-        rapList.add(new Rap("CGV Vĩnh Trung Plaza", "255-257 đường Hùng Vương, Đà Nẵng", R.drawable.cgv, 1.2)); // Thêm khoảng cách
-        rapList.add(new Rap("Starlight Đà Nẵng", "T4-Tòa nhà Nguyễn Kim, Đà Nẵng", R.drawable.starlight, 0.8));
-        rapList.add(new Rap("CGV Vincom Đà Nẵng", "Tầng 4, TTTM Vincom, Đà Nẵng", R.drawable.starlight, 1.5));
+        rapList.add(new Rap("CGV Vĩnh Trung Plaza", "255-257 đường Hùng Vương, Đà Nẵng", R.drawable.cgv,0.5));
+        rapList.add(new Rap("Starlight Đà Nẵng", "T4-Tòa nhà Nguyễn Kim, Đà Nẵng", R.drawable.starlight,1));
+        rapList.add(new Rap("CGV Vincom Đà Nẵng", "Tầng 4, TTTM Vincom, Đà Nẵng", R.drawable.starlight,2.3));
         return rapList;
+    }
+
+    // Implement phương thức onItemClick từ OnItemClickListener
+    @Override
+    public void onItemClick(Rap rap) {
+        // Logic xử lý khi người dùng click vào một rạp
+        // Ví dụ: mở một Activity mới hoặc hiển thị thông tin chi tiết
     }
 }

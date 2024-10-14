@@ -14,10 +14,17 @@ import java.util.List;
 public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
 
     private List<Rap> rapList;
+    private OnItemClickListener listener;
 
-    // Constructor của RapAdapter nhận danh sách rạp
-    public RapAdapter(List<Rap> rapList) {
+    // Interface để xử lý sự kiện click
+    public interface OnItemClickListener {
+        void onItemClick(Rap rap);
+    }
+
+    // Constructor của RapAdapter nhận danh sách rạp và listener
+    public RapAdapter(List<Rap> rapList, OnItemClickListener listener) {
         this.rapList = rapList;
+        this.listener = listener;
     }
 
     // Tạo ViewHolder cho các item của RecyclerView
@@ -35,6 +42,9 @@ public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
         Rap rap = rapList.get(position);
         holder.rapName.setText(rap.getName());
         holder.rapAddress.setText(rap.getAddress());
+
+        // Xử lý sự kiện click
+        holder.itemView.setOnClickListener(v -> listener.onItemClick(rap));
     }
 
     // Trả về số lượng item trong danh sách
@@ -54,5 +64,12 @@ public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
             rapName = itemView.findViewById(R.id.rapName);
             rapAddress = itemView.findViewById(R.id.rapAddress);
         }
+    }
+
+    // Phương thức cập nhật danh sách rạp
+    public void updateRapList(List<Rap> newRapList) {
+        this.rapList.clear();
+        this.rapList.addAll(newRapList);
+        notifyDataSetChanged(); // Cập nhật dữ liệu
     }
 }

@@ -1,6 +1,8 @@
 package com.example.a3t_appdatvexemphim;
 
-public class dsFILMHH {
+import java.io.Serializable;
+
+public class dsFILMHH implements Serializable {
     String  name, time, day, datve;
    int imageID;
 
@@ -11,6 +13,5 @@ public class dsFILMHH {
         this.datve = datve;
         this.imageID = imageID;
     }
-
 
 }

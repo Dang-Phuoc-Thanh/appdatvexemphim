@@ -1,5 +1,8 @@
 package com.example.a3t_appdatvexemphim;
-public class Rap {
+
+import java.io.Serializable;
+
+public class Rap implements Serializable {
     private String name;
     private String address;
     private int imageResource;

@@ -1,5 +1,6 @@
 package com.example.a3t_appdatvexemphim;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class RAPActivity extends AppCompatActivity {
     private RecyclerView nearbyRapRecyclerView;
     private Spinner spinnerCities;  // Khai báo Spinner
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,18 +44,26 @@ public class RAPActivity extends AppCompatActivity {
 
         // Thiết lập RecyclerView
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        nearbyRapRecyclerView.setAdapter(new RapAdapter(getNearbyRaps()));
-// Thay đổi màu chữ thành phố thành trắng
+
+        // Khởi tạo adapter với listener
+        nearbyRapRecyclerView.setAdapter(new RapAdapter(getNearbyRaps(), new RapAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Rap rap) {
+                // Khi người dùng click vào một mục trong danh sách
+                Intent intent = new Intent(RAPActivity.this, CTRapActivity.class);
+                intent.putExtra("selectedRap", rap); // Truyền đối tượng Rap đã chọn
+                startActivity(intent);
+            }
+        }));
+
+        // Thay đổi màu chữ thành phố thành trắng
         cityName.setTextColor(getResources().getColor(android.R.color.white));
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.city_list, android.R.layout.simple_spinner_item);
-
-// Thiết lập màu chữ cho mục trong Spinner
-       //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adapter.setNotifyOnChange(true);
 
-// Tạo một kiểu cho các mục trong Spinner
+        // Tạo một kiểu cho các mục trong Spinner
         ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.city_list)) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -72,15 +82,12 @@ public class RAPActivity extends AppCompatActivity {
         stringArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCities.setAdapter(stringArrayAdapter);
 
-
-
         // Xử lý sự kiện khi người dùng chọn thành phố
         spinnerCities.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedCity = parent.getItemAtPosition(position).toString();
-               // cityName.setText(selectedCity);  // Cập nhật tên thành phố hiển thị
-                // Có thể thêm logic để cập nhật danh sách rạp gần bạn dựa trên thành phố được chọn
+                // Cập nhật tên thành phố hiển thị hoặc thêm logic cập nhật danh sách rạp
             }
 
             @Override
@@ -94,10 +101,10 @@ public class RAPActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Logic thay đổi thành phố tại đây
-                // Ví dụ: hiển thị một hộp thoại để chọn thành phố khác
             }
         });
     }
+
 
     // Phương thức giả lập dữ liệu rạp gần bạn
     private List<Rap> getNearbyRaps() {
