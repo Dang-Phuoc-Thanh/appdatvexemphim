@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".LichSu.Fragment_chuadung">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/videography">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Đặt vé phim"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 50% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bapnuoc">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Bắp nước"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 50% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/videography">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Đặt vé phim"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 20% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bapnuoc">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Mua bắp nước"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 10% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/pale_purple"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/videography">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Đặt vé phim"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 50% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bapnuoc">
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Mua bắp nước"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 50% tối đa 100.000đ"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pale_purple"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/videography">
+
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:text="Đặt vé phim"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:text="Giảm 50% khi đặt 2 vé xem phim"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+                </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/pale_purple"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/videography">
+
+                    </ImageView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="top"
+                            android:text="Đặt vé phim"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text="Giảm 50% tối đa 100.000đ"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/pale_purple"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/videography">
+
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="top"
+                                android:text="Đặt vé phim"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="left"
+                                android:text="Giảm 50% tối đa 100.000đ"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold">
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/pale_purple"
+                        android:orientation="horizontal" >
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/bapnuoc">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="top"
+                                android:text="Đặt vé phim"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="left"
+                                android:text="Giảm 50% tối đa 100.000đ"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/pale_purple"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/bapnuoc">
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="top"
+                                android:text="Đặt vé phim"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+                            </TextView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="left"
+                                android:text="Giảm 50% tối đa 100.000đ"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"
+                                android:textStyle="bold">
+                            </TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+    </ScrollView>
+</FrameLayout>
