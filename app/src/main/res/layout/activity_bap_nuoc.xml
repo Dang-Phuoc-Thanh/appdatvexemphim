@@ -290,6 +290,7 @@
                 android:id="@+id/tongtien"
                 android:textSize="25sp"
                 android:gravity="center"
+                android:hint="0"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:textStyle="bold" />
