@@ -1,0 +1,18 @@
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n<<<<<<< HEAD\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n    <color name=\"xam\">#87B4D9</color>\r\n    <color name=\"color_datve\">#6644F1</color>\r\n=======\r\n\r\n    <color name=\"blue\">#2980b9</color>\r\n\r\n    <color name=\"pale_purple\">#B3A4EF</color>\r\n    <color name=\"Dark_Grey\">#757185</color>\r\n    <color name=\"light_blue\">#3498db</color>\r\n\r\n\r\n>>>>>>> 31e175159d674eff7597bcac7f902631484a3b03\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	
++++ b/app/src/main/res/values/colors.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-<<<<<<< HEAD
++
+     <color name="black">#FF000000</color>
+     <color name="white">#FFFFFFFF</color>
+     <color name="xam">#87B4D9</color>

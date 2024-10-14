@@ -46,15 +46,14 @@
 
             </ImageView>
 
-            <TextView
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:id="@+id/input_voucher"
                 android:text="Nhập mã voucher"
                 android:textColor="@color/white">
-
-            </TextView>
+            </EditText>
 
 
         </LinearLayout>

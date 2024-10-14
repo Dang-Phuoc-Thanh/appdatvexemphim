@@ -37,7 +37,7 @@
         <TextView
 
             android:layout_width="match_parent"
-
+            android:id="@+id/lichsu"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
 
@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="20sp"
+                android:id="@+id/add_voucher"
                 android:text="Nhập mã voucher"
                 android:textColor="@color/white">
 
@@ -105,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:id="@+id/add_uudai"
                 android:text="Ưu đãi"
                 android:textColor="@color/white"
 
