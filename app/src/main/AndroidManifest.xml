@@ -23,6 +23,40 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".BapNuoc"
+            android:exported="false" />
+        <activity
+            android:name=".UuDai"
+            android:exported="false" />
+        <activity
+            android:name=".VoucherLichSu"
+            android:exported="false" />
+        <activity
+            android:name=".VoucherHome"
+            android:exported="false" />
+        <activity
+            android:name=".PhuongThucThanhToan"
+            android:exported="false" />
+        <activity
+            android:name=".AddVoucher"
+            android:exported="false" />
+        <activity
+            android:name=".ThanhToan"
+            android:exported="false" />
+        <activity
+            android:name=".formSignIn"
+            android:exported="false" />
+        <activity
+            android:name=".DatGhe"
+            android:exported="false" />
+        <activity
+            android:name=".SuatChieu"
+            android:exported="false" />
+        <activity
+            android:name=".hello"
+            android:exported="false" />
+
         <!-- MainActivity không còn là màn hình chính nữa -->
         <activity
             android:name=".MainActivity"
