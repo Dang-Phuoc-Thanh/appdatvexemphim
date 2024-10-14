@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.a3t_appdatvexemphim.R;
 
 import java.util.List;
-import java.util.logging.Level;
+
 
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder>{
