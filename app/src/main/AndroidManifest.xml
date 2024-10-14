@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -13,28 +14,53 @@
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
         <activity
+
             android:name=".test"
             android:exported="false" />
         <activity
             android:name=".BapNuoc"
+
+
+
             android:exported="false" />
         <activity
-            android:name=".UuDai"
+            android:name=".TrangchuActivity"
             android:exported="false" />
         <activity
-            android:name=".VoucherLichSu"
+            android:name=".XacThucTaiKhoanActivity"
             android:exported="false" />
         <activity
-            android:name=".VoucherHome"
+            android:name=".KhoiPhucTaiKhoanActivity"
             android:exported="false" />
         <activity
-            android:name=".PhuongThucThanhToan"
+            android:name=".CTRapActivity"
             android:exported="false" />
         <activity
-            android:name=".AddVoucher"
+            android:name=".RAPActivity"
             android:exported="false" />
         <activity
-            android:name=".ThanhToan"
+            android:name=".QuenMKActivity"
+            android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".test"
+            android:exported="false" />
+        <activity
+            android:name=".VeCuaToi"
+            android:exported="false" />
+        <activity
+            android:name=".thannhtoan_trangchu"
+            android:exported="false" />
+        <activity
+            android:name=".phuongthucthanhtoan"
+            android:exported="false" />
+        <activity
+            android:name=".voucher_trangchu"
             android:exported="false" />
         <activity
             android:name=".formSignIn"
@@ -48,15 +74,18 @@
         <activity
             android:name=".hello"
             android:exported="false" />
+
+        <!-- MainActivity không còn là màn hình chính nữa -->
+        <!-- Các Activity khác không cần exported nếu không cần khởi chạy từ ngoài ứng dụng -->
+        <activity
+            android:name=".DSphimhhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
