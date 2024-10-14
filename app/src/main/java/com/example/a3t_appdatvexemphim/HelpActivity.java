@@ -2,16 +2,21 @@ package com.example.a3t_appdatvexemphim;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.content.Intent;
+import android.net.Uri;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.content.pm.PackageManager;
+import androidx.annotation.NonNull;
+
 
 public class HelpActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -37,5 +42,46 @@ itemList.add(new ItemLucchonhelp("Tôi có được mang đồ ăn từ bên ngo
         // Thiết lập adapter
         itemViewLuachonhelpAdapter = new ItemViewLuachonhelpAdapter(itemList);
         recyclerView.setAdapter(itemViewLuachonhelpAdapter);
+
+
+        // Thiết lập sự kiện click cho biểu tượng điện thoại
+        ImageView phoneIcon = findViewById(R.id.imageView6);
+        phoneIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:0877022760"));
+
+                // Kiểm tra quyền gọi điện trước khi thực hiện cuộc gọi
+                if (checkSelfPermission(android.Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(callIntent);
+                } else {
+                    // Yêu cầu quyền nếu chưa được cấp
+                    Toast.makeText(HelpActivity.this, "Vui lòng cấp quyền gọi điện", Toast.LENGTH_SHORT).show();
+                    requestPermissions(new String[]{android.Manifest.permission.CALL_PHONE}, 1);
+                }
+            }
+        });
     }
+    // Phương thức để xử lý kết quả khi người dùng cấp hoặc từ chối quyền
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults); // Gọi phương thức cha
+
+        if (requestCode == 1) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Nếu quyền được cấp, thực hiện cuộc gọi
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:0877022760"));
+                if (checkSelfPermission(android.Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(callIntent);
+                }
+            } else {
+                // Thông báo nếu người dùng từ chối cấp quyền
+                Toast.makeText(this, "Quyền gọi điện bị từ chối", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+
 }
