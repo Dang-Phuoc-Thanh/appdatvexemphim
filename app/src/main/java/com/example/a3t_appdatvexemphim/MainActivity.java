@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,12 +16,13 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     TextView signUp;
+    Button button_login_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        button_login_main=findViewById(R.id.button_login_main);
         signUp = findViewById(R.id.textViewSignUp);
         imageView = findViewById(R.id.myImageView);
         imageView.setBackgroundResource(R.drawable.animation_movie);
@@ -37,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, VeCuaToi.class);
                 startActivity(intent);
+            }
+        });
+        button_login_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(MainActivity.this, BapNuoc.class);
+                startActivity(intent1);
             }
         });
 
