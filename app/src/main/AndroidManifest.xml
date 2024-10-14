@@ -24,25 +24,19 @@
         </activity>
 
         <activity
-            android:name=".BapNuoc"
+            android:name=".test"
             android:exported="false" />
         <activity
-            android:name=".UuDai"
+            android:name=".VeCuaToi"
             android:exported="false" />
         <activity
-            android:name=".VoucherLichSu"
+            android:name=".thannhtoan_trangchu"
             android:exported="false" />
         <activity
-            android:name=".VoucherHome"
+            android:name=".phuongthucthanhtoan"
             android:exported="false" />
         <activity
-            android:name=".PhuongThucThanhToan"
-            android:exported="false" />
-        <activity
-            android:name=".AddVoucher"
-            android:exported="false" />
-        <activity
-            android:name=".ThanhToan"
+            android:name=".voucher_trangchu"
             android:exported="false" />
         <activity
             android:name=".formSignIn"
