@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -12,11 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme._3T_appdatvexemphim"
         tools:targetApi="31">
-
-        <!-- Đặt TrangchuActivity làm màn hình chính -->
+        <activity
+            android:name=".rapbapnuocActivity"
+            android:exported="false" />
         <activity
             android:name=".TrangchuActivity"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".XacThucTaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KhoiPhucTaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CTRapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RAPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuenMKActivity"
+            android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -52,10 +69,16 @@
             android:exported="false" />
 
         <!-- MainActivity không còn là màn hình chính nữa -->
+        <!-- Các Activity khác không cần exported nếu không cần khởi chạy từ ngoài ứng dụng -->
+        <activity
+            android:name=".DSphimhhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
