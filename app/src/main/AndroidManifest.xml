@@ -44,7 +44,7 @@
         <activity
             android:name=".QuenMKActivity"
             android:exported="true"> <!-- Bắt buộc phải là true với activity launchable -->
-<<<<<<< HEAD
+
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
@@ -54,7 +54,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
->>>>>>> master
+
         </activity>
         <activity
             android:name=".VeCuaToi"
@@ -86,18 +86,7 @@
         <activity
             android:name=".HelpActivity"
             android:exported="false" />
-<<<<<<< HEAD
-=======
 
-        <!-- MainActivity không còn là màn hình chính nữa -->
-        <!-- Các Activity khác không cần exported nếu không cần khởi chạy từ ngoài ứng dụng -->
-        <activity
-            android:name=".DSphimhhActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HelpActivity"
-            android:exported="false" />
->>>>>>> master
         <activity
             android:name=".MainActivity"
             android:exported="false" />
