@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
     <string name="back"><![CDATA[<-]]></string>
     <string name="forward"><![CDATA[->]]></string>
     <string-array name="city_list">
@@ -14,6 +15,8 @@
         <item>Hà Tĩnh</item>
     </string-array>
 
+=======
+>>>>>>> master
     <string name="app_name">form_SignIn</string>
     <string name="select">Gới Tính</string>
     <string name="title">Vé của tôi</string>
@@ -33,4 +36,24 @@
     <string name="name_tongtien">Tổng tiền thanh toán</string>
     <string name="gia_tien">130.000vnđ</string>
     <string name="image_description">Description of the image</string>
+<<<<<<< HEAD
+=======
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string-array name="city_list">
+        <item>Hà Nội</item>
+        <item>Đà Nẵng</item>
+        <item>Hồ Chí Minh</item>
+        <item>Hải Phòng</item>
+        <item>Cần Thơ</item>
+        <item>Sài Gòn</item>
+        <item>Quảng Trị</item>
+        <item>HUẾ</item>
+        <item>Nha Trang</item>
+        <item>Hà Tĩnh</item>
+    </string-array>
+
+>>>>>>> master
 </resources>
