@@ -72,15 +72,17 @@
             android:textSize="25sp">
 
         </TextView>
+
         <EditText
+            android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:id="@+id/txt_name"
             android:layout_marginTop="5dp"
             android:background="@drawable/button"
             android:textColor="@color/white">
 
         </EditText>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
