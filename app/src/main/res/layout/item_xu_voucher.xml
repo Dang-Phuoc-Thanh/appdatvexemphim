@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- Hình ảnh nằm bên trái -->
+        <ImageView
+            android:id="@+id/imgCuaHang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/highlands" /> <!-- Thay @drawable/your_image bằng hình ảnh của bạn -->
+
+        <!-- Text tiêu đề voucher -->
+        <TextView
+            android:id="@+id/tvVoucherTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgCuaHang"
+            android:text="Giảm 20K"
+            android:layout_marginStart="15dp"
+            android:textColor="#CE9642"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Text Thương hiệu -->
+        <TextView
+            android:id="@+id/tvVoucherDon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVoucherTitle"
+            android:layout_toEndOf="@id/imgCuaHang"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:text="Cho đơn từ 60K"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!-- Layout chứa icon xu và text số xu, nằm dưới Text "Cho đơn từ 60K" -->
+        <LinearLayout
+            android:id="@+id/llCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVoucherDon"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/imgCuaHang"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <!-- Icon xu -->
+            <ImageView
+                android:id="@+id/imgCoinIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/dollar" /> <!-- Thay @drawable/dollar bằng icon xu của bạn -->
+
+            <!-- Text số xu -->
+            <TextView
+                android:id="@+id/tvCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 xu"
+                android:textColor="#149419"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
