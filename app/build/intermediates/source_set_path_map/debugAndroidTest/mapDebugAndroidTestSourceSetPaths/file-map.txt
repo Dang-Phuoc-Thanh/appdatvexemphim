@@ -1,0 +1,5 @@
+com.example.appxemphim.test.app-core-1.6.1-0 C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\dba3bac13939e9dcd8e87f75589d0208\transformed\core-1.6.1\res
+com.example.appxemphim.test.app-androidTest-1 G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\build\generated\res\resValues\androidTest\debug
+com.example.appxemphim.test.app-mergeDebugAndroidTestResources-2 G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.appxemphim.test.app-mergeDebugAndroidTestResources-3 G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.appxemphim.test.app-debugAndroidTest-4 G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

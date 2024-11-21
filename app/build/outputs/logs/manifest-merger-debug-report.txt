@@ -1,0 +1,353 @@
+-- Merging decision tree log ---
+manifest
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:2:1-47:12
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\101067206514eaa24cefe66ffac91a1a\transformed\viewbinding-8.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a898bd4b2328a1a83b6bf0a968e9b4a8\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\3b99db2888e710cadafe12901c3bd96c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8a82fb38101a6802d4e71255d32e805b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d658e30a5c7a207cce2624b81ac81cea\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\2b75f1a52f510c767dd7f3a9fe7fe5ec\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\98826446b31c1dcca069ccf5ac6748ca\transformed\viewpager2-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.8.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fb9d48546325eccead0b8b704caf3d46\transformed\fragment-1.8.4\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d4817b14b962b2a422144c7a3f652956\transformed\activity-1.9.2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c92898ebba4f7a413ed381a07c8e69da\transformed\roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c799bd601a86ec7cba7bf4ccd804b22d\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\28a2063d47f89ade66092ed78b5f35f1\transformed\circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\664d3f1f812c80bc778c66238e9c7f6a\transformed\threetenabp-1.4.4\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\11cefb2a34e18f998ab622c456e23214\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8b2ca4a2cd23ac4c6b0570bcccae93b6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c66a341ad0aabb4b05ddfaba876b38ce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\0f097b023abd2644b29bc19a72284ae8\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e84c3f63156320fef30710038b0a3d17\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e3ca14c82804c15dd2af4e5483603d42\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fc6892bb78e4fe57cf8b0008c93bb629\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\00e9f7a4862755adde595673d2e37d16\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\60a868cd5a2ffead35a851ede8988af2\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\21bce0917a637958702340961a75c5e5\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7352c405b62e9dc5e06a5508e30806db\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\73e722e44175006b0790bcc05f268d06\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e0e576c350c0d438e29d69134cbf0537\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7c667a0ff3d99b72e68f463511d32927\transformed\core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\32fc8a327db9a8bd44d561115720182e\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8bbdb584484690a120263b820cfa64c5\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8c44a6dcd06c0162f3bde542568d17b1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\6686369082a3c248b52362f80e9a0bb0\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\66e5d50ce97520843f0ef097bc241997\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\1130e7c52f0b7b51e8623292636fb966\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ebde5d1d8bf678d3ff7ab47ce1314eb3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71204294a5fd0c08b8f8f0978b52126d\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\68e5b1e55226246901d94db82d2da9d8\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71afd3c01a32443fdf548c3187ccbac0\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\70b5efee86b6f02486ad7f08a78c02e1\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\879de4cfc15e229205f6de6a5cf18fba\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\14041b0fbe6c396252dd8a53e597d65c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\31bbcbe8688a5b127a6610142a000e89\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission-sdk-23#android.permission.CALL_PHONE
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:4:5-76
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:4:29-73
+application
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:6:5-45:19
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:6:5-45:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a898bd4b2328a1a83b6bf0a968e9b4a8\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a898bd4b2328a1a83b6bf0a968e9b4a8\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\3b99db2888e710cadafe12901c3bd96c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\3b99db2888e710cadafe12901c3bd96c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\28a2063d47f89ade66092ed78b5f35f1\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\28a2063d47f89ade66092ed78b5f35f1\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\664d3f1f812c80bc778c66238e9c7f6a\transformed\threetenabp-1.4.4\AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\664d3f1f812c80bc778c66238e9c7f6a\transformed\threetenabp-1.4.4\AndroidManifest.xml:7:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\1130e7c52f0b7b51e8623292636fb966\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\1130e7c52f0b7b51e8623292636fb966\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:11:9-41
+	android:fullBackupContent
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:9:9-54
+	android:roundIcon
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:12:9-54
+	tools:targetApi
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:15:9-29
+	android:icon
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:14:9-48
+	android:dataExtractionRules
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:8:9-65
+activity#com.example.appxemphim.XacThucTaiKhoan
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:17:13-44
+activity#com.example.appxemphim.KhoiPhucTaiKhoan
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:21:9-23:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:23:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:22:13-45
+activity#com.example.appxemphim.QuenMK
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:24:9-26:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:25:13-35
+activity#com.example.appxemphim.formSignIn
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:27:9-29:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:28:13-39
+activity#com.example.appxemphim.Home
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:31:13-33
+activity#com.example.appxemphim.hello
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:33:9-35:40
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:34:13-34
+activity#com.example.appxemphim.MainActivity
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:36:9-44:20
+	android:exported
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:38:13-36
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:37:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:39:13-43:29
+action#android.intent.action.MAIN
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:40:25-66
+category#android.intent.category.LAUNCHER
+ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml:42:27-74
+uses-sdk
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\101067206514eaa24cefe66ffac91a1a\transformed\viewbinding-8.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\101067206514eaa24cefe66ffac91a1a\transformed\viewbinding-8.6.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a898bd4b2328a1a83b6bf0a968e9b4a8\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a898bd4b2328a1a83b6bf0a968e9b4a8\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\3b99db2888e710cadafe12901c3bd96c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\3b99db2888e710cadafe12901c3bd96c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8a82fb38101a6802d4e71255d32e805b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8a82fb38101a6802d4e71255d32e805b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d658e30a5c7a207cce2624b81ac81cea\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d658e30a5c7a207cce2624b81ac81cea\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\2b75f1a52f510c767dd7f3a9fe7fe5ec\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\2b75f1a52f510c767dd7f3a9fe7fe5ec\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\98826446b31c1dcca069ccf5ac6748ca\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\98826446b31c1dcca069ccf5ac6748ca\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fb9d48546325eccead0b8b704caf3d46\transformed\fragment-1.8.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.8.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fb9d48546325eccead0b8b704caf3d46\transformed\fragment-1.8.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d4817b14b962b2a422144c7a3f652956\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d4817b14b962b2a422144c7a3f652956\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c92898ebba4f7a413ed381a07c8e69da\transformed\roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c92898ebba4f7a413ed381a07c8e69da\transformed\roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c799bd601a86ec7cba7bf4ccd804b22d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c799bd601a86ec7cba7bf4ccd804b22d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\28a2063d47f89ade66092ed78b5f35f1\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\28a2063d47f89ade66092ed78b5f35f1\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\664d3f1f812c80bc778c66238e9c7f6a\transformed\threetenabp-1.4.4\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.4.4] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\664d3f1f812c80bc778c66238e9c7f6a\transformed\threetenabp-1.4.4\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\11cefb2a34e18f998ab622c456e23214\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\11cefb2a34e18f998ab622c456e23214\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8b2ca4a2cd23ac4c6b0570bcccae93b6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8b2ca4a2cd23ac4c6b0570bcccae93b6\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c66a341ad0aabb4b05ddfaba876b38ce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\c66a341ad0aabb4b05ddfaba876b38ce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\0f097b023abd2644b29bc19a72284ae8\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\0f097b023abd2644b29bc19a72284ae8\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e84c3f63156320fef30710038b0a3d17\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e84c3f63156320fef30710038b0a3d17\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e3ca14c82804c15dd2af4e5483603d42\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e3ca14c82804c15dd2af4e5483603d42\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fc6892bb78e4fe57cf8b0008c93bb629\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\fc6892bb78e4fe57cf8b0008c93bb629\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\00e9f7a4862755adde595673d2e37d16\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\00e9f7a4862755adde595673d2e37d16\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\60a868cd5a2ffead35a851ede8988af2\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\60a868cd5a2ffead35a851ede8988af2\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\21bce0917a637958702340961a75c5e5\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\21bce0917a637958702340961a75c5e5\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7352c405b62e9dc5e06a5508e30806db\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7352c405b62e9dc5e06a5508e30806db\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\73e722e44175006b0790bcc05f268d06\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\73e722e44175006b0790bcc05f268d06\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e0e576c350c0d438e29d69134cbf0537\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\e0e576c350c0d438e29d69134cbf0537\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7c667a0ff3d99b72e68f463511d32927\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\7c667a0ff3d99b72e68f463511d32927\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\32fc8a327db9a8bd44d561115720182e\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\32fc8a327db9a8bd44d561115720182e\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8bbdb584484690a120263b820cfa64c5\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8bbdb584484690a120263b820cfa64c5\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8c44a6dcd06c0162f3bde542568d17b1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\8c44a6dcd06c0162f3bde542568d17b1\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\6686369082a3c248b52362f80e9a0bb0\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\6686369082a3c248b52362f80e9a0bb0\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\66e5d50ce97520843f0ef097bc241997\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\66e5d50ce97520843f0ef097bc241997\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\1130e7c52f0b7b51e8623292636fb966\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\1130e7c52f0b7b51e8623292636fb966\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ebde5d1d8bf678d3ff7ab47ce1314eb3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ebde5d1d8bf678d3ff7ab47ce1314eb3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71204294a5fd0c08b8f8f0978b52126d\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71204294a5fd0c08b8f8f0978b52126d\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\68e5b1e55226246901d94db82d2da9d8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\68e5b1e55226246901d94db82d2da9d8\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71afd3c01a32443fdf548c3187ccbac0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\71afd3c01a32443fdf548c3187ccbac0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\70b5efee86b6f02486ad7f08a78c02e1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\70b5efee86b6f02486ad7f08a78c02e1\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\879de4cfc15e229205f6de6a5cf18fba\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\879de4cfc15e229205f6de6a5cf18fba\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\14041b0fbe6c396252dd8a53e597d65c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\14041b0fbe6c396252dd8a53e597d65c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\31bbcbe8688a5b127a6610142a000e89\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\31bbcbe8688a5b127a6610142a000e89\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\DANG PHUOC THANH\toan\appxemphim\appxemphim\appxemphim\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\ef7669f7f46292a4357a56d4fab0eb97\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\352875723393597825d8d1566470e06b\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\d7e50990bb891d42273f72662aef12d8\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+permission#com.example.appxemphim.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.appxemphim.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.0] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\a0f5170b199c156c66682d0882a70ed5\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DANG PHUOC THANH\.gradle\caches\8.10.2\transforms\161223827dd8befbbf4c784e527c394b\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

@@ -1,0 +1,282 @@
+[
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_d_sphimhh.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_d_sphimhh.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_bap_nuoc2.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_bap_nuoc2.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\item_films_trangchu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_films_trangchu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_voucher.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_voucher.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_ttphim.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ttphim.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_phuong_thuc_thanh_toan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_phuong_thuc_thanh_toan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_uu_dai.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_uu_dai.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_add_voucher.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_add_voucher.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_ve_cua_toi.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ve_cua_toi.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_voucher_lich_su.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_voucher_lich_su.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_home.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_quen_mk.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_quen_mk.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_comment_film_.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_comment_film_.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_ctrap.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_tai_khoan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_comment_film_.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_comment_film_.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_phuong_thuc_thanh_toan.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_phuong_thuc_thanh_toan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_voucher.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_danhgia.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_danhgia.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_khac.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_khac.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_d_sphimhh.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_d_sphimhh.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_xac_thuc_tai_khoan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_xac_thuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_ho_tro.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ho_tro.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\item_rap.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_rap.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_khoi_phuc_tai_khoan.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_khoi_phuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_ttphim.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ttphim.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_test.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_ve_cua_toi.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ve_cua_toi.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_tai_khoan.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_tai_khoan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/list_items.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\item_category_trangchu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_category_trangchu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_ho_tro.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ho_tro.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_danhgia.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_danhgia.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_xac_thuc_tai_khoan.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_xac_thuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\list_item_filmhoathinh.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_item_filmhoathinh.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_test.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_ctrap.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_thanh_toan.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_thanh_toan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_khac.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_khac.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\item_view_luachonhelp.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_view_luachonhelp.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\list_items.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_items.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_dat_ghe.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_dat_ghe.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\list_item_binhluan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_item_binhluan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_khoi_phuc_tai_khoan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_khoi_phuc_tai_khoan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_ctrap.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_thanh_toan.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_thanh_toan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_hello.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_hello.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_bap_nuoc2.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_bap_nuoc2.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_trang_chu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_trang_chu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_suat_chieu.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_suat_chieu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_cinema.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_cinema.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_xu.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_xu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_cinema.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_cinema.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_form_sign_in.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_form_sign_in.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_form_sign_in.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_form_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_add_voucher.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_add_voucher.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_quen_mk.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_quen_mk.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_uu_dai.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_uu_dai.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_ctrap.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_hello.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_hello.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_suat_chieu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_suat_chieu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/activity_main.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-mergeDebugResources-33:/layout/fragment_trang_chu.xml",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_trang_chu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_voucher_lich_su.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_voucher_lich_su.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\item_xu_voucher.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_xu_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\slide_item_container_trangchu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\slide_item_container_trangchu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_dat_ghe.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_dat_ghe.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-mergeDebugResources-33:\\layout\\fragment_xu.xml",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_xu.xml"
+    }
+]

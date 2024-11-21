@@ -1,0 +1,1122 @@
+[
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_voucher_lich_su.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_voucher_lich_su.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_contact2.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\contact2.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phim6.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phim6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_ve_cua_toi.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ve_cua_toi.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_item_films_trangchu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_films_trangchu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_anhrap.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\anhrap.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_reorder_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_reorder_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_ttphim.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ttphim.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/xml_backup_rules.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_home.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pkinhdi4.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pkinhdi4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_item_xu_voucher.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_xu_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_custom_edtemail.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\custom_edtemail.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie2.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie2.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_ttphim.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ttphim.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_hello.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_hello.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_thanh_toan.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_thanh_toan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie3.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie3.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_custom_btn_login.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/custom_btn_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pkinhdi5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pkinhdi5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie1_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie1_75.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_call.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\call.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_facebook.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\facebook.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_uu_dai.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_uu_dai.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_lotte.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\lotte.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_uu_dai.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_uu_dai.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_arrow_back_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phh2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phh2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_ctrap.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ctrap.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_xac_thuc_tai_khoan.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_xac_thuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_phim5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_phim5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_d_sphimhh.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_d_sphimhh.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_toolbar.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie4.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie4.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_horizontal_rule_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_horizontal_rule_24.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_ctrap.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_videography.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\videography.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_gradient_background.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\gradient_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_conner_4.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\conner_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phh3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phh3.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_background_cinema.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/background_cinema.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_dongho.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_dongho.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_list_item_filmhoathinh.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_item_filmhoathinh.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_rio.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\rio.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie6_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie6_25.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_frame_login.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/frame_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_list_items.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_introduction.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\introduction.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_app.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_app.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_background_toolbar.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/background_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_list_item_binhluan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\list_item_binhluan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pkinhdi3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pkinhdi3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_zalopay.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\zalopay.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_settings_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_settings_24.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_voucher.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_khoi_phuc_tai_khoan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_khoi_phuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie1.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie1.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_background_main.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/background_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_trailer.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\trailer.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_add_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_dollar.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\dollar.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bg_combobox_city_rap.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bg_combobox_city_rap.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_ve_cua_toi.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ve_cua_toi.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_like_favorite_heart_5759.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\like_favorite_heart_5759.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_write.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\write.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_login.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_login.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_background_white.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/background_white.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_search_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_cgv.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\cgv.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_cinema.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_cinema.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_home_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phh11.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phh11.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_phim3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_phim3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_uudai2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\uudai2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bogoc_btn.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bogoc_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_vouch1er.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\vouch1er.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_next.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\next.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_but_back_lightblue.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\but_back_lightblue.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_cgvicon.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\cgvicon.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pkinhdi1.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pkinhdi1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_phim4.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_phim4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bapnuoc2.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bapnuoc2.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_momo.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\momo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie6_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie6_75.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/color_custom_color_navigation.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/color/custom_color_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie6_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie6_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pkinhdi2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pkinhdi2.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_animation_movie.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/animation_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_file.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\file.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie4_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie4_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie2_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie2_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_custom_comment.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\custom_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie2_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie2_75.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_ic_search.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_comment_film_.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_comment_film_.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_add_voucher.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_add_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_noto_popcorn.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\noto_popcorn.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_reorder_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_reorder_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_danhgia.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_danhgia.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_trang_chu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_trang_chu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_encrypted.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\encrypted.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_button_square.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\button_square.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_add_voucher.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_add_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_cinema.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_cinema.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_uudai1.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\uudai1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_thanh_toan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_thanh_toan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_xu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\xu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_down_arrow.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_down_arrow.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_trang_chu.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_trang_chu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_spyxfamily.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\spyxfamily.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_galaxy.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\galaxy.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_conner_background.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\conner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_profile.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\profile.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_ho_tro.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ho_tro.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_gradient_background.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/gradient_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_phone.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bapnuoc.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bapnuoc.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_quenmk.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_quenmk.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_item_rap.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_rap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bapnuoc1.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bapnuoc1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phd3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phd3.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie3_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie3_25.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_highlands.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\highlands.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_phuong_thuc_thanh_toan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_phuong_thuc_thanh_toan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_main.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bg_nen_danhgia.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bg_nen_danhgia.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_quocte.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\quocte.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_arrow_right.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_item_category_trangchu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_category_trangchu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ptc5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ptc5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_up_arrow.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_up_arrow.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_day.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\day.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_voucher.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_cinema.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\cinema.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ptc4.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ptc4.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_khac.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_khac.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_item_view_luachonhelp.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\item_view_luachonhelp.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_starlight.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\starlight.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_xu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_xu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phd4.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phd4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_quen_mk.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_quen_mk.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_background_app.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/background_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie5_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie5_75.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_home_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_home_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie4_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie4_75.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ptc3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ptc3.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_danhgia.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_danhgia.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_white.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_logout.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\logout.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_main.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_noidia.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\noidia.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_nen.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\nen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phd5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phd5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_coin.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\coin.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie2_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie2_25.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_d_sphimhh.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_d_sphimhh.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_comment_film_.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_comment_film_.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_test.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\color_custom_color_navigation.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\color\\custom_color_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_phim2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_phim2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phh6.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phh6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_cinema1.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\cinema1.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie4_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie4_25.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_background_app_moi.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\background_app_moi.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_ctrap.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_suat_chieu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_suat_chieu.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_but_back_lightblue.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/but_back_lightblue.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_khac.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_khac.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ptc2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ptc2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_oppo.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\oppo.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_phuong_thuc_thanh_toan.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_phuong_thuc_thanh_toan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_khoi_phuc_tai_khoan.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_khoi_phuc_tai_khoan.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_conner_background.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/conner_background.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_custom_button_date.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/custom_button_date.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_back.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_form_sign_in.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_form_sign_in.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_xu.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_xu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_hello.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_hello.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_google.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\google.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_pizza.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\pizza.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_custom_edtemail.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/custom_edtemail.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_left_white.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_left_white.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_button.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/button.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phd2.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phd2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_voucher_lich_su.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_voucher_lich_su.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_uudai5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\uudai5.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_star.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\star.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ls_mua_ve.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ls_mua_ve.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_taikhoan.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\taikhoan.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_app.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\app.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_dat_ghe.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_dat_ghe.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ptc1.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ptc1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_number_12.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\number_12.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_custom_button_date.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\custom_button_date.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_conner_4.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/conner_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie1_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie1_25.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_horizontal_rule_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_horizontal_rule_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_animation_movie.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\animation_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_button.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\button.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_cinema.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_cinema.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie5_25.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie5_25.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_star_nho.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\star_nho.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_contact.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\contact.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_person_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_button_voucher_nhap.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\button_voucher_nhap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_custom_btn_login.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\custom_btn_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_xac_thuc_tai_khoan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_xac_thuc_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_img_phimcam.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\img_phimcam.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_phh5.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\phh5.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_list_items.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie5_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie5_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_left.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_p3.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\p3.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_voucher.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\voucher.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_uudai3.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\uudai3.jpg"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_form_sign_in.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_form_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie3_75.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie3_75.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie1_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie1_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie6.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie6.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_activity_ctrap.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\activity_ctrap.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie3_5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie3_5.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_bg_btn_datve.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\bg_btn_datve.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_location_on_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_location_on_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_test.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_coopmart.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\coopmart.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_person.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\person.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_qrcode.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\qrcode.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_baseline_account_circle_24.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_button_square.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/button_square.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_twitter.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\twitter.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_dongho.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\dongho.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_activity_quen_mk.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/activity_quen_mk.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_suat_chieu.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_suat_chieu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_uudai4.jpg.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\uudai4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_dat_ghe.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_dat_ghe.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_frame_login.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\frame_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_settings_24.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_tai_khoan.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_ho_tro.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_ho_tro.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_movie5.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\movie5.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_xanhxm.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\xanhxm.png"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_tai_khoan.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_tai_khoan.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_slide_item_container_trangchu.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\slide_item_container_trangchu.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_salary.png.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\salary.png"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_button_voucher_nhap.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/button_voucher_nhap.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/layout_fragment_bap_nuoc2.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/layout/fragment_bap_nuoc2.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\drawable_baseline_location_on_24.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\drawable\\baseline_location_on_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-debug-34:\\layout_fragment_bap_nuoc2.xml.flat",
+        "source": "C:\\Users\\DANG PHUOC THANH\\.gradle\\daemon\\8.10.2\\com.example.appxemphim.app-main-36:\\layout\\fragment_bap_nuoc2.xml"
+    },
+    {
+        "merged": "com.example.appxemphim.app-debug-34:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.appxemphim.app-main-36:/drawable/ic_launcher_background.xml"
+    }
+]
