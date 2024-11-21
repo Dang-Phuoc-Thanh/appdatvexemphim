@@ -1,3 +1,0 @@
-com.example.appxemphim.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
