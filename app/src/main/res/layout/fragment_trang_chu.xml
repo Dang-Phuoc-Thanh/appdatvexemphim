@@ -30,7 +30,7 @@
             android:layout_width="373dp"
             android:layout_height="56dp"
             android:layout_marginTop="-25dp"
-            android:background="@drawable/bogoc_btn"
+            android:background="@drawable/bg_btn_2"
             android:gravity="center"
             android:padding="10dp"
             android:hint="Nhập phim bạn quan tâm"
@@ -93,7 +93,7 @@
                     android:layout_width="135dp"
                     android:layout_height="48dp"
                     android:layout_marginTop="24dp"
-                    android:backgroundTint="@color/color_datve"
+                    android:backgroundTint="@color/blue"
                     android:text="Đặt vé"
                     android:layout_gravity="center"
                     />
