@@ -1,3 +1,4 @@
+// TrangChuFragment.java
 package com.example.a3t_appdatvexemphim.Trangchu;
 
 import android.os.Bundle;
@@ -119,11 +120,7 @@ public class TrangChuFragment extends Fragment {
                 }
             }
         });
-
-
-
     }
-
 
     private void initSearchEditText() {
         edtSearch.addTextChangedListener(new TextWatcher() {
@@ -143,7 +140,6 @@ public class TrangChuFragment extends Fragment {
             }
         });
     }
-
 
     private List<Category> getListCategory() {
         List<Category> listCategory = new ArrayList<>();
