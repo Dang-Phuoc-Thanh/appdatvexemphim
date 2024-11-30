@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
+
         android:background="#3F4285"
         android:layout_height="wrap_content">
 
@@ -24,7 +24,7 @@
             android:layout_marginLeft="10dp"
 
             android:textColor="@color/white"
-            android:textSize="27sp">
+            android:textSize="23sp">
 
         </TextView>
         <TextView
@@ -36,7 +36,7 @@
 
             android:text="Lịch sử"
             android:textColor="@color/white"
-            android:textSize="27sp">
+            android:textSize="20sp">
 
         </TextView>
 
@@ -53,12 +53,12 @@
             android:layout_height="50dp"
 
             android:gravity="center"
-            android:background="@drawable/button_voucher_nhap"
+            android:background="@drawable/bg_btn_2"
             >
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:src="@drawable/write">
@@ -69,7 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:layout_marginStart="7dp"
+                android:textSize="18sp"
                 android:id="@+id/add_voucher"
                 android:text="Nhập mã voucher"
                 android:textColor="@color/white">
@@ -78,29 +79,30 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="50dp"
 
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:background="@drawable/button_voucher_nhap"
-            >
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/bg_btn_2"
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
                 android:src="@drawable/vouch1er">
 
             </ImageView>
 
             <TextView
+                android:id="@+id/add_uudai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/add_uudai"
+                android:layout_marginStart="18dp"
                 android:text="Ưu đãi"
                 android:textColor="@color/white"
 
@@ -138,14 +140,17 @@
                 </ImageView>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="251dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_gravity="top"
+                        android:gravity="center"
                         android:text="Đặt vé phim"
                         android:textColor="@color/white"
                         android:textSize="20sp"
@@ -156,17 +161,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="left"
+                        android:layout_gravity="top"
+                        android:gravity="center"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
-
-
 
 
             </LinearLayout>
@@ -185,6 +188,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -205,8 +210,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -230,6 +235,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -250,8 +257,8 @@
                         android:gravity="left"
                         android:text="Giảm 20% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -275,6 +282,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -295,8 +304,8 @@
                         android:gravity="left"
                         android:text="Giảm 10% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -320,6 +329,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -340,8 +351,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -365,6 +376,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -385,8 +398,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -399,6 +412,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:orientation="horizontal" >
 
                 <ImageView
@@ -410,6 +424,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -430,8 +446,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% khi đặt 2 vé xem phim"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -450,6 +466,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -470,8 +488,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -490,6 +508,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -510,8 +530,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -535,6 +555,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -555,8 +577,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>
@@ -580,6 +602,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -600,8 +624,8 @@
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
                         android:textColor="@color/white"
-                        android:textSize="25sp"
-                        android:textStyle="bold">
+                        android:textSize="18sp"
+                        android:textStyle="italic">
 
                     </TextView>
                 </LinearLayout>

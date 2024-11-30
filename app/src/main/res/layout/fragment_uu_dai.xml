@@ -47,12 +47,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/pale_purple"
+                android:background="@color/blue"
                 android:orientation="horizontal" >
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+
                     android:src="@drawable/uudai1">
 
                 </ImageView>
@@ -60,6 +61,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="40sp"
+                    android:layout_marginStart="24dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -67,7 +70,7 @@
                         android:gravity="center"
                         android:layout_gravity="top"
                         android:text="Đặt vé phim"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold">
                     </TextView>
@@ -77,9 +80,9 @@
                         android:layout_gravity="center"
                         android:gravity="left"
                         android:text="Giá ưu đãi chỉ từ 40000đ"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textStyle="normal">
                     </TextView>
                 </LinearLayout>
             </LinearLayout>
@@ -87,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:background="@color/pale_purple"
+                android:background="#5A9E90"
                 android:orientation="horizontal" >
 
                 <ImageView
@@ -100,6 +103,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="35sp"
+                    android:layout_marginStart="24dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -107,7 +112,7 @@
                         android:gravity="center"
                         android:layout_gravity="top"
                         android:text="Đặt vé phim"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold">
                     </TextView>
@@ -117,16 +122,16 @@
                         android:layout_gravity="center"
                         android:gravity="left"
                         android:text="Giá ưu đãi chỉ từ 79k khi dặt vé xen phim trên VNpay"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal">
                     </TextView>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/pale_purple"
+                android:background="@color/blue"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
@@ -140,6 +145,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="40sp"
+                    android:layout_marginStart="24dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -147,7 +154,7 @@
                         android:gravity="center"
                         android:layout_gravity="top"
                         android:text="Đặt vé phim"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold">
                     </TextView>
@@ -157,16 +164,16 @@
                         android:layout_gravity="center"
                         android:gravity="left"
                         android:text="Giảm ngay 30000đ cho người mới"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal">
                     </TextView>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/pale_purple"
+                android:background="#5A9E90"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal" >
 
@@ -180,6 +187,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="40sp"
+                    android:layout_marginStart="24dp"
                     android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
@@ -187,7 +196,7 @@
                         android:gravity="center"
                         android:layout_gravity="top"
                         android:text="Đặt vé phim"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         android:textStyle="bold">
                     </TextView>
@@ -197,9 +206,9 @@
                         android:layout_gravity="center"
                         android:gravity="left"
                         android:text="Giảm sâu vé xem phim khi thanh toán qua vnpay"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold">
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal">
                     </TextView>
                 </LinearLayout>
             </LinearLayout>

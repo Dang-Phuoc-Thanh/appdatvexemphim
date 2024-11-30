@@ -35,7 +35,7 @@
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:background="@drawable/button_voucher_nhap"
+            android:background="@drawable/bg_btn_2"
             >
 
             <ImageView
@@ -62,7 +62,7 @@
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_voucher_nhap"
+            android:background="@drawable/bg_btn_2"
             android:id="@+id/button_apdung"
             android:textColor="@color/white"
             android:layout_marginLeft="10dp"

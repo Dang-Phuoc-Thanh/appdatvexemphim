@@ -1,3 +1,4 @@
+// TrangChuFragment.java
 package com.example.a3t_appdatvexemphim.Trangchu;
 
 import android.os.Bundle;
@@ -288,5 +289,57 @@ public class TrangChuFragment extends Fragment {
                 }
             }
         });
+
+
+    }
+
+    private void initSearchEditText() {
+        edtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // Không cần xử lý
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filter(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Không cần xử lý
+            }
+        });
+    }
+
+    
+    private Runnable sliderRunnable = new Runnable() {
+        @Override
+        public void run() {
+            viewPager2.setCurrentItem(viewPager2.getCurrentItem() + 1);
+        }
+    };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        sliderHandler.postDelayed(sliderRunnable, 3000);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        sliderHandler.removeCallbacks(sliderRunnable);
+    }
+
+    private void filter(String text) {
+        List<Category> filteredList = new ArrayList<>();
+        for (Category item : categoryList) {
+            if (item.getNameCategory().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        categoryAdapter.setData(filteredList);
+
     }
 }

@@ -9,8 +9,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +53,20 @@ public class TTPhimFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ttphim, container, false);
 
-        // Thêm log để kiểm tra ListView
+
+        // Set OnClickListener for Xemvideo LinearLayout
+        LinearLayout xemVideoLayout = view.findViewById(R.id.Xemvideo);
+        xemVideoLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, new Video_Fragment());
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        // Thêm log iđể kiểm tra ListView
         ListView listView = view.findViewById(R.id.listview_chitietphim);
         Log.d("TTPhimFragment", "ListView: " + listView);
 
