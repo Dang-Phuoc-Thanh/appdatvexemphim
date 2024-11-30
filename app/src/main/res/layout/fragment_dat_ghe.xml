@@ -60,11 +60,12 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="820dp"
-        android:layout_height="400dp"
+        android:layout_height="350dp"
         android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545">
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -72,14 +73,13 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
+                    android:layout_height="50dp"
                     android:text="Màn hình"
                     android:textAlignment="center"
                     android:textSize="34sp"
@@ -87,8 +87,7 @@
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_height="wrap_content">
 
                     <TableRow
                         android:layout_width="match_parent"
@@ -137,74 +136,6 @@
                             android:textSize="20dp"
                             android:textStyle="bold"
                             app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A05"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A06"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A06"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A07"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A07"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A08"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A08"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A09"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A10"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_A10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="A10"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
                     </TableRow>
 
                     <TableRow
@@ -251,72 +182,6 @@
                             android:layout_margin="5dp"
                             android:background="@drawable/button_square"
                             android:text="B04"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B05"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B06"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B06"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B07"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B07"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B08"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B08"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B09"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B09"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_B10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="@drawable/button_square"
-                            android:text="B10"
                             android:textSize="20dp"
                             android:textStyle="bold"
                             app:backgroundTint="@null" />
@@ -372,73 +237,6 @@
                             android:textStyle="bold"
                             app:backgroundTint="@null" />
 
-                        <Button
-                            android:id="@+id/idghe_C05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C05"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_C06"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C06"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_C07"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C07"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_C08"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C08"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
-                        <Button
-                            android:id="@+id/idghe_C09"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C09"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_C10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="C10"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
 
                     </TableRow>
 
@@ -490,74 +288,6 @@
                             android:textStyle="bold"
                             app:backgroundTint="@null" />
 
-                        <Button
-                            android:id="@+id/idghe_D05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D05"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_D06"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D06"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_D07"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D07"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_D08"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D08"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
-                        <Button
-                            android:id="@+id/idghe_D09"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D09"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_D10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="D10"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
                     </TableRow>
 
                     <TableRow
@@ -608,102 +338,6 @@
                             android:textStyle="bold"
                             app:backgroundTint="@null" />
 
-                        <Button
-                            android:id="@+id/idghe_E05"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E05"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_E06"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E06"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_E07"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E07"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_E08"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E08"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
-                        <Button
-                            android:id="@+id/idghe_E09"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E09"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_E10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="E10"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <Button
-                            android:id="@+id/idghe_vd01"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#EB2F06"
-                            android:text="Bassic"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
-                        <Button
-                            android:id="@+id/idghe_vd02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#eb2f06"
-                            android:text="VIP"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            app:backgroundTint="@null" />
-
 
                     </TableRow>
 
@@ -717,15 +351,37 @@
         android:id="@+id/button_datghe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="5dp"
         android:background="#F44336"
         android:text="Đặt ghế"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/button_square"
+        android:text="Ghế thường"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="#eb2f06"
+        android:text="Ghế VIP"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

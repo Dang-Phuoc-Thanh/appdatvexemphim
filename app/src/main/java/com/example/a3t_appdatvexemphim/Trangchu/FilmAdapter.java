@@ -12,7 +12,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.R;
+
+import com.example.a3t_appdatvexemphim.Trangchu.FILM;
+
 import com.example.a3t_appdatvexemphim.THONGTINPHIM.TTPhimFragment;
 
 import java.util.List;
@@ -44,8 +48,12 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
         if (film == null) {
             return;
         }
-        holder.imgFilm.setImageResource(film.getResourceId());
         holder.tvTitle.setText(film.getTitle());
+
+        // Sử dụng Glide để tải hình ảnh từ URL
+        Glide.with(holder.itemView.getContext())
+                .load(film.getImageUrl())
+                .into(holder.imgFilm);
 
         // Set OnClickListener for img_phim2
         if (film.getResourceId() == R.drawable.img_phim2) {
@@ -63,10 +71,14 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
 
     @Override
     public int getItemCount() {
+
+        return nFilms != null ? nFilms.size() : 0;
+
         if (nFilms != null) {
             return nFilms.size();
         }
         return 0;
+
     }
 
     public class FilmViewHolder extends RecyclerView.ViewHolder {
@@ -79,4 +91,8 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
             tvTitle = itemView.findViewById(R.id.text_title);
         }
     }
+
 }
+
+}
+

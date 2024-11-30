@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,8 +23,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     private List<Category> nListCategory;
     private OnCategoryClickListener categoryClickListener;
 
-    public CategoryAdapter(Context nContext) {
+    public CategoryAdapter(Context nContext, List<Category> nListCategory) {
         this.nContext = nContext;
+        this.nListCategory = nListCategory;
     }
 
     public void setData(List<Category> list) {
