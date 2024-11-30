@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">form_SignIn</string>
+    <string name="select">Giới Tính</string>
+    <string name="title">Vé của tôi</string>
+    <string name="tl_img">CGV Vĩnh Trung Plaza</string>
+    <string name="tenphim">Gia đình x điệp viên: Mã trắng</string>
+    <string name="ma_ghe">Ghế A01,A02</string>
+    <string name="name_ngay">Ngày</string>
+    <string name="suatchieu">Suất chiếu:16/09/2024</string>
+    <string name="val_ngay">16/09/2024</string>
+    <string name="xemchitiet">Xem chi tiết</string>
+    <string name="name_gio">Giờ</string>
+    <string name="val_gio">19:00Pm</string>
+    <string name="name_rap">Rạp</string>
+    <string name="val_rap">Cinema</string>
+    <string name="diachi">225-227 Đường Hùng Vương Quận Thanh Khê TP Đà Nẵng</string>
+    <string name="QR">Đưa mã QR cho kiểm soát vé</string>
+    <string name="name_tongtien">Tổng tiền thanh toán</string>
+    <string name="gia_tien">130.000vnđ</string>
+    <string name="image_description">Description of the image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="google_button_description">Đăng nhập bằng Google</string>
+    <string name="twitter_button_description">Đăng nhập bằng Twitter</string>
+    <string name="phim_hoat_hinh">Phim hoạt hình</string>
+    <string name="phim_hoat_hinh_desc">Section for animated movies</string>
+    <string name="back_icon_desc">Back icon</string>
+    <string name="select_tinh">Chọn Tỉnh</string>
+    <string name="img_phim2">https://example.com/path/to/image1.jpg</string>
+    <string name="phd2">https://example.com/path/to/image2.jpg</string>
+    <string name="phd3">https://example.com/path/to/image3.jpg</string>
+    <string name="phd4">https://example.com/path/to/image4.jpg</string>
+    <string name="phd5">https://example.com/path/to/image5.jpg</string>
+
+
+    <string-array name="city_list">
+        <item>Hà Nội</item>
+        <item>Đà Nẵng</item>
+        <item>Hồ Chí Minh</item>
+        <item>Hải Phòng</item>
+        <item>Cần Thơ</item>
+        <item>Sài Gòn</item>
+        <item>Quảng Trị</item>
+        <item>HUẾ</item>
+        <item>Nha Trang</item>
+        <item>Hà Tĩnh</item>
+    </string-array>
+
+
+
+</resources>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app_moi"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linear"
+        android:layout_marginLeft="5dp"
+
+        android:background="#3F4285"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:id="@+id/but_back"
+            android:src="@drawable/baseline_arrow_back_24">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/Payment"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:text="Mua bắp nước"
+            android:textColor="@color/white"
+            android:textSize="27sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cgv">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="top"
+                android:text="CGV Vĩnh Trung Plaza"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:text="Hôm nay ngày 15/10"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="italic">
+
+            </TextView>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="180dp"
+
+            android:background="@drawable/background_white"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/bapnuoc"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/bapnuoc1">
+
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                android:text="My combo 1">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:text="1 bắp+1 nước">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                android:text="99.000đ">
+
+            </TextView>
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+                <TableRow
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/baseline_horizontal_rule_24"
+                        android:layout_weight="1"
+                        android:id="@+id/tru1"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/sl1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:textSize="25sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/baseline_add_24"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cong1"
+                        android:layout_weight="1">
+
+                    </ImageView>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="180dp"
+
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/background_white"
+            android:orientation="vertical"
+
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/bapnuoc2">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                android:text="My combo 2">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:text="1 bắp lớn +2 nước">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="149.000đ">
+
+            </TextView>
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+                <TableRow
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/baseline_horizontal_rule_24"
+                        android:layout_weight="1"
+                        android:id="@+id/tru2"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:layout_weight="1"
+
+                        android:id="@+id/sl2"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        >
+
+                    </TextView>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/baseline_add_24"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cong2"
+                        android:layout_weight="1">
+
+                    </ImageView>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="480dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_white"
+
+
+        android:layout_height="150dp">
+        <TableRow
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Tổng tiền"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tongtien"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_weight="1"
+
+                android:layout_width="0dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="Tiếp tục"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:background="@drawable/but_back_lightblue"
+                android:id="@+id/but_tieptuc"
+                >
+
+            </Button>
+        </TableRow>
+
+    </TableLayout>
+
+
+
+
+
+</FrameLayout>

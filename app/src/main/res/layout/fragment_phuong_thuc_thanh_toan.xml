@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/background_app_moi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhuongThucThanhToan">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="00dp"
+        android:layout_marginLeft="0dp"
+        android:background="#3F4285"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:id="@+id/back"
+            android:src="@drawable/baseline_arrow_back_24">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/Payment"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:text="Thanh toán vé xem phim"
+            android:textColor="@color/white"
+            android:textSize="27sp">
+
+        </TextView>
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn phương thức thanh toán"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:textColor="@color/white">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="90dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/zalopay">
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ZALO PAY"
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/zalo">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="180dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/momo">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOMO"
+            android:id="@+id/momo"
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="270dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/noidia">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/thenoidia"
+            android:text="THẺ NỘI ĐỊA"
+            android:textColor="@color/black"
+            android:textSize="33sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="360dp"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/quocte">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="THẺ QUỐC TẾ"
+            android:id="@+id/thequocte"
+            android:textColor="@color/black"
+            android:textSize="33sp">
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
