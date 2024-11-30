@@ -46,6 +46,8 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+
+
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("com.makeramen:roundedimageview:2.3.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
