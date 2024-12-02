@@ -23,79 +23,56 @@ import androidx.fragment.app.FragmentTransaction;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
-    private TextView txtPttt;
+    private TextView txtPttt,discountTextView,txt_tongtien,txt_thanhtien;
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
 
     public ThanhToan() {
         // Required empty public constructor
     }
 
-    /**
-     * Factory method to create a new instance of this fragment with provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ThanhToan.
-     */
-    public static ThanhToan newInstance(String param1, String param2) {
+    public static ThanhToan newInstance(float discountAmount) {
         ThanhToan fragment = new ThanhToan();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putFloat("DISCOUNT_AMOUNT", discountAmount); // Truyền giá trị giảm giá
         fragment.setArguments(args);
         return fragment;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_thanh_toan, container, false);
+
+        // Ánh xạ các view
         select_voucher = view.findViewById(R.id.select_voucher);
-        // Initialize views
         txtPhone = view.findViewById(R.id.txt_phone);
         txtName = view.findViewById(R.id.txt_name);
         txtEmail = view.findViewById(R.id.txt_email);
         txtPttt = view.findViewById(R.id.select_pttt);
         btnBack = view.findViewById(R.id.back);
         btnThanhToan = view.findViewById(R.id.button_ThanhToan);
+        discountTextView = view.findViewById(R.id.txt_giamgia);
+        txt_thanhtien=view.findViewById(R.id.txt_thanhtien);
+        txt_tongtien=view.findViewById(R.id.txt_tongtien);
 
-        // Set click listener for selecting payment method
+        // Lấy dữ liệu từ Bundle
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            float discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f); // Lấy discountAmount
+            // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
+            discountTextView.setText(String.format("%.2f", discountAmount)); // Hiển thị số giảm giá với 2 chữ số thập phân
+        }
+
+        // Set click listener
         txtPttt.setOnClickListener(v -> openFragment(new PhuongThucThanhToan()));
-        select_voucher.setOnClickListener(v -> openFragment(new VoucherFragment()));
-        // Set click listener for the back button
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                backpage();
-            }
-        });
-
-        // Set click listener for the payment button
+        select_voucher.setOnClickListener(v -> openFragment(new KhuyenMaiFragment()));
+        btnBack.setOnClickListener(v -> backpage());
         btnThanhToan.setOnClickListener(v -> handleThanhToan());
 
         return view;
     }
 
-    /**
-     * Opens the specified fragment, replacing the current one.
-     *
-     * @param fragment The fragment to open.
-     */
     private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -104,10 +81,6 @@ public class ThanhToan extends Fragment {
         fragmentTransaction.commit();
     }
 
-    /**
-     * Handles the payment button click event.
-     * Checks if required fields are filled, and if so, displays the payment confirmation dialog.
-     */
     private void handleThanhToan() {
         if (txtName.getText().toString().isEmpty() ||
                 txtPhone.getText().toString().isEmpty() ||
@@ -119,11 +92,6 @@ public class ThanhToan extends Fragment {
         }
     }
 
-    /**
-     * Creates and returns a confirmation dialog for the payment process.
-     *
-     * @return AlertDialog instance.
-     */
     AlertDialog createDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setMessage("Bạn có muốn thanh toán")
@@ -150,4 +118,5 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
+
 }

@@ -50,6 +50,10 @@ public class TrangChuFragment extends Fragment {
     private List<FILM> listFilmhd = new ArrayList<>();
     private List<FILM> listFilmtc = new ArrayList<>();
     private List<FILM> listFilmkd = new ArrayList<>();
+    private List<ClassPhim> DSFilmhh = new ArrayList<>();
+    private List<ClassPhim> DSFilmhd = new ArrayList<>();
+    private List<ClassPhim> DSFilmtc = new ArrayList<>();
+    private List<ClassPhim> DSFilmkd = new ArrayList<>();
     private List<ClassPhim> dsPhim = new ArrayList<>();
     private Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     private DatabaseReference mData;
@@ -141,15 +145,19 @@ public class TrangChuFragment extends Fragment {
                                 switch (maTheLoaiPhim.intValue()) {
                                     case 6: // Hoạt hình
                                         listFilmhh.add(film);
+                                        DSFilmhh.add(phim);
                                         break;
                                     case 1: // Hành động
                                         listFilmhd.add(film);
+                                        DSFilmhd.add(phim);
                                         break;
                                     case 4: // Kinh dị
                                         listFilmkd.add(film);
+                                        DSFilmkd.add(phim);
                                         break;
                                     case 2: // Tình cảm
                                         listFilmtc.add(film);
+                                        DSFilmtc.add(phim);
                                         break;
                                     default:
                                         break;
@@ -280,19 +288,35 @@ public class TrangChuFragment extends Fragment {
         categoryAdapter.setOnCategoryClickListener(new CategoryAdapter.OnCategoryClickListener() {
             @Override
             public void onCategoryClick(Category category) {
-                if (category.getNameCategory().equals("Hoạt hình")) {
-                    // Chuyển sang DSphimhhFragment
-                    FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new DSphimhhFragment()); // Đảm bảo ID này là ID của FrameLayout trong Home activity
-                    transaction.addToBackStack(null);  // Thêm vào backstack để quay lại TrangChuFragment nếu cần
-                    transaction.commit();
+                List<ClassPhim> danhsachphim = new ArrayList<>();
+                switch (category.getNameCategory()) {
+                    case "Hoạt hình":
+                        danhsachphim = DSFilmhh;
+                        break;
+                    case "Hành động":
+                        danhsachphim = DSFilmhd;
+                        break;
+                    case "Kinh dị":
+                        danhsachphim = DSFilmkd;
+                        break;
+                    case "Tình cảm":
+                        danhsachphim = DSFilmtc;
+                        break;
                 }
+
+                Bundle mybundle = new Bundle();
+                mybundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Sử dụng putParcelableArrayList để truyền danh sách phim
+
+                DSphimhhFragment fragment = new DSphimhhFragment();
+                fragment.setArguments(mybundle);
+
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, fragment); // Đảm bảo ID này là ID của FrameLayout trong Home activity
+                transaction.addToBackStack(null);  // Thêm vào backstack để quay lại TrangChuFragment nếu cần
+                transaction.commit();
             }
         });
-
-
     }
-
     @Override
     public void onResume() {
         super.onResume();

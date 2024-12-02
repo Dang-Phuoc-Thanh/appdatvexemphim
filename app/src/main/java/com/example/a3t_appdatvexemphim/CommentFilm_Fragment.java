@@ -5,12 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bumptech.glide.Glide;
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
+import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,29 +25,20 @@ import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
  */
 public class CommentFilm_Fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private ImageView back;
+    private ImageView imgFilm;
+    private TextView nameFilm;
+    private TextView contentFilm;
 
     public CommentFilm_Fragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CommentFilm_Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static CommentFilm_Fragment newInstance(String param1, String param2) {
         CommentFilm_Fragment fragment = new CommentFilm_Fragment();
         Bundle args = new Bundle();
@@ -64,14 +61,50 @@ public class CommentFilm_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_comment_film_, container, false);
+
+        // Nhận dữ liệu từ Bundle
+        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+        ArrayList<ClassPhim> danhsachphim = getArguments().getParcelableArrayList("danhsachphim");
+
+        // Khởi tạo các thành phần giao diện
+        imgFilm = view.findViewById(R.id.img_film);
+        nameFilm = view.findViewById(R.id.name_film);
+        contentFilm = view.findViewById(R.id.Content_film);
         back = view.findViewById(R.id.back);
+
+        // Thiết lập dữ liệu cho các thành phần giao diện
+        if (selectedFilm != null) {
+            Glide.with(this).load(selectedFilm.getImageUrl()).into(imgFilm);
+            nameFilm.setText(selectedFilm.getName());
+            contentFilm.setText(selectedFilm.getDatve()); // Giả sử bạn muốn hiển thị thông tin đặt vé
+        }
+
+        // Sử dụng dữ liệu của selectedFilm nếu cần thiết
+        if (danhsachphim != null && selectedFilm != null) {
+            int i = 0;
+            while (i < danhsachphim.size() && !selectedFilm.getName().equals(danhsachphim.get(i).TenPhim)) {
+                i++;
+            }
+
+            if (i < danhsachphim.size()) {
+                // Sử dụng dữ liệu của selectedFilm nếu cần thiết
+                nameFilm.setText(danhsachphim.get(i).TenPhim);
+                Glide.with(this).load(danhsachphim.get(i).HinhAnh).into(imgFilm); // Sử dụng Glide để tải hình ảnh
+                contentFilm.setText(danhsachphim.get(i).NoiDung);
+            }
+        }
+
+        // Sự kiện click cho nút quay lại
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Fragment newFragment = new DSphimhhFragment(); // Replace with your target fragment
+
+                // Truyền lại danh sách phim nếu cần thiết
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("danhsachphim", danhsachphim);
+                newFragment.setArguments(bundle);
 
                 // Replace the current fragment with the new fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
@@ -81,6 +114,7 @@ public class CommentFilm_Fragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
         return view;
     }
 }

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a3t_appdatvexemphim.RAP.CinemaFragment;
 import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
+import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -37,10 +38,10 @@ public class Home extends AppCompatActivity {
                 replaceFragment(new VoucherFragment());
                 return true;
             } else if (itemId == R.id.rap) {
-                replaceFragment(new CinemaFragment());
+                replaceFragment(new KhuyenMaiFragment());
                 return true;
             }
-            replaceFragment(new ImageFragment());
+            replaceFragment(new Video_Fragment());
             return true;
         });
 

@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
-import com.example.a3t_appdatvexemphim.DSphim.listAdapter;
+import com.example.a3t_appdatvexemphim.DSphim.listAdapter1;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.databinding.ActivityCtrapBinding;
 
@@ -29,6 +29,7 @@ public class CtrapFragment extends Fragment {
     public CtrapFragment() {
         // Required empty public constructor
     }
+
     public static CtrapFragment newInstance(Rap rap) {
         CtrapFragment fragment = new CtrapFragment();
         Bundle args = new Bundle();
@@ -36,7 +37,6 @@ public class CtrapFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,65 +54,68 @@ public class CtrapFragment extends Fragment {
 
         // Nhận dữ liệu từ Bundle
         dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+        final ArrayList<dsFILMHH> dsFILMHHArrayList;
 
+        // Khôi phục danh sách phim từ Bundle nếu có
+        if (getArguments() != null && getArguments().getSerializable("filmList") != null) {
+            dsFILMHHArrayList = (ArrayList<dsFILMHH>) getArguments().getSerializable("filmList");
+        } else {
+            dsFILMHHArrayList = new ArrayList<>();
+            // Thêm dữ liệu mặc định vào dsFILMHHArrayList nếu cần
+            String[] imageUrls = {
+                    "https://example.com/path/to/image1.jpg",
+                    "https://example.com/path/to/image2.jpg",
+                    "https://example.com/path/to/image3.jpg",
+                    "https://example.com/path/to/image4.jpg",
+                    "https://example.com/path/to/image5.jpg",
+                    "https://example.com/path/to/image6.jpg",
+                    "https://example.com/path/to/image7.jpg"
+            };
+            String[] name = {
+                    "SPY x FAMILY",
+                    "Xác ướp - Cuộc phiêu lưu đến LonDon",
+                    "Mèo béo siêu đẳng",
+                    "SPY x FAMILY",
+                    "Bản giao hưởng địa cầu",
+                    "Truyền thuyết nhẫn thuật ninja",
+                    "Sonic the Hedgehog 2 (2024)"
+            };
+            String[] time = {
+                    "Thời lượng: 180 Phút",
+                    "Thời lượng: 90 Phút",
+                    "Thời lượng: 150 Phút",
+                    "Thời lượng: 200 Phút",
+                    "Thời lượng: 90 Phút",
+                    "Thời lượng: 180 Phút",
+                    "Thời lượng: 150 Phút"
+            };
+            String[] day = {
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024",
+                    "Khởi chiếu: 20/09/2024"
+            };
+            String[] datve = {
+                    "Đặt vé",
+                    "Đặt vé",
+                    "Đặt vé",
+                    "Đặt vé",
+                    "Đặt vé",
+                    "Đặt vé",
+                    "Đặt vé"
+            };
 
-
-        // Dữ liệu cho danh sách phim
-        int[] imageId = {
-                R.drawable.phim6,
-                R.drawable.phh11,
-                R.drawable.phh2,
-                R.drawable.phh3,
-                R.drawable.phh5,
-                R.drawable.phh6,
-                R.drawable.phh11
-        };
-        String[] name = {
-                "SPY x FAMILY",
-                "Xác ướp - Cuộc phiêu lưu đến LonDon",
-                "Mèo béo siêu đẳng",
-                "SPY x FAMILY",
-                "Bản giao hưởng địa cầu",
-                "Truyền thuyết nhẫn thuật ninja",
-                "Sonic the Hedgehog 2 (2024)"
-        };
-        String[] time = {
-                "Thời lượng: 180 Phút",
-                "Thời lượng: 90 Phút",
-                "Thời lượng: 150 Phút",
-                "Thời lượng: 200 Phút",
-                "Thời lượng: 90 Phút",
-                "Thời lượng: 180 Phút",
-                "Thời lượng: 150 Phút"
-        };
-        String[] day = {
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024",
-                "Khởi chiếu: 20/09/2024"
-        };
-        String[] datve = {
-                "Đặt vé",
-                "Đặt vé",
-                "Đặt vé",
-                "Đặt vé",
-                "Đặt vé",
-                "Đặt vé",
-                "Đặt vé"
-        };
-
-        // Tạo danh sách đối tượng dsFILMHH
-        ArrayList<dsFILMHH> dsFILMHHArrayList = new ArrayList<>();
-        for (int i = 0; i < imageId.length; i++) {
-            dsFILMHH dsfilmhh = new dsFILMHH(name[i], time[i], day[i], datve[i], imageId[i]);
-            dsFILMHHArrayList.add(dsfilmhh);
+            for (int i = 0; i < imageUrls.length; i++) {
+                dsFILMHH dsfilmhh = new dsFILMHH(name[i], time[i], day[i], datve[i], imageUrls[i]);
+                dsFILMHHArrayList.add(dsfilmhh);
+            }
         }
 
         // Khởi tạo adapter
-        listAdapter ListAdapter = new listAdapter(getContext(), dsFILMHHArrayList);
+        listAdapter1 ListAdapter = new listAdapter1(getContext(), dsFILMHHArrayList);
 
         // Gán adapter cho ListView
         binding.listview.setAdapter(ListAdapter);
@@ -128,6 +131,7 @@ public class CtrapFragment extends Fragment {
                 // Truyền dữ liệu nếu cần thiết qua Bundle
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", dsFILMHHArrayList.get(position));
+                bundle.putSerializable("filmList", dsFILMHHArrayList); // Lưu trữ danh sách phim
                 ctrapFragment.setArguments(bundle);
 
                 // Thay thế Fragment hiện tại bằng CTRapFragment
@@ -136,19 +140,14 @@ public class CtrapFragment extends Fragment {
                         .addToBackStack(null) // Thêm vào back stack để có thể quay lại
                         .commit();
             }
-
         });
 
         // Thiết lập sự kiện nhấp chuột cho nút quay lại
         binding.icQuaylai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Chuyển đến CinemaFragment
-                CinemaFragment cinemaFragment = new CinemaFragment();
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.frameRAP, cinemaFragment) // R.id.frameRAP là ID của View chứa Fragment
-                        .addToBackStack(null) // Thêm vào stack để có thể quay lại
-                        .commit();
+                // Pop the back stack to return to the previous fragment
+                getParentFragmentManager().popBackStack();
             }
         });
 
