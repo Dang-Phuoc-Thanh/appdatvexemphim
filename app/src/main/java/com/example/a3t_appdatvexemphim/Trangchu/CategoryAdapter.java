@@ -1,4 +1,3 @@
-// CategoryAdapter.java
 package com.example.a3t_appdatvexemphim.Trangchu;
 
 import android.content.Context;
@@ -7,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,14 +15,16 @@ import com.example.a3t_appdatvexemphim.R;
 
 import java.util.List;
 
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
     private Context nContext;
     private List<Category> nListCategory;
-    private OnCategoryClickListener categoryClickListener;
+    private OnCategoryClickListener categoryClickListener; // Thêm listener
 
-    public CategoryAdapter(Context nContext) {
+    public CategoryAdapter(Context nContext, List<Category> nListCategory) {
         this.nContext = nContext;
+        this.nListCategory = nListCategory;
     }
 
     public void setData(List<Category> list) {
@@ -31,7 +32,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         notifyDataSetChanged();
     }
 
-    public void setOnCategoryClickListener(OnCategoryClickListener listener) {
+    public void setOnCategoryClickListener(OnCategoryClickListener listener) { // Thêm phương thức để thiết lập listener
         this.categoryClickListener = listener;
     }
 
@@ -52,13 +53,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(nContext, RecyclerView.HORIZONTAL, false);
         holder.rcvFilm.setLayoutManager(linearLayoutManager);
-        FilmAdapter filmAdapter = new FilmAdapter((FragmentActivity) nContext);
+        FilmAdapter filmAdapter = new FilmAdapter();
         filmAdapter.setData(category.getFilms());
         holder.rcvFilm.setAdapter(filmAdapter);
 
+        // Thiết lập sự kiện click cho tên danh mục
         holder.itemView.setOnClickListener(v -> {
             if (categoryClickListener != null) {
-                categoryClickListener.onCategoryClick(category);
+                categoryClickListener.onCategoryClick(category); // Gọi listener khi danh mục được nhấn
             }
         });
     }
@@ -68,7 +70,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return nListCategory != null ? nListCategory.size() : 0;
     }
 
-    public interface OnCategoryClickListener {
+    public interface OnCategoryClickListener { // Giao diện để xử lý sự kiện click
         void onCategoryClick(Category category);
     }
 

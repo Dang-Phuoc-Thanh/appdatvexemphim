@@ -1,20 +1,27 @@
 package com.example.a3t_appdatvexemphim.DSphim;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ListView;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.a3t_appdatvexemphim.BapNuocFragment;
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
+import com.example.a3t_appdatvexemphim.DSphim.listAdapter;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
 import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
+import com.example.a3t_appdatvexemphim.VoucherFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,40 +65,37 @@ public class DSphimhhFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_d_sphimhh, container, false);
 
+        // Nhận danh sách phim từ Bundle
+        Bundle myBundle = getArguments();
+        ArrayList<ClassPhim> danhsachphim = new ArrayList<>();
+        if (myBundle != null) {
+            danhsachphim = myBundle.getParcelableArrayList("danhsachphim");
+        }
+
         // Initialize the ListView
-        DSphim = view.findViewById(R.id.listview);
+        ListView DSphim = view.findViewById(R.id.listview);
 
         // Initialize the list and add data
-        list = new ArrayList<>();
-        list.add(new dsFILMHH("SPY x FAMILY", "Thời lượng: 180 Phút", "Khởi chiếu: 20/09/2024", "Đặt vé", R.drawable.phim6));
-        list.add(new dsFILMHH("Xác ướp - Cuộc phiêu lưu đến LonDon", "Thời lượng: 90 Phút", "Khởi chiếu: 20/09/2024", "Đặt vé", R.drawable.phh11));
-        list.add(new dsFILMHH("Mèo béo siêu đẳng", "Thời lượng: 150 Phút", "Khởi chiếu: 20/09/2024", "Đặt vé", R.drawable.phh2));
-        list.add(new dsFILMHH("Bản giao hưởng địa cầu", "Thời lượng: 90 Phút", "Khởi chiếu: 20/09/2024", "Đặt vé", R.drawable.phh5));
-        list.add(new dsFILMHH("Truyền thuyết nhẫn thuật ninja", "Thời lượng: 180 Phút", "Khởi chiếu: 20/09/2024", "Đặt vé", R.drawable.phh6));
+        ArrayList<dsFILMHH> list = new ArrayList<>();
+        if (danhsachphim != null) {
+            for (ClassPhim phim : danhsachphim) {
+                list.add(new dsFILMHH(
+                        phim.TenPhim,
+                        "Thời lượng: " + phim.ThoiLuong + " Phút",
+                        "Khởi chiếu: " + phim.NgayKhoiChieu, "Nội dung: " + phim.NoiDung,
+                        "Đặt vé",
+                        phim.HinhAnh, // Replace with the actual image URL
+                        phim.Video// Replace with the actual trailer URL
 
-        // Set the adapter
-        adapter = new listAdapter(getActivity(), list);
-        DSphim.setAdapter(adapter);
-
-
-        // Set the OnItemClickListener for the ListView
-        back=view.findViewById(R.id.ic_quaylai);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment newFragment = new TrangChuFragment(); // Replace with your target fragment
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
+                ));
             }
-        });
+        }
+
+        // Khởi tạo adapter với đủ ba tham số
+        listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
+        DSphim.setAdapter(adapter);
 
         return view;
     }

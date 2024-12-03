@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.trangchu) {
+            if (itemId == R.id.Frametrangchu) {
                 replaceFragment(new TrangChuFragment());
                 return true;
             } else if (itemId == R.id.voucher) {
@@ -40,7 +40,7 @@ public class Home extends AppCompatActivity {
                 replaceFragment(new CinemaFragment());
                 return true;
             }
-            replaceFragment(new ImageFragment());
+            replaceFragment(new KhacFragment());
             return true;
         });
 

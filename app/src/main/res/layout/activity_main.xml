@@ -26,6 +26,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="450dp"
+        android:fitsSystemWindows="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,10 +48,10 @@
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/txMatKhau" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/txMatKhau"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="36dp"
@@ -59,11 +60,12 @@
                 android:hint="  Password"
                 android:inputType="textPassword"
                 android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+                app:layout_constraintTop_toBottomOf="@+id/txEmail" />
 
             <TextView
                 android:id="@+id/textViewForgotPassword"
@@ -75,7 +77,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.816"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+                app:layout_constraintTop_toBottomOf="@+id/txMatKhau" />
 
             <TextView
                 android:id="@+id/textViewSignInWith"
@@ -142,7 +144,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress"
+                android:id="@+id/txEmail"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -151,6 +153,7 @@
                 android:hint="  Username"
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

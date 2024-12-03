@@ -42,7 +42,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/img_film"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:src="@drawable/p3" />
 
@@ -55,6 +56,7 @@
             <TableRow>
 
                 <TextView
+                    android:id="@+id/name_film"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
@@ -128,6 +130,7 @@
 
                 <!-- Second item -->
                 <LinearLayout
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -142,6 +145,7 @@
                         android:src="@drawable/trailer" />
 
                     <TextView
+                        android:id="@+id/trailer"
                         android:layout_width="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_height="wrap_content"
@@ -258,9 +262,10 @@
         </TextView>
 
         <TextView
+            android:id="@+id/Content_film"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spy x Family xoay quanh gia đình Forger, một gia đình đặc biệt với những bí mật riêng. Loid Forger, còn được biết đến là Twilight là một điệp viên xuất sắc. Anh ta nhận nhiệm vụ phải tạo dựng một gia đình giả để thâm nhập vào một ngôi trường danh tiếng và tiếp cận mục tiêu quan trọng. Để hoàn thành nhiệm vụ này, anh nhận nuôi Anya, một cô bé có khả năng ngoại cảm, và kết hôn với Yor Briar, một nữ sát thủ bí ẩn. Cả ba phải cố gắng che giấu thân phận thật của mình trong khi vẫn phải sống như một gia đình bình thường">
+            android:text="Spy x Family xoay quanh gia đình Forger, một gia đình đặc biệt với những bí mật riêng. Loid Forger, còn được biết đến là Twilight là một điệp viên xuất sắc.">
 
         </TextView>
 
@@ -270,7 +275,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="480dp"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"

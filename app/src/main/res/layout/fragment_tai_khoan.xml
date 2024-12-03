@@ -65,9 +65,10 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tvHOTEN"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:text="Đặng Phước Thạnh"
+
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
@@ -84,11 +85,12 @@
                 android:layout_weight="1" />
 
             <TextView
+                android:id="@+id/tvGIOITINH"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:text="Nam" />
+                />
         </TableRow>
 
         <!-- Email -->
@@ -103,7 +105,8 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:text="thanh@gmail.com"
+                android:id="@+id/tvEMAIL"
+
                 android:layout_width="wrap_content"
                 android:textColor="@color/white"
 
@@ -123,7 +126,7 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:text="0123456789"
+                android:id="@+id/tvSDT"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"

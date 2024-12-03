@@ -1,4 +1,3 @@
-// FilmAdapter.java
 package com.example.a3t_appdatvexemphim.Trangchu;
 
 import android.view.LayoutInflater;
@@ -8,23 +7,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.R;
-import com.example.a3t_appdatvexemphim.THONGTINPHIM.TTPhimFragment;
+import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 
 import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder> {
 
     private List<FILM> nFilms;
-    private FragmentActivity activity;
-
-    public FilmAdapter(FragmentActivity activity) {
-        this.activity = activity;
-    }
 
     public void setData(List<FILM> list) {
         this.nFilms = list;
@@ -44,29 +37,16 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
         if (film == null) {
             return;
         }
-        holder.imgFilm.setImageResource(film.getResourceId());
         holder.tvTitle.setText(film.getTitle());
-
-        // Set OnClickListener for img_phim2
-        if (film.getResourceId() == R.drawable.img_phim2) {
-            holder.imgFilm.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame_layout, new TTPhimFragment());
-                    transaction.addToBackStack(null);
-                    transaction.commit();
-                }
-            });
-        }
+        // Sử dụng Glide để tải hình ảnh từ URL
+        Glide.with(holder.itemView.getContext())
+                .load(film.getImageUrl())
+                .into(holder.imgFilm);
     }
 
     @Override
     public int getItemCount() {
-        if (nFilms != null) {
-            return nFilms.size();
-        }
-        return 0;
+        return nFilms != null ? nFilms.size() : 0;
     }
 
     public class FilmViewHolder extends RecyclerView.ViewHolder {

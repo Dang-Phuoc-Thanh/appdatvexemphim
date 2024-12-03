@@ -7,11 +7,11 @@
     android:id="@+id/Frametrangchu"
     tools:context=".Trangchu.TrangChuFragment">
 
+    <!-- Hình nền ứng dụng -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_app_moi">
-
 
         <!-- Hình ảnh đầu trang -->
         <ImageView
@@ -40,9 +40,6 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Biểu tượng tìm kiếm -->
-
-        <!-- TextView "Sắp chiếu" -->
-
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
@@ -53,7 +50,7 @@
             app:layout_constraintTop_toTopOf="@+id/edtSearch"
             app:srcCompat="@drawable/ic_search" />
 
-        <!-- ViewPager cho hình ảnh quảng cáo -->
+        <!-- TextView "Sắp chiếu" -->
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -66,28 +63,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
 
+        <!-- ScrollView chứa các nội dung khác -->
         <ScrollView
-            android:layout_width="391dp"
-            android:layout_height="533dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.97">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!-- ViewPager cho hình ảnh quảng cáo -->
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPagerImagerSlider"
-                    android:layout_width="407dp"
+                    android:layout_width="match_parent"
                     android:layout_height="319dp"
-                    android:layout_marginTop="-10dp"
+                    android:layout_marginTop="185dp"
                     android:paddingStart="80dp"
                     android:paddingEnd="80dp" />
 
+                <!-- Nút Đặt vé -->
                 <Button
                     android:id="@+id/btn_datve"
                     android:layout_width="135dp"
@@ -95,9 +94,9 @@
                     android:layout_marginTop="24dp"
                     android:backgroundTint="@color/blue"
                     android:text="Đặt vé"
-                    android:layout_gravity="center"
-                    />
+                    android:layout_gravity="center" />
 
+                <!-- TextView "Bạn cũng có thể xem" -->
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
@@ -107,19 +106,15 @@
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
+                <!-- RecyclerView cho danh sách phim -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rcv_category"
-                    android:layout_width="438dp"
-                    android:layout_height="414dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp" />
             </LinearLayout>
         </ScrollView>
-
-        <!-- Nút đặt vé -->
-
-        <!-- TextView "Bạn cũng có thể xem" -->
-
-        <!-- RecyclerView cho danh sách phim -->
+        <!-- Thêm BottomNavigationView vào đây -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
