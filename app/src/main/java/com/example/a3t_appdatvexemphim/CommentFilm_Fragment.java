@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
 import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
+import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 
 import java.util.ArrayList;
 
@@ -72,28 +73,35 @@ public class CommentFilm_Fragment extends Fragment {
         nameFilm = view.findViewById(R.id.name_film);
         contentFilm = view.findViewById(R.id.Content_film);
         back = view.findViewById(R.id.back);
+        TextView trailer = view.findViewById(R.id.trailer); // Ánh xạ TextView trailer
 
         // Thiết lập dữ liệu cho các thành phần giao diện
         if (selectedFilm != null) {
             Glide.with(this).load(selectedFilm.getImageUrl()).into(imgFilm);
             nameFilm.setText(selectedFilm.getName());
-            contentFilm.setText(selectedFilm.getDatve()); // Giả sử bạn muốn hiển thị thông tin đặt vé
+            contentFilm.setText(selectedFilm.getNoidung()); // Giả sử bạn muốn hiển thị thông tin đặt vé
         }
 
-        // Sử dụng dữ liệu của selectedFilm nếu cần thiết
-        if (danhsachphim != null && selectedFilm != null) {
-            int i = 0;
-            while (i < danhsachphim.size() && !selectedFilm.getName().equals(danhsachphim.get(i).TenPhim)) {
-                i++;
-            }
+        // Sự kiện click cho nút trailer
+        trailer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Video_Fragment
+                Video_Fragment videoFragment = new Video_Fragment();
 
-            if (i < danhsachphim.size()) {
-                // Sử dụng dữ liệu của selectedFilm nếu cần thiết
-                nameFilm.setText(danhsachphim.get(i).TenPhim);
-                Glide.with(this).load(danhsachphim.get(i).HinhAnh).into(imgFilm); // Sử dụng Glide để tải hình ảnh
-                contentFilm.setText(danhsachphim.get(i).NoiDung);
+                // Tùy chọn: Truyền dữ liệu vào Video_Fragment nếu cần thiết
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("selectedFilm", selectedFilm); // Truyền thông tin phim nếu cần
+                videoFragment.setArguments(bundle);
+
+                // Thay thế fragment hiện tại bằng Video_Fragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frame_layout, videoFragment);
+                transaction.addToBackStack(null); // Quay lại khi nhấn Back
+                transaction.commit();
             }
-        }
+        });
 
         // Sự kiện click cho nút quay lại
         back.setOnClickListener(new View.OnClickListener() {
@@ -109,8 +117,8 @@ public class CommentFilm_Fragment extends Fragment {
                 // Replace the current fragment with the new fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
+                fragmentTransaction.replace(R.id.frame_layout, newFragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

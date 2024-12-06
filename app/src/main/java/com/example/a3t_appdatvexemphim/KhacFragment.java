@@ -12,32 +12,27 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a3t_appdatvexemphim.GiupDo.HoTroFragment;
+import com.example.a3t_appdatvexemphim.BapNuocFragment;
+import com.example.a3t_appdatvexemphim.VeCuaToiFragment;
+import com.example.a3t_appdatvexemphim.TaiKhoan;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link KhacFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class KhacFragment extends Fragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private TextView tk,hotro;
-    private String mParam1;
-    private String mParam2;
-    private TextView rap;
 
-    private ImageView vecuatoi;
-    private ImageView bapnuoc;
+    private static final String ARG_USER_ID = "USER_ID"; // Key để truyền userId qua arguments
+    private String userId; // Biến lưu userId
+
+    private TextView tk, hotro;
+    private ImageView vecuatoi, bapnuoc;
 
     public KhacFragment() {
         // Required empty public constructor
     }
 
-    public static KhacFragment newInstance(String param1, String param2) {
+    // Phương thức factory để tạo instance mới của KhacFragment
+    public static KhacFragment newInstance(String userId) {
         KhacFragment fragment = new KhacFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_USER_ID, userId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -45,81 +40,57 @@ public class KhacFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Lấy userId từ arguments
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            userId = getArguments().getString(ARG_USER_ID);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        // Inflate layout cho KhacFragment
         View view = inflater.inflate(R.layout.fragment_khac, container, false);
 
-
+        // Ánh xạ các view
         vecuatoi = view.findViewById(R.id.vecuatoi);
         bapnuoc = view.findViewById(R.id.bapnuoc);
-        tk =view.findViewById(R.id.taikhoan);
-        hotro=view.findViewById(R.id.hotro);
-        vecuatoi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create a new fragment instance
-                Fragment newFragment = new VeCuaToiFragment(); // Replace with your target fragment
+        tk = view.findViewById(R.id.taikhoan);
+        hotro = view.findViewById(R.id.hotro);
 
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
-            }
+        // Xử lý sự kiện "Vé của tôi"
+        vecuatoi.setOnClickListener(v -> {
+            Fragment newFragment = new VeCuaToiFragment();
+            replaceFragment(newFragment);
         });
 
-        bapnuoc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Create a new fragment instance
-                Fragment newFragment = new BapNuocFragment(); // Replace with your target fragment
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
-            }
-        });
-        tk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment newFragment = new TaiKhoan(); // Replace with your target fragment
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
-
-            }
+        // Xử lý sự kiện "Bắp nước"
+        bapnuoc.setOnClickListener(v -> {
+            Fragment newFragment = new BapNuocFragment();
+            replaceFragment(newFragment);
         });
 
-        hotro=view.findViewById(R.id.hotro);
-        hotro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment newFragment = new HoTroFragment(); // Thay thế bằng HoTroFragment
+        // Xử lý sự kiện "Tài khoản" (truyền userId)
+        tk.setOnClickListener(v -> {
+            Fragment newFragment = TaiKhoan.newInstance(userId); // Truyền userId tới TaiKhoanFragment
+            replaceFragment(newFragment);
+        });
 
-                // Thay thế fragment hiện tại bằng HoTroFragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Đảm bảo R.id.frame_layout là ID của container layout
-                fragmentTransaction.addToBackStack(null); // Tùy chọn: thêm vào back stack
-                fragmentTransaction.commit();
-            }
+        // Xử lý sự kiện "Hỗ trợ"
+        hotro.setOnClickListener(v -> {
+            Fragment newFragment = new HoTroFragment();
+            replaceFragment(newFragment);
         });
 
         return view;
+    }
+
+    // Hàm thay thế fragment trong container
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment); // frame_layout là container
+        fragmentTransaction.addToBackStack(null); // Thêm vào back stack
+        fragmentTransaction.commit();
     }
 }

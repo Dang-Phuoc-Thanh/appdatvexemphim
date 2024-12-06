@@ -5,7 +5,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -25,6 +28,9 @@ import java.util.List;
 
 public class KhuyenMaiFragment extends Fragment {
     ListView listView;
+    private TextView lichsu;
+    private LinearLayout linear_nhap, linear_uudai;
+    private ImageView but_back;
     List<Voucher> khuyenMaiList;
     VoucherAdapter adapter;
     DatabaseReference data;
@@ -32,9 +38,12 @@ public class KhuyenMaiFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_khuyen_mai, container, false);
+        lichsu = view.findViewById(R.id.lichsu);
+        but_back = view.findViewById(R.id.but_back);
 
-        // Ánh xạ ListView
         listView = view.findViewById(R.id.lv_voucher);
+        linear_nhap = view.findViewById(R.id.linear_nhap);
+        linear_uudai = view.findViewById(R.id.linearuudai);
 
         // Khởi tạo danh sách và adapter
         ArrayList<Voucher> voucherList = new ArrayList<>();
@@ -44,7 +53,7 @@ public class KhuyenMaiFragment extends Fragment {
         // Lấy tham chiếu Firebase
         data = FirebaseDatabase.getInstance().getReference("KHUYENMAI");
 
-// Đọc dữ liệu từ Firebase
+        // Đọc dữ liệu từ Firebase
         data.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -70,7 +79,6 @@ public class KhuyenMaiFragment extends Fragment {
                 adapter.notifyDataSetChanged(); // Update ListView
             }
 
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.e("FirebaseError", "Error: " + error.getMessage());
@@ -90,6 +98,37 @@ public class KhuyenMaiFragment extends Fragment {
             openFragment(thanhToanFragment);
         });
 
+        lichsu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VoucherLichSu voucherLichSuFragment = new VoucherLichSu(); // Tạo instance của VoucherLichSu
+                openFragment(voucherLichSuFragment);
+            }
+        });
+
+        linear_uudai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UuDai uuDai = new UuDai(); // Tạo instance của UuDai
+                openFragment(uuDai);
+            }
+        });
+
+        linear_nhap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AddVoucher addVoucher = new AddVoucher(); // Tạo instance của AddVoucher
+                openFragment(addVoucher);
+            }
+        });
+
+        but_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backpage();
+            }
+        });
+
         return view;
     }
 
@@ -99,12 +138,17 @@ public class KhuyenMaiFragment extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
+
     private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment); // Thay thế fragment trong container
-        fragmentTransaction.addToBackStack(null); // Thêm vào back stack
-        fragmentTransaction.commit(); // Hoàn thành giao dịch
-    }
 
+        if (fragment != null) {
+            fragmentTransaction.replace(R.id.frame_layout, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        } else {
+            Log.e("openFragment", "Fragment truyền vào null.");
+        }
+    }
 }

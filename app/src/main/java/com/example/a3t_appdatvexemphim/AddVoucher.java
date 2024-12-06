@@ -59,14 +59,7 @@ public class AddVoucher extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new VoucherFragment();
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                backpage();
             }
         });
 
@@ -88,5 +81,11 @@ public class AddVoucher extends Fragment {
         });
 
         return view;  // Ensure this is at the end of the method
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }

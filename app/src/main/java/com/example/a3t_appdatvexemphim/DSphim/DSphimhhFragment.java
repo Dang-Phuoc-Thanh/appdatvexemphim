@@ -3,25 +3,18 @@ package com.example.a3t_appdatvexemphim.DSphim;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.example.a3t_appdatvexemphim.BapNuocFragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.DSphim.listAdapter;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
-import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
-import com.example.a3t_appdatvexemphim.VoucherFragment;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,7 +25,7 @@ public class DSphimhhFragment extends Fragment {
     private ListView DSphim;
     private ArrayList<dsFILMHH> list;
     private listAdapter adapter;
-    private ImageView back;
+    private ImageView butback;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -66,6 +59,7 @@ public class DSphimhhFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_d_sphimhh, container, false);
+        butback = view.findViewById(R.id.back);
 
         // Nhận danh sách phim từ Bundle
         Bundle myBundle = getArguments();
@@ -75,26 +69,42 @@ public class DSphimhhFragment extends Fragment {
         }
 
         // Initialize the ListView
-        ListView DSphim = view.findViewById(R.id.listview);
+        DSphim = view.findViewById(R.id.listview);
 
         // Initialize the list and add data
-        ArrayList<dsFILMHH> list = new ArrayList<>();
+        list = new ArrayList<>();
         if (danhsachphim != null) {
             for (ClassPhim phim : danhsachphim) {
                 list.add(new dsFILMHH(
                         phim.TenPhim,
                         "Thời lượng: " + phim.ThoiLuong + " Phút",
                         "Khởi chiếu: " + phim.NgayKhoiChieu,
+                        "Nội dung: " + phim.NoiDung,
                         "Đặt vé",
-                        phim.HinhAnh // Replace with the actual image URL
+                        phim.HinhAnh, // Replace with the actual image URL
+                        phim.Video // Replace with the actual trailer URL
                 ));
             }
         }
 
         // Khởi tạo adapter với đủ ba tham số
-        listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
+        adapter = new listAdapter(getContext(), list, danhsachphim);
         DSphim.setAdapter(adapter);
 
+        butback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backpage();
+            }
+        });
+
         return view;
+    }
+
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }

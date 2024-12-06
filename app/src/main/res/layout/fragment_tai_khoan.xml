@@ -10,132 +10,87 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="406dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:background="#3F4285"
-        android:layout_height="wrap_content">
+        android:background="#3F4285">
 
         <ImageView
 
+            android:id="@+id/buttonback"
             android:layout_width="39dp"
             android:layout_height="match_parent"
-            android:id="@+id/buttonback"
             android:src="@drawable/baseline_arrow_back_24">
 
         </ImageView>
 
-        <TextView
-            android:id="@+id/Payment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tài khoản của tôi"
-            android:textColor="@color/white"
-            android:textSize="27sp">
-
-        </TextView>
     </LinearLayout>
 
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:src="@drawable/profile" />
 
-        <!-- Profile Image -->
-        <TableRow
-            android:gravity="center">
-            <ImageView
-                android:src="@drawable/profile"
-                android:layout_width="150dp"
-                android:layout_height="150dp" />
-        </TableRow>
+    <!-- Họ và tên -->
+    <TextView
+        android:id="@+id/tvht"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Họ và tên:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <!-- Họ và tên -->
-        <TableRow
-            android:paddingTop="20dp">
-            <TextView
-                android:text="Họ và tên:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:text="Đặng Phước Thạnh"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </TableRow>
-
-        <!-- Giới tính -->
-        <TableRow
-            android:paddingTop="8dp">
-            <TextView
-                android:text="Giới tính:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:text="Nam" />
-        </TableRow>
-
-        <!-- Email -->
-        <TableRow
-            android:paddingTop="8dp">
-            <TextView
-                android:text="Email:"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:text="thanh@gmail.com"
-                android:layout_width="wrap_content"
-                android:textColor="@color/white"
-
-                android:textSize="20sp"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <!-- Số điện thoại -->
-        <TableRow
-            android:paddingTop="8dp">
-            <TextView
-                android:text="Số điện thoại:"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:text="0123456789"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_weight="1" />
-        </TableRow>
-
-    </TableLayout>
-
+    <TextView
+        android:id="@+id/tvgt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvht"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Giới tính:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvgt"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvsdt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvemail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Số điện thoại:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    --------------------------------------------
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="400dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp">
 
@@ -289,8 +244,71 @@
 
     </TableLayout>
 
+    <TextView
+        android:id="@+id/Payment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="10dp"
+        android:text="Tài khoản của tôi"
+        android:textColor="@color/white"
+        android:textSize="27sp">
 
+    </TextView>
 
+    <TextView
+        android:id="@+id/tvHOTEN"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvht"
+        android:hint="TextView"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
 
+    <TextView
+        android:id="@+id/tvGIOITINH"
+        android:layout_width="304dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvHOTEN"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tvEMAIL"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvGIOITINH"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvSDT"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvEMAIL"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
 </RelativeLayout>

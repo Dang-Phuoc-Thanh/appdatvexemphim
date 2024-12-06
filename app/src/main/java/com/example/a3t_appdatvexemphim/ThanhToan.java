@@ -23,7 +23,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
-    private TextView txtPttt,discountTextView,txt_tongtien,txt_thanhtien;
+    private TextView txtPttt, discountTextView, txt_tongtien, txt_thanhtien;
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
@@ -53,15 +53,17 @@ public class ThanhToan extends Fragment {
         btnBack = view.findViewById(R.id.back);
         btnThanhToan = view.findViewById(R.id.button_ThanhToan);
         discountTextView = view.findViewById(R.id.txt_giamgia);
-        txt_thanhtien=view.findViewById(R.id.txt_thanhtien);
-        txt_tongtien=view.findViewById(R.id.txt_tongtien);
+        txt_thanhtien = view.findViewById(R.id.txt_thanhtien);
+        txt_tongtien = view.findViewById(R.id.txt_tongtien);
 
         // Lấy dữ liệu từ Bundle
         Bundle bundle = getArguments();
         if (bundle != null) {
             float discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f); // Lấy discountAmount
             // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
-            discountTextView.setText(String.format("%.2f", discountAmount)); // Hiển thị số giảm giá với 2 chữ số thập phân
+            discountTextView.setText(String.format("%.0f VND", discountAmount));
+            txt_thanhtien.setText("90000 VND");
+            txt_tongtien.setText(String.format("%.0f VND", 90000 - discountAmount)); // Hiển thị số giảm giá với 2 chữ số thập phân
         }
 
         // Set click listener
@@ -118,5 +120,4 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
-
 }
