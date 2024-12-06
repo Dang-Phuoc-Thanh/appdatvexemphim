@@ -1,5 +1,6 @@
 package com.example.a3t_appdatvexemphim;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +59,7 @@ public class BapNuocFragment extends Fragment {
 
         return view;
     }
+
 
     private void init() {
         soluong1.setText("0");

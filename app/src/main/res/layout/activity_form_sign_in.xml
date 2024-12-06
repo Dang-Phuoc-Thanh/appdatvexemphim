@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:text="THÔNG TIN BẮT BUỘC"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,10 +36,10 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/HOTEN"
         android:layout_width="316dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Họ Tên"
         android:inputType="text"
@@ -49,34 +49,46 @@
         app:layout_constraintWidth_percent="0.75"
         tools:ignore="HardcodedText" />
 
+
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/EMAIL"
         android:layout_width="321dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Gmail"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextText"
+        app:layout_constraintTop_toBottomOf="@id/HOTEN"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/SDT"
+        android:layout_width="316dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Số điện thoại"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EMAIL"
         app:layout_constraintWidth_percent="0.75"
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="316dp"
-        android:layout_height="57dp"
+        android:id="@+id/MK"
+        android:layout_width="317dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Mật Khẩu"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/SDT"
         app:layout_constraintWidth_percent="0.75"
         tools:ignore="HardcodedText" />
-
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/nhaplaiMK"
         android:layout_width="317dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -84,10 +96,9 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@id/MK"
         app:layout_constraintWidth_percent="0.75"
         tools:ignore="HardcodedText" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -104,13 +115,13 @@
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintHorizontal_bias="0.045"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.742" />
+            app:layout_constraintVertical_bias="0.754" />
 
         <EditText
-            android:id="@+id/dateEditText"
+            android:id="@+id/dateNgaySinh"
             android:layout_width="224dp"
             android:layout_height="50dp"
             android:enabled="false"
@@ -130,10 +141,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.074"
+            app:layout_constraintHorizontal_bias="0.055"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.538"
+            app:layout_constraintVertical_bias="0.553"
             tools:ignore="HardcodedText" />
 
         <CheckBox
@@ -141,7 +152,7 @@
             android:layout_width="365dp"
             android:layout_height="63dp"
             android:text="Tôi cam kết tuân theo chính sách bảo mật và điều khoản sử dụng"
-            app:layout_constraintBottom_toBottomOf="@+id/button2"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDANGKY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.347"
             app:layout_constraintStart_toStartOf="parent"
@@ -149,7 +160,7 @@
             app:layout_constraintVertical_bias="0.898" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnDANGKY"
             android:layout_width="211dp"
             android:layout_height="50dp"
             android:layout_marginBottom="28dp"
@@ -161,12 +172,13 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <RadioGroup
+            android:id="@+id/radioGroupGioiTinh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="44dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/dateEditText"
+            app:layout_constraintBottom_toTopOf="@+id/dateNgaySinh"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
@@ -174,13 +186,13 @@
             app:layout_constraintVertical_bias="0.48000002">
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rbtNam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nam" />
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rbtNu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nữ" />
