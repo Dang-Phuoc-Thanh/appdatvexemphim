@@ -47,6 +47,7 @@ public class TrangChuFragment extends Fragment {
     public ViewPager2 viewPager2;
     private Handler sliderHandler = new Handler();
     private Runnable sliderRunnable;
+
     public List<FILM> listFilmhh = new ArrayList<>();
     public List<FILM> listFilmhd = new ArrayList<>();
     public List<FILM> listFilmtc = new ArrayList<>();
@@ -58,6 +59,7 @@ public class TrangChuFragment extends Fragment {
     public List<ClassPhim> dsPhim = new ArrayList<>();
     public Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     public DatabaseReference mData;
+
 
     @Nullable
     @Override

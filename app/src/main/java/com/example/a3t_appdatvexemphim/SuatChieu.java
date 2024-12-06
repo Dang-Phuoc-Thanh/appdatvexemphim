@@ -61,8 +61,9 @@ public class SuatChieu extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_suat_chieu, container, false);
-        linear1=view.findViewById(R.id.linear1);
-        butback=view.findViewById(R.id.imageView2);
+        linear1 = view.findViewById(R.id.linear1);
+        butback = view.findViewById(R.id.imageView2);
+
         // Nhận dữ liệu từ Bundle
         List<ClassPhim> danhsachphim = null;
         dsFILMHH selectedFilm = null;
@@ -102,6 +103,7 @@ public class SuatChieu extends Fragment {
                 });
             }
         }
+
         butback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,14 +111,13 @@ public class SuatChieu extends Fragment {
             }
         });
 
-
         return view;
     }
+
     public void backpage() {
         FragmentManager fragmentManager = getParentFragmentManager();
         if (fragmentManager.getBackStackEntryCount() > 0) {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
-
 }

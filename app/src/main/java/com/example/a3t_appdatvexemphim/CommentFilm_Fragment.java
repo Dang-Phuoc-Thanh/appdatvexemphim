@@ -59,7 +59,6 @@ public class CommentFilm_Fragment extends Fragment {
     }
 
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -126,5 +125,4 @@ public class CommentFilm_Fragment extends Fragment {
 
         return view;
     }
-
 }
