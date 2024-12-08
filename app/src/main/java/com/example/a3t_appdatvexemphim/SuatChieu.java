@@ -60,7 +60,6 @@ public class SuatChieu extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_suat_chieu, container, false);
         linear1 = view.findViewById(R.id.linear1);
         butback = view.findViewById(R.id.imageView2);
@@ -114,7 +113,6 @@ public class SuatChieu extends Fragment {
 
         return view;
     }
-}
 
     public void backpage() {
         FragmentManager fragmentManager = getParentFragmentManager();

@@ -15,7 +15,15 @@ public class dsFILMHH implements Serializable {
         this.imageUrl = imageUrl;
         this.trailerURL = trailerURL;
     }
+    public dsFILMHH(String name, String time, String day, String datve, String imageUrl) {
+        this.name = name;
+        this.time = time;
+        this.day = day;
 
+        this.datve = datve;
+        this.imageUrl = imageUrl;
+
+    }
     public dsFILMHH() {
     }
 
