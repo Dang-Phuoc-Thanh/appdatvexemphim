@@ -11,14 +11,11 @@
         android:background="#3F4285"
         android:layout_height="wrap_content">
         <ImageView
-
             android:layout_width="39dp"
             android:layout_height="match_parent"
             android:id="@+id/but_back"
             android:src="@drawable/baseline_arrow_back_24">
-
         </ImageView>
-
 
         <TextView
             android:id="@+id/Payment"
@@ -26,26 +23,18 @@
             android:layout_height="wrap_content"
             android:text="Voucher của tôi"
             android:layout_marginLeft="10dp"
-
             android:textColor="@color/white"
             android:textSize="27sp">
-
         </TextView>
         <TextView
-
             android:layout_width="wrap_content"
             android:id="@+id/lichsu"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-
             android:text="Lịch sử"
             android:textColor="@color/white"
             android:textSize="27sp">
-
         </TextView>
-
-
-
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,10 +45,8 @@
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="50dp"
-
             android:gravity="center"
-            android:background="@drawable/button_voucher_nhap"
-            >
+            android:background="@drawable/button_voucher_nhap">
 
             <ImageView
                 android:layout_width="30dp"
@@ -67,7 +54,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:src="@drawable/write">
-
             </ImageView>
 
             <TextView
@@ -78,10 +64,7 @@
                 android:id="@+id/add_voucher"
                 android:text="Nhập mã voucher"
                 android:textColor="@color/white">
-
             </TextView>
-
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="200dp"
@@ -89,8 +72,7 @@
             android:id="@+id/linearuudai"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:background="@drawable/button_voucher_nhap"
-            >
+            android:background="@drawable/button_voucher_nhap">
 
             <ImageView
                 android:layout_width="30dp"
@@ -98,7 +80,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:src="@drawable/vouch1er">
-
             </ImageView>
 
             <TextView
@@ -108,14 +89,9 @@
                 android:id="@+id/add_uudai"
                 android:text="Ưu đãi"
                 android:textColor="@color/white"
-
                 android:textSize="20sp">
-
             </TextView>
-
-
         </LinearLayout>
-
     </LinearLayout>
 
         <ListView

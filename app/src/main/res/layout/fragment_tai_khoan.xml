@@ -14,13 +14,16 @@
         android:layout_height="40dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
-        android:background="#3F4285">
+
+        android:background="#3F4285"
+       >
 
         <ImageView
 
             android:id="@+id/buttonback"
             android:layout_width="39dp"
             android:layout_height="match_parent"
+
             android:src="@drawable/baseline_arrow_back_24">
 
         </ImageView>
@@ -86,7 +89,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
---------------------------------------------
+    --------------------------------------------
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

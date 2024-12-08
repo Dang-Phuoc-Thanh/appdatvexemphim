@@ -1,3 +1,4 @@
+// Video_Fragment.java
 package com.example.a3t_appdatvexemphim.Video;
 
 import android.media.MediaPlayer;
@@ -13,6 +14,7 @@ import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -68,7 +70,8 @@ public class Video_Fragment extends Fragment {
             tvMoTa.setText("Nội dung: " + selectedFilm.getNoidung());
 
 
-        }
+       }
+
         return view;
+        }
     }
-}

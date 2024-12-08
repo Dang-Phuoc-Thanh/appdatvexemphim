@@ -3,9 +3,10 @@ package com.example.a3t_appdatvexemphim.DSphim;
 import java.io.Serializable;
 
 public class dsFILMHH implements Serializable {
-    String name, time, day,noidung, datve, imageUrl , trailerURL;
 
-    public dsFILMHH(String name, String time, String day,String noidung, String datve, String imageUrl , String trailerURL) {
+    String name, time, day, noidung, datve, imageUrl, trailerURL;
+
+    public dsFILMHH(String name, String time, String day, String noidung, String datve, String imageUrl, String trailerURL) {
         this.name = name;
         this.time = time;
         this.day = day;
@@ -13,14 +14,6 @@ public class dsFILMHH implements Serializable {
         this.datve = datve;
         this.imageUrl = imageUrl;
         this.trailerURL = trailerURL;
-    }
-
-    public dsFILMHH(String name, String time, String day, String datve, String imageUrl ) {
-        this.name = name;
-        this.time = time;
-        this.day = day;
-        this.datve = datve;
-        this.imageUrl = imageUrl;
     }
 
     public dsFILMHH() {
@@ -50,13 +43,21 @@ public class dsFILMHH implements Serializable {
         this.day = day;
     }
 
+    public String getNoidung() {
+        return noidung;
+    }
+
+    public void setNoidung(String noidung) {
+        this.noidung = noidung;
+    }
+
     public String getDatve() {
         return datve;
     }
 
     public void setDatve(String datve) {
-        this.datve = datve;
     }
+
 
     public String getImageUrl() {
         return imageUrl;
@@ -71,12 +72,7 @@ public class dsFILMHH implements Serializable {
     public void setTrailerUrl(String trailerURL) {
         this.trailerURL = trailerURL;
     }
-    public String getNoidung() {
-        return noidung;
-    }
-    public void setNoidung(String noidung) {
-        this.noidung = noidung;
-    }
+
 
 
 }

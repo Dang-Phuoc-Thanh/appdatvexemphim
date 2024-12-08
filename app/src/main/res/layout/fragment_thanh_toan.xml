@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,6 +15,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+
             android:layout_width="39dp"
             android:layout_height="match_parent"
             android:id="@+id/back"
@@ -42,11 +44,13 @@
             android:textSize="25sp"
             android:textColor="@color/white"/>
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/receive_ticket_info_description"
             android:textColor="@color/white"/>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -74,9 +78,10 @@
             android:textColor="@color/white"
             android:textSize="25sp"/>
 
+
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             android:background="@drawable/button"
             android:contentDescription="Phone number input field"
             android:layout_marginTop="5dp"
@@ -100,6 +105,7 @@
             android:id="@+id/txt_email"
             android:paddingStart="10dp"
             android:background="@drawable/button"
+
             android:textColorHint="@color/white"
             android:hint="@string/enter_email"/>
 
@@ -205,4 +211,5 @@
             </TableRow>
         </TableLayout>
     </LinearLayout>
+
 </FrameLayout>
