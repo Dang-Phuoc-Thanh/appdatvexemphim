@@ -29,6 +29,31 @@
     <string name="phim_hoat_hinh_desc">Section for animated movies</string>
     <string name="back_icon_desc">Back icon</string>
     <string name="select_tinh">Chọn Tỉnh</string>
+    <string name="img_phim2">https://i.imgur.com/SSCivLb.jpeg</string>
+    <string name="phd2">https://i.imgur.com/HPdmwWF.jpeg</string>
+    <string name="phd3">https://i.imgur.com/bXdiC0B.jpeg</string>
+    <string name="phd4">https://i.imgur.com/m9edomF.jpeg</string>
+    <string name="phd5">https://i.imgur.com/m9edomF.jpeg</string>
+
+    <string name="payment_title">Thanh toán vé xem phim</string>
+    <string name="receive_ticket_info">Thông tin nhận vé</string>
+    <string name="receive_ticket_info_description">Chúng tôi sẽ gửi thông tin về số điện thoại và email</string>
+    <string name="name_label">Họ và Tên</string>
+    <string name="phone_label">Số điện thoại</string>
+    <string name="email_label">Email</string>
+    <string name="payment_info_label">Thông tin thanh toán</string>
+    <string name="promotion_label">Khuyến mãi</string>
+    <string name="total_amount_label">Thành tiền</string>
+    <string name="discount_label">Giảm giá</string>
+    <string name="total_label">Tổng tiền</string>
+    <string name="payment_method_label">Chọn phương thức thanh toán</string>
+    <string name="select_voucher">Chọn Voucher</string>
+    <string name="select_voucher_hint">Chọn Voucher</string>
+    <string name="enter_name">Nhập họ và tên</string>
+    <string name="enter_phone">Nhập số điện thoại</string>
+    <string name="enter_email">Nhập email</string>
+    <string name="payment_button">Thanh Toán</string>
+
 
     <string-array name="city_list">
         <item>Hà Nội</item>
@@ -42,5 +67,7 @@
         <item>Nha Trang</item>
         <item>Hà Tĩnh</item>
     </string-array>
+
+
 
 </resources>

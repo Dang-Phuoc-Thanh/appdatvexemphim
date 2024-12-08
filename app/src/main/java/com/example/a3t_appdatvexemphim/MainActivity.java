@@ -85,112 +85,54 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void navigateToHome(String userId) {
+        Intent intent = new Intent(MainActivity.this, Home.class);
+        intent.putExtra("USER_ID", userId); // Truyền userId qua Intent
+        startActivity(intent);
+        finish(); // Kết thúc MainActivity nếu không cần quay lại
+    }
 
-
-    // Kiểm tra thông tin đăng nhập với Firebase
-    private void checkLogin(String email, String password) {
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("TAIKHOAN");
-        database.orderByChild("Email").equalTo(email).addListenerForSingleValueEvent(new ValueEventListener() {
+    private void fetchUserData(String userId) {
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("TAIKHOAN").child(userId);
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        // Lấy giá trị Email và MatKhau
-                        String dbEmail = snapshot.child("Email").getValue(String.class);
-                        Object dbPasswordObj = snapshot.child("MatKhau").getValue();
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    // Chuyển đến Fragment TaiKhoan và truyền userId
 
-                        // Kiểm tra email khớp
-                        if (dbEmail != null && dbEmail.equals(email)) {
-                            if (dbPasswordObj instanceof Long) {
-                                // Nếu MatKhau là kiểu Long, chuyển sang String
-                                String dbPassword = String.valueOf(dbPasswordObj);
-                                if (dbPassword.equals(password)) {
-                                    navigateToHome();
-                                    return;
-                                }
-                            } else if (dbPasswordObj instanceof String) {
-                                // Nếu MatKhau là kiểu String (dự phòng)
-                                String dbPassword = (String) dbPasswordObj;
-                                if (dbPassword.equals(password)) {
-                                    navigateToHome();
-                                    return;
-                                }
-                            }
-                            Toast.makeText(MainActivity.this, "Sai mật khẩu!", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                    }
-                    Toast.makeText(MainActivity.this, "Tài khoản không tồn tại!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Tài khoản không tồn tại!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Không tìm thấy thông tin tài khoản!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(MainActivity.this, "Database error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Lỗi kết nối cơ sở dữ liệu!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
+
+
+
+
+    // Kiểm tra thông tin đăng nhập với Firebase
+    private void checkLogin(String email, String password) {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = auth.getCurrentUser();
                         if (user != null) {
-                            String userId = user.getUid();
-                            fetchUserData(userId);
+                            String userId = user.getUid(); // Lấy userId
+                            Log.d("MainActivity", "Đăng nhập thành công với userId: " + userId);
+                            navigateToHome(userId); // Chuyển tới TrangChu
                         }
                     } else {
-                        // Log the error message
-                        Log.e("AuthError", "Authentication failed: " + task.getException().getMessage());
-                        Toast.makeText(MainActivity.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Đăng nhập thất bại. Vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
-    private void navigateToHome() {
-        Intent intent = new Intent(MainActivity.this, Home.class);
-        startActivity(intent);
-        finish(); // Optional: finish MainActivity if you don't want to allow the user to go back to the login screen
-    }
-
-    private void fetchUserData(String userId) {
-        // Lấy tham chiếu tới người dùng trong Firebase Realtime Database
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("TAIKHOAN").child(userId);
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    // Lấy thông tin từ Firebase
-                    String hoten = dataSnapshot.child("hoten").getValue(String.class);
-                    String gioiTinh = dataSnapshot.child("GioiTinh").getValue(String.class);
-                    String email = dataSnapshot.child("Email").getValue(String.class);
-                    String sdt = dataSnapshot.child("SDT").getValue(String.class);
-
-                    // Log dữ liệu để kiểm tra
-                    Log.d("UserData", "Hoten: " + hoten);
-                    Log.d("UserData", "GioiTinh: " + gioiTinh);
-                    Log.d("UserData", "Email: " + email);
-                    Log.d("UserData", "SDT: " + sdt);
-
-                    // Truyền dữ liệu tới Fragment
-                    TaiKhoan fragment = TaiKhoan.newInstance(hoten, gioiTinh, email, sdt);
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.frame_layout, fragment)  // Đảm bảo rằng R.id.frame_layout là ID của FrameLayout trong activity_main.xml
-                            .commit();
-                } else {
-                    // Nếu không tìm thấy người dùng
-                    Toast.makeText(MainActivity.this, "User not found.", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Xử lý lỗi nếu có
-                Toast.makeText(MainActivity.this, "Failed to load user data.", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
 }

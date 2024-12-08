@@ -76,9 +76,20 @@ public class TrangChuFragment extends Fragment {
         but_datve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                List<ClassPhim> danhsachphim = DSFilmhh;
+
+                // Tạo Bundle để truyền danh sách phim sang Fragment
+                Bundle mybundle = new Bundle();
+                mybundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Truyền danh sách phim hoạt hình
+
+                // Khởi tạo Fragment DSphimhhFragment và gán dữ liệu
+                DSphimhhFragment fragment = new DSphimhhFragment();
+                fragment.setArguments(mybundle);
+
+                // Chuyển sang DSphimhhFragment
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, new DSphimhhFragment()); // Đảm bảo ID này là ID của FrameLayout trong Home activity
-                transaction.addToBackStack(null);  // Thêm vào backstack để quay lại TrangChuFragment nếu cần
+                transaction.replace(R.id.frame_layout, fragment); // Đảm bảo ID này là ID của FrameLayout trong layout
+                transaction.addToBackStack(null); // Thêm vào backstack để quay lại TrangChuFragment nếu cần
                 transaction.commit();
             }
         });

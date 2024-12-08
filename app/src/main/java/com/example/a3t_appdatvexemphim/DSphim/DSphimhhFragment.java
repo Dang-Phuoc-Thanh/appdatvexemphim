@@ -32,7 +32,7 @@ public class DSphimhhFragment extends Fragment {
     private ListView DSphim;
     private ArrayList<dsFILMHH> list;
     private listAdapter adapter;
-    private ImageView back;
+    private ImageView butback;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -66,7 +66,7 @@ public class DSphimhhFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_d_sphimhh, container, false);
-
+        butback=view.findViewById(R.id.back);
         // Nhận danh sách phim từ Bundle
         Bundle myBundle = getArguments();
         ArrayList<ClassPhim> danhsachphim = new ArrayList<>();
@@ -96,7 +96,18 @@ public class DSphimhhFragment extends Fragment {
         // Khởi tạo adapter với đủ ba tham số
         listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
         DSphim.setAdapter(adapter);
-
+        butback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backpage();
+            }
+        });
         return view;
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }

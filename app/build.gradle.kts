@@ -63,6 +63,7 @@ dependencies {
     annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
     implementation ("com.google.firebase:firebase-auth:22.0.0")
 
+    implementation ("com.google.firebase:firebase-auth:23.1.0")
 
 
 
