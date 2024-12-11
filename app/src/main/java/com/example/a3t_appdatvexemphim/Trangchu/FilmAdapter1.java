@@ -12,14 +12,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.R;
-import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 
 import java.util.List;
 
-public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder> {
+public class FilmAdapter1 extends RecyclerView.Adapter<FilmAdapter1.FilmViewHolder> {
+
     private Context context;
     private List<FILM> nFilms;
- 
+
+    public FilmAdapter1(Context context, List<FILM> list) {
+        this.context = context;
+        this.nFilms = list;
+    }
+
     public void setData(List<FILM> list) {
         this.nFilms = list;
         notifyDataSetChanged();

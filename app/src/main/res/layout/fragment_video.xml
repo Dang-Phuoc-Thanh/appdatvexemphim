@@ -15,6 +15,7 @@
 
         <!-- Icon Back -->
         <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_left_white"
@@ -84,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Phim cùng thể loại"
+                android:text="Có thể bạn thích"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />

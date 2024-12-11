@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,6 @@ public class ThanhToan extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_thanh_toan, container, false);
@@ -60,12 +60,18 @@ public class ThanhToan extends Fragment {
 
         // Lấy dữ liệu từ Bundle
         Bundle bundle = getArguments();
+        float discountAmount = 0;
         if (bundle != null) {
-            float discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f); // Lấy discountAmount
+            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
             // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
-            discountTextView.setText(String.format("%.0f VND", discountAmount));
-            txt_thanhtien.setText("90000 VND");
-            txt_tongtien.setText(String.format("%.0f VND", 90000 - discountAmount)); // Hiển thị số giảm giá với 2 chữ số thập phân
+            discountTextView.setText(String.format("%.0f" + " Vnd", discountAmount));
+            txt_thanhtien.setText("90000 Vnd");
+
+            txt_tongtien.setText(String.format("%.0f" + " VND", 90000 - discountAmount));// Hiển thị số giảm giá với 2 chữ số thập phân
+        } else {
+            txt_tongtien.setText("90000 Vnd");
+            txt_thanhtien.setText("90000 Vnd");
+            discountTextView.setText("0 Vnd");
         }
 
         // Set click listener
@@ -102,8 +108,33 @@ public class ThanhToan extends Fragment {
                 .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        // Show success message
                         Toast.makeText(getContext(), "Thanh toán thành công", Toast.LENGTH_SHORT).show();
-                        openFragment(new VeCuaToiFragment());
+
+                        // Create a new Bundle to pass selected film and seats
+                        Bundle bundle = new Bundle();
+
+                        // Assuming these values are passed to the fragment beforehand
+                        if (getArguments() != null) {
+
+                            // Get selected film and seats if available
+                            if (getArguments().containsKey("selectedFilm")) {
+                                bundle.putSerializable("selectedFilm", getArguments().getSerializable("selectedFilm"));
+
+                            }
+                            if (getArguments().containsKey("danhSachGheDuocChon")) {
+                                bundle.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
+                            }
+                        }
+
+                        // Pass the bundle to the VeCuaToiFragment
+                        VeCuaToiFragment veCuaToiFragment = VeCuaToiFragment.newInstance(bundle);
+
+                        // Start the VeCuaToiFragment with the passed data
+                        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_layout, veCuaToiFragment); // Replace with VeCuaToiFragment
+                        transaction.addToBackStack(null); // Allow back navigation
+                        transaction.commit();
                     }
                 })
                 .setNegativeButton("Không", new DialogInterface.OnClickListener() {
@@ -122,4 +153,6 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
+
+
 }
