@@ -19,7 +19,6 @@ public class dsFILMHH implements Serializable {
         this.name = name;
         this.time = time;
         this.day = day;
-
         this.datve = datve;
         this.imageUrl = imageUrl;
 

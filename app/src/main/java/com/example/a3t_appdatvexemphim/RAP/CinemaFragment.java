@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -16,7 +17,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.a3t_appdatvexemphim.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +80,34 @@ public class CinemaFragment extends Fragment {
         btn = view.findViewById(R.id.btn_chontinh);
         autoCompleteTextView = view.findViewById(R.id.inputTV);
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
+
+//
+//        List<String> cityList = new ArrayList<>();
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, cityList);
+//        autoCompleteTextView.setAdapter(adapter);
+//
+//        // Fetch data from Firebase
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ThanhPho");
+//        databaseReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                cityList.clear();
+//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+//                    String city = snapshot.getValue(String.class);
+//                    cityList.add(city);
+//                }
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                // Handle possible errors.
+//            }
+//        });
+//
+
+
+
 
         // Set up RecyclerView
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class DSphimhhFragment extends Fragment {
     private ArrayList<dsFILMHH> list;
     private listAdapter adapter;
     private ImageView butback;
+    private Button but_datve;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";

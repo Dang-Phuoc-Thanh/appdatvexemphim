@@ -94,4 +94,17 @@ public class ClassPhim implements Parcelable {
         dest.writeString(QuocGia);
         dest.writeInt(TrangThai);
     }
+
+    public ClassPhim(String TenPhim, String HinhAnh) {
+        this.TenPhim = TenPhim;
+        this.HinhAnh = HinhAnh;
+    }
+
+    public String getTenPhim() {
+        return TenPhim;
+    }
+
+    public String getHinhAnh() {
+        return HinhAnh;
+    }
 }

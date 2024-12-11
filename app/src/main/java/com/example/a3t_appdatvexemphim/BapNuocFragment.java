@@ -14,6 +14,9 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
+
+import java.util.ArrayList;
 public class BapNuocFragment extends Fragment {
 
     private Button tieptuc;
@@ -22,13 +25,26 @@ public class BapNuocFragment extends Fragment {
     private TextView soluong1, soluong2;
     private int quantity1 = 0, quantity2 = 0;
 
+    // Variables to store passed data
+    private ArrayList<String> danhSachGheDuocChon;
+    private dsFILMHH selectedFilm;
+    private float discountAmount;
+
     public BapNuocFragment() { }
 
-    public static BapNuocFragment newInstance(String param1, String param2) {
+    public static BapNuocFragment newInstance(ArrayList<String> danhSachGheDuocChon, dsFILMHH selectedFilm, float discountAmount) {
         BapNuocFragment fragment = new BapNuocFragment();
         Bundle args = new Bundle();
-        args.putString("param1", param1);
-        args.putString("param2", param2);
+
+        // Truyền danh sách ghế đã chọn
+        args.putStringArrayList("danhSachGheDuocChon", danhSachGheDuocChon);
+
+        // Truyền thông tin phim đã chọn
+        args.putSerializable("selectedFilm", selectedFilm); // selectedFilm phải implements Serializable
+
+        // Truyền dữ liệu giảm giá
+        args.putFloat("DISCOUNT_AMOUNT", discountAmount);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -47,9 +63,45 @@ public class BapNuocFragment extends Fragment {
         cong1 = view.findViewById(R.id.cong1);
         cong2 = view.findViewById(R.id.cong2);
 
+        // Initialize the views
         init();
 
-        tieptuc.setOnClickListener(v -> navigateTo(new ThanhToan()));
+        // Get data from Bundle
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            danhSachGheDuocChon = bundle.getStringArrayList("danhSachGheDuocChon");
+            selectedFilm = (dsFILMHH) bundle.getSerializable("selectedFilm");
+            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
+        }
+
+        tieptuc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // In BapNuocFragment
+
+                // Ensure the data is in the bundle
+                Bundle bundle = new Bundle();
+                if (danhSachGheDuocChon != null) {
+                    bundle.putStringArrayList("danhSachGheDuocChon", danhSachGheDuocChon);
+                }
+
+                if (selectedFilm != null) {
+                    bundle.putSerializable("selectedFilm", selectedFilm);
+                }
+
+                // Truyền dữ liệu giảm giá
+                bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
+
+                // Open ThanhToanFragment and pass data
+                ThanhToan thanhToanFragment = ThanhToan.newInstance(discountAmount);
+                thanhToanFragment.setArguments(bundle); // Pass bundle to ThanhToanFragment
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, thanhToanFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
         back.setOnClickListener(v -> navigateTo(new DatGheFragment()));
 
         cong1.setOnClickListener(v -> updateQuantity(true, soluong1, true));
@@ -59,7 +111,6 @@ public class BapNuocFragment extends Fragment {
 
         return view;
     }
-
 
     private void init() {
         soluong1.setText("0");
@@ -80,7 +131,7 @@ public class BapNuocFragment extends Fragment {
     }
 
     private void updateTotal() {
-        int total = (quantity1 *99000)+(quantity2*14900); // Replace 10000 with item price if needed
+        int total = (quantity1 * 99000) + (quantity2 * 14900); // Replace prices with the correct values if needed
         tongtien.setText(total + " đ");
     }
 
