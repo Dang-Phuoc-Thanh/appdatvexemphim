@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309197351500",
+    "project_id": "quanlyxemphim",
+    "storage_bucket": "quanlyxemphim.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309197351500:android:a4792a42e63f200a3262e9",
+        "android_client_info": {
+          "package_name": "com.example.a3t_appdatvexemphim"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxrfK7uHXhvWC8ls1V-Cym_6suCtf9TgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

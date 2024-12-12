@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".formSignIn">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="420dp"
+        android:layout_height="53dp"
+        android:background="@color/black"
+        android:paddingTop="10dp"
+        android:text="Đăng Ký"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="THÔNG TIN BẮT BUỘC"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/HOTEN"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Họ Tên"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+
+
+    <EditText
+        android:id="@+id/EMAIL"
+        android:layout_width="321dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HOTEN"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/SDT"
+        android:layout_width="316dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Số điện thoại"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EMAIL"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/MK"
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Mật Khẩu"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SDT"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/nhaplaiMK"
+        android:layout_width="317dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Nhập Lại Mật Khẩu"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/MK"
+        app:layout_constraintWidth_percent="0.75"
+        tools:ignore="HardcodedText" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/calendarButton"
+            android:layout_width="147dp"
+            android:layout_height="50dp"
+            android:text="Ngày sinh"
+            android:textSize="20sp"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.754" />
+
+        <EditText
+            android:id="@+id/dateNgaySinh"
+            android:layout_width="224dp"
+            android:layout_height="50dp"
+            android:enabled="false"
+            android:hint="Selected Date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/calendarButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.754" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN BỔ SUNG"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.553"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="365dp"
+            android:layout_height="63dp"
+            android:text="Tôi cam kết tuân theo chính sách bảo mật và điều khoản sử dụng"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDANGKY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.898" />
+
+        <Button
+            android:id="@+id/btnDANGKY"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/custom_btn_login"
+            android:text="Đăng Ký"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGioiTinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="44dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/dateNgaySinh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.48000002">
+
+            <RadioButton
+                android:id="@+id/rbtNam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nam" />
+
+            <RadioButton
+                android:id="@+id/rbtNu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nữ" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

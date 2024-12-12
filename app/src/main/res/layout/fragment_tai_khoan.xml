@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app_moi"
+    tools:context=".TaiKhoan">
+
+
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:background="#3F4285">
+
+        <ImageView
+
+            android:id="@+id/buttonback"
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back_24">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/profile" />
+
+    <!-- Họ và tên -->
+    <TextView
+        android:id="@+id/tvht"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Họ và tên:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvgt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvht"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Giới tính:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvgt"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Email:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvsdt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvemail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Số điện thoại:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    --------------------------------------------
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:src="@drawable/coin"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:text="Xu tích lũy"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:textSize="25sp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/next"
+                android:id="@+id/xu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:src="@drawable/introduction"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Giới thiệu bạn bè"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="30dp"
+                android:alpha="0.4"
+                android:id="@+id/gioithieu"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/file" />
+
+            <TextView
+                android:text="Lịch sử giao dịch"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:src="@drawable/encrypted"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Bảo mật tài khoản"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:src="@drawable/salary"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:text="Nguồn tiền"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:background="@color/blue">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logout" />
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Đăng xuất"
+                android:id="@+id/logout"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/Payment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="10dp"
+        android:text="Tài khoản của tôi"
+        android:textColor="@color/white"
+        android:textSize="27sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvHOTEN"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvht"
+        android:hint="TextView"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvGIOITINH"
+        android:layout_width="304dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvHOTEN"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/tvEMAIL"
+        android:layout_width="212dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvGIOITINH"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tvSDT"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvEMAIL"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/tvgt"
+        android:hint="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>
