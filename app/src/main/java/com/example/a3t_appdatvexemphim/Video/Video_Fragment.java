@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,11 +24,11 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.Trangchu.FILM;
-import com.example.a3t_appdatvexemphim.Trangchu.FilmAdapter;
 import com.example.a3t_appdatvexemphim.Trangchu.FilmAdapter1;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -98,16 +101,7 @@ public class Video_Fragment extends Fragment {
         if (selectedFilm != null) {
             loadMoviesByGenreData(selectedFilm.getName());
         }
-// Inside your fragment where btnBack is located
-        ImageView btnBack = view.findViewById(R.id.btnBack);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate back to the previous fragment
-                getParentFragmentManager().popBackStack();
-            }
-        });
         return view;
     }
 

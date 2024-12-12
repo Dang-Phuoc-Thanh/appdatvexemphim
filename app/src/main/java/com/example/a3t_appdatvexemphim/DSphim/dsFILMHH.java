@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class dsFILMHH implements Serializable {
 
+
     String name, time, day, noidung, datve, imageUrl, trailerURL;
 
     public dsFILMHH(String name, String time, String day, String noidung, String datve, String imageUrl, String trailerURL) {

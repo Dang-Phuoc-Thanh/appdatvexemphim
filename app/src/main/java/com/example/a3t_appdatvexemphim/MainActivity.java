@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Xử lý quên mật khẩu
+    // Xử lý quên mật khẩu
         forgotPassword.setOnClickListener(view -> {
             // Thêm xử lý chuyển màn hình nếu cần
             Intent intent = new Intent(MainActivity.this, QuenMK.class);

@@ -60,16 +60,19 @@ public class SuatChieu extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_suat_chieu, container, false);
         linear1 = view.findViewById(R.id.linear1);
         butback = view.findViewById(R.id.imageView2);
 
         // Nhận dữ liệu từ Bundle
         List<ClassPhim> danhsachphim = null;
-        dsFILMHH selectedFilm = null;
+        final dsFILMHH selectedFilm; // Declare as final
         if (getArguments() != null) {
             selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
             danhsachphim = getArguments().getParcelableArrayList("danhsachphim");
+        } else {
+            selectedFilm = null; // Initialize to null if no arguments
         }
 
         // Sử dụng dữ liệu của selectedFilm nếu cần thiết
@@ -91,13 +94,21 @@ public class SuatChieu extends Fragment {
                 linear1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Fragment newFragment = new DatGheFragment(); // Replace with your target fragment
+                        // Tạo fragment mới
+                        Fragment newFragment = new DatGheFragment();
 
-                        // Replace the current fragment with the new fragment
+                        // Tạo Bundle để truyền dữ liệu
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle
+
+                        // Đặt Bundle vào fragment
+                        newFragment.setArguments(bundle);
+
+                        // Chuyển sang fragment mới
                         FragmentManager fragmentManager = getParentFragmentManager();
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                        fragmentTransaction.addToBackStack(null); // Optional: add to back stack
+                        fragmentTransaction.replace(R.id.frame_layout, newFragment); // Thay đổi Fragment
+                        fragmentTransaction.addToBackStack(null); // Thêm vào back stack
                         fragmentTransaction.commit();
                     }
                 });
@@ -113,11 +124,11 @@ public class SuatChieu extends Fragment {
 
         return view;
     }
-
     public void backpage() {
         FragmentManager fragmentManager = getParentFragmentManager();
         if (fragmentManager.getBackStackEntryCount() > 0) {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
+
 }

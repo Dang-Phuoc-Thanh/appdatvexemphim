@@ -31,9 +31,7 @@
             android:layout_height="wrap_content"
             android:text="Mua bắp nước"
             android:textColor="@color/white"
-            android:textSize="27sp">
-
-        </TextView>
+            android:textSize="27sp"></TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,6 +75,9 @@
 
             </TextView>
         </LinearLayout>
+
+
+
 
 
     </LinearLayout>

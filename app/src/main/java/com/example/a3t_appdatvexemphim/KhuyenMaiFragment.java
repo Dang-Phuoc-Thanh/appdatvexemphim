@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -44,7 +45,6 @@ public class KhuyenMaiFragment extends Fragment {
         listView = view.findViewById(R.id.lv_voucher);
         linear_nhap = view.findViewById(R.id.linear_nhap);
         linear_uudai = view.findViewById(R.id.linearuudai);
-
         // Khởi tạo danh sách và adapter
         ArrayList<Voucher> voucherList = new ArrayList<>();
         VoucherAdapter adapter = new VoucherAdapter(getContext(), voucherList);
@@ -88,16 +88,42 @@ public class KhuyenMaiFragment extends Fragment {
         listView.setOnItemClickListener((parent, view1, position, id) -> {
             // Lấy mục được click
             Voucher selectedVoucher = voucherList.get(position);
+            Bundle bundle= new Bundle();
+            if (getArguments() != null) {
+                if (getArguments().containsKey("selectedFilm")) {
+                    bundle.putSerializable("selectedFilm", getArguments().getSerializable("selectedFilm"));
+                }
+                if (getArguments().containsKey("danhSachGheDuocChon")) {
+                    bundle.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
+                }
+                if (getArguments().containsKey("txtName")) {
+                    bundle.putString("txtName",getArguments().getString("txtName"));
 
+                }
+                if (getArguments().containsKey("txtPhone")) {
+                    bundle.putString("txtPhone",getArguments().getString("txtPhone"));
+
+                }
+                if (getArguments().containsKey("txtEmail")) {
+                    bundle.putString("txtEmail",getArguments().getString("txtEmail"));
+
+                }
+            }
             Long discountAmount = selectedVoucher.getDiscountAmount(); // Lấy discountAmount từ đối tượng Voucher
-
+            bundle.putFloat("discountAmount",discountAmount);
             // Tạo Fragment ThanhToan và truyền dữ liệu qua Bundle
-            ThanhToan thanhToanFragment = ThanhToan.newInstance(discountAmount); // Truyền giá trị discountAmount
+            ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle); // Truyền giá trị discountAmount
 
+            thanhToanFragment.setArguments(bundle); // Pass bundle to ThanhToanFragment
+            FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+            transaction.replace(R.id.frame_layout, thanhToanFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
             // Chuyển sang Fragment ThanhToan
-            openFragment(thanhToanFragment);
-        });
 
+
+
+        });
         lichsu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,7 +158,7 @@ public class KhuyenMaiFragment extends Fragment {
     public void backpage() {
         FragmentManager fragmentManager = getParentFragmentManager();
         if (fragmentManager.getBackStackEntryCount() > 0) {
-            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+            fragmentManager.popBackStack();
         }
     }
     private void openFragment(Fragment fragment) {

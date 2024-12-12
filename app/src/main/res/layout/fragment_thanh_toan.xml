@@ -44,13 +44,11 @@
             android:textSize="25sp"
             android:textColor="@color/white"/>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/receive_ticket_info_description"
             android:textColor="@color/white"/>
-
 
         <TextView
             android:layout_width="match_parent"
@@ -66,6 +64,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="5dp"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:background="@drawable/button"
             android:textColorHint="@color/white"
             android:hint="@string/enter_name"/>
@@ -78,7 +77,6 @@
             android:textColor="@color/white"
             android:textSize="25sp"/>
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -86,6 +84,7 @@
             android:contentDescription="Phone number input field"
             android:layout_marginTop="5dp"
             android:paddingStart="10dp"
+            android:textColor="@color/white"
             android:id="@+id/txt_phone"
             android:textColorHint="@color/white"
             android:hint="@string/enter_phone"/>
@@ -105,7 +104,7 @@
             android:id="@+id/txt_email"
             android:paddingStart="10dp"
             android:background="@drawable/button"
-
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:hint="@string/enter_email"/>
 
@@ -151,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:id="@+id/txt_thanhtien"
-
+                    android:textColorHint="@color/white"
                     android:textColor="@color/white"
                     android:textSize="20sp"/>
             </TableRow>
@@ -167,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:id="@+id/txt_giamgia"
-
+                    android:textColor="@color/white"
                     android:textColorHint="@color/white"
                     android:textSize="20sp"/>
             </TableRow>
@@ -183,6 +182,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textColor="@color/white"
+
                     android:id="@+id/txt_tongtien"
                     android:textSize="20sp"/>
             </TableRow>
@@ -211,5 +211,4 @@
             </TableRow>
         </TableLayout>
     </LinearLayout>
-
 </FrameLayout>

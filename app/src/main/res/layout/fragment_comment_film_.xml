@@ -130,7 +130,6 @@
 
                 <!-- Second item -->
                 <LinearLayout
-
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -265,8 +264,9 @@
             android:id="@+id/Content_film"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spy x Family xoay quanh gia đình Forger, một gia đình đặc biệt với những bí mật riêng. Loid Forger, còn được biết đến là Twilight là một điệp viên xuất sắc."/>
+            android:text="Spy x Family xoay quanh gia đình Forger, một gia đình đặc biệt với những bí mật riêng. Loid Forger, còn được biết đến là Twilight là một điệp viên xuất sắc.">
 
+        </TextView>
 
 
     </LinearLayout>

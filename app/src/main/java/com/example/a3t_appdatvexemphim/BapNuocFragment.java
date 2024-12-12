@@ -93,7 +93,7 @@ public class BapNuocFragment extends Fragment {
                 bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
 
                 // Open ThanhToanFragment and pass data
-                ThanhToan thanhToanFragment = ThanhToan.newInstance(discountAmount);
+                ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle);
                 thanhToanFragment.setArguments(bundle); // Pass bundle to ThanhToanFragment
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
                 transaction.replace(R.id.frame_layout, thanhToanFragment);

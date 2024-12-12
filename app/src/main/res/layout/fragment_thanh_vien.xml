@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThanhVienFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="match_parent">
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Lớp : 124LTDD01"
+                android:textSize="20sp">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Nhóm TTT"
+                android:textSize="20sp">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Đề tài : Xây dựng app đặt vé xem phim"
+                android:textSize="20sp">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Lê Minh Toàn MSV:22115053122142"
+                android:textSize="20sp">
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Lê Thị Huyền Trang MSV:22115053122248"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Đặng Phước Thạnh MSV:22115053122246"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </TableRow>
+    </TableLayout>
+
+</FrameLayout>

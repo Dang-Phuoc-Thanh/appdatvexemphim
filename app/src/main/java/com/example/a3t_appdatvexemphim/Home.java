@@ -2,6 +2,7 @@ package com.example.a3t_appdatvexemphim;
 
 import android.os.Bundle;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -70,4 +71,6 @@ public class Home extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null); // Optional: add to back stack
         fragmentTransaction.commit();
     }
+
+
 }

@@ -22,6 +22,7 @@ import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
 import com.example.a3t_appdatvexemphim.VoucherFragment;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,6 +67,7 @@ public class DSphimhhFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_d_sphimhh, container, false);
         butback=view.findViewById(R.id.back);
         // Nhận danh sách phim từ Bundle
@@ -76,17 +78,16 @@ public class DSphimhhFragment extends Fragment {
         }
 
         // Initialize the ListView
-        DSphim = view.findViewById(R.id.listview);
+        ListView DSphim = view.findViewById(R.id.listview);
 
         // Initialize the list and add data
-        list = new ArrayList<>();
+        ArrayList<dsFILMHH> list = new ArrayList<>();
         if (danhsachphim != null) {
             for (ClassPhim phim : danhsachphim) {
                 list.add(new dsFILMHH(
                         phim.TenPhim,
                         "Thời lượng: " + phim.ThoiLuong + " Phút",
-                        "Khởi chiếu: " + phim.NgayKhoiChieu,
-                        "Nội dung: " + phim.NoiDung,
+                        "Khởi chiếu: " + phim.NgayKhoiChieu, "Nội dung: " + phim.NoiDung,
                         "Đặt vé",
                         phim.HinhAnh, // Replace with the actual image URL
                         phim.Video // Replace with the actual trailer URL
@@ -94,10 +95,10 @@ public class DSphimhhFragment extends Fragment {
             }
         }
 
-        // Khởi tạo adapter với đủ ba tham số
-        adapter = new listAdapter(getContext(), list, danhsachphim);
-        DSphim.setAdapter(adapter);
 
+        // Khởi tạo adapter với đủ ba tham số
+        listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
+        DSphim.setAdapter(adapter);
         butback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +108,6 @@ public class DSphimhhFragment extends Fragment {
 
         return view;
     }
-
     public void backpage() {
         FragmentManager fragmentManager = getParentFragmentManager();
         if (fragmentManager.getBackStackEntryCount() > 0) {
