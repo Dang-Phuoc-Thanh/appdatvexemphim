@@ -61,10 +61,7 @@ public class DanhGiaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Đánh giá thành công", Snackbar.LENGTH_LONG).show();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, new VeCuaToiFragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
+                backpage();
             }
         });
         back=view.findViewById(R.id.back);

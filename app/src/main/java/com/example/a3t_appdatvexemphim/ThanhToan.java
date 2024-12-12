@@ -18,6 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bumptech.glide.disklrucache.DiskLruCache;
+
 /**
  * A Fragment class representing the "Thanh Toan" (Payment) screen.
  */
@@ -33,11 +35,9 @@ public class ThanhToan extends Fragment {
         // Required empty public constructor
     }
 
-    public static ThanhToan newInstance(float discountAmount) {
+    public static ThanhToan newInstance(Bundle bundle) {
         ThanhToan fragment = new ThanhToan();
-        Bundle args = new Bundle();
-        args.putFloat("DISCOUNT_AMOUNT", discountAmount); // Truyền giá trị giảm giá
-        fragment.setArguments(args);
+        fragment.setArguments(bundle); // Gán trực tiếp Bundle được truyền vào
         return fragment;
     }
 
@@ -62,11 +62,16 @@ public class ThanhToan extends Fragment {
         Bundle bundle = getArguments();
         float discountAmount = 0;
         if (bundle != null) {
-            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
+            discountAmount = bundle.getFloat("discountAmount", 0.0f);
             // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
             discountTextView.setText(String.format("%.0f" + " Vnd", discountAmount));
             txt_thanhtien.setText("90000 Vnd");
-
+            String name=bundle.getString("txtName");
+            String email=bundle.getString("txtEmail");
+            String phone=bundle.getString("txtPhone");
+            txtPhone.setText(phone);
+            txtName.setText(name);
+            txtEmail.setText(email);
             txt_tongtien.setText(String.format("%.0f" + " VND", 90000 - discountAmount));// Hiển thị số giảm giá với 2 chữ số thập phân
         } else {
             txt_tongtien.setText("90000 Vnd");
@@ -76,7 +81,31 @@ public class ThanhToan extends Fragment {
 
         // Set click listener
         txtPttt.setOnClickListener(v -> openFragment(new PhuongThucThanhToan()));
-        select_voucher.setOnClickListener(v -> openFragment(new KhuyenMaiFragment()));
+        select_voucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle1 = new Bundle();
+
+                // Truyền thông tin từ ThanhToan sang KhuyenMaiFragment
+                bundle1.putString("txtName", txtName.getText().toString());
+                bundle1.putString("txtPhone", txtPhone.getText().toString());
+                bundle1.putString("txtEmail", txtEmail.getText().toString());
+
+                if (getArguments() != null) {
+                    if (getArguments().containsKey("selectedFilm")) {
+                        bundle1.putSerializable("selectedFilm", getArguments().getSerializable("selectedFilm"));
+                    }
+                    if (getArguments().containsKey("danhSachGheDuocChon")) {
+                        bundle1.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
+                    }
+                }
+
+                // Mở KhuyenMaiFragment và truyền bundle1
+                KhuyenMaiFragment khuyenMaiFragment = new KhuyenMaiFragment();
+                khuyenMaiFragment.setArguments(bundle1);
+                openFragment(khuyenMaiFragment);
+            }
+        });
         btnBack.setOnClickListener(v -> backpage());
         btnThanhToan.setOnClickListener(v -> handleThanhToan());
 

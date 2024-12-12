@@ -125,7 +125,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_weight="1"
                 app:shapeAppearanceOverlay="@style/circle"
-                app:srcCompat="@drawable/ls_mua_ve" />
+                app:srcCompat="@drawable/teamwork" />
         </TableRow>
 
         <TableRow
@@ -148,7 +148,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_marginStart="24dp"
-                android:text="Lịch sử"
+                android:text="Thành viên"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </TableRow>
