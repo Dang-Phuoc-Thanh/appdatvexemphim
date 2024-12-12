@@ -101,7 +101,15 @@ public class Video_Fragment extends Fragment {
         if (selectedFilm != null) {
             loadMoviesByGenreData(selectedFilm.getName());
         }
-
+        // Set click listener for btnBack
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.popBackStack();
+            }
+        });
         return view;
     }
 

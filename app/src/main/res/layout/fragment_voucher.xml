@@ -164,7 +164,7 @@
                         android:layout_gravity="top"
                         android:gravity="center"
                         android:text="Giảm 50% tối đa 100.000đ"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="italic">
 
@@ -209,7 +209,7 @@
                         android:layout_gravity="center"
                         android:gravity="left"
                         android:text="Giảm 50% tối đa 100.000đ"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="italic">
 
