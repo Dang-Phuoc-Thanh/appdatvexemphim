@@ -15,10 +15,11 @@
         android:id="@+id/tv_voucher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginStart="16dp"
         android:layout_gravity="center_vertical"
         android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/white" />
 </LinearLayout>
 
 

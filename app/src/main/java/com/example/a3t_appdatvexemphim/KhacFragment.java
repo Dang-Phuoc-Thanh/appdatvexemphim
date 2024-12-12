@@ -60,13 +60,13 @@ public class KhacFragment extends Fragment {
 
         // Xử lý sự kiện "Vé của tôi"
         vecuatoi.setOnClickListener(v -> {
-            Fragment newFragment = new VeCuaToiFragment();
+            Fragment newFragment = new ThanhVienFragment();
             replaceFragment(newFragment);
         });
 
         // Xử lý sự kiện "Bắp nước"
         bapnuoc.setOnClickListener(v -> {
-            Fragment newFragment = new BapNuocFragment();
+            Fragment newFragment = new DoAnFragment();
             replaceFragment(newFragment);
         });
 
