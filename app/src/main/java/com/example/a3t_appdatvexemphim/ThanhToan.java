@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,79 +24,65 @@ import androidx.fragment.app.FragmentTransaction;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
-    private TextView txtPttt;
+    private TextView txtPttt,discountTextView,txt_tongtien,txt_thanhtien;
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
 
     public ThanhToan() {
         // Required empty public constructor
     }
 
-    /**
-     * Factory method to create a new instance of this fragment with provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ThanhToan.
-     */
-    public static ThanhToan newInstance(String param1, String param2) {
+    public static ThanhToan newInstance(float discountAmount) {
         ThanhToan fragment = new ThanhToan();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putFloat("DISCOUNT_AMOUNT", discountAmount); // Truyền giá trị giảm giá
         fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_thanh_toan, container, false);
+
+        // Ánh xạ các view
         select_voucher = view.findViewById(R.id.select_voucher);
-        // Initialize views
         txtPhone = view.findViewById(R.id.txt_phone);
         txtName = view.findViewById(R.id.txt_name);
         txtEmail = view.findViewById(R.id.txt_email);
         txtPttt = view.findViewById(R.id.select_pttt);
         btnBack = view.findViewById(R.id.back);
         btnThanhToan = view.findViewById(R.id.button_ThanhToan);
+        discountTextView = view.findViewById(R.id.txt_giamgia);
+        txt_thanhtien = view.findViewById(R.id.txt_thanhtien);
+        txt_tongtien = view.findViewById(R.id.txt_tongtien);
 
-        // Set click listener for selecting payment method
+        // Lấy dữ liệu từ Bundle
+        Bundle bundle = getArguments();
+        float discountAmount = 0;
+        if (bundle != null) {
+            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
+            // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
+            discountTextView.setText(String.format("%.0f" + " Vnd", discountAmount));
+            txt_thanhtien.setText("90000 Vnd");
+
+            txt_tongtien.setText(String.format("%.0f" + " VND", 90000 - discountAmount));// Hiển thị số giảm giá với 2 chữ số thập phân
+        } else {
+            txt_tongtien.setText("90000 Vnd");
+            txt_thanhtien.setText("90000 Vnd");
+            discountTextView.setText("0 Vnd");
+        }
+
+        // Set click listener
         txtPttt.setOnClickListener(v -> openFragment(new PhuongThucThanhToan()));
-        select_voucher.setOnClickListener(v -> openFragment(new VoucherFragment()));
-        // Set click listener for the back button
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                backpage();
-            }
-        });
-
-        // Set click listener for the payment button
+        select_voucher.setOnClickListener(v -> openFragment(new KhuyenMaiFragment()));
+        btnBack.setOnClickListener(v -> backpage());
         btnThanhToan.setOnClickListener(v -> handleThanhToan());
 
         return view;
     }
 
-    /**
-     * Opens the specified fragment, replacing the current one.
-     *
-     * @param fragment The fragment to open.
-     */
     private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -104,10 +91,6 @@ public class ThanhToan extends Fragment {
         fragmentTransaction.commit();
     }
 
-    /**
-     * Handles the payment button click event.
-     * Checks if required fields are filled, and if so, displays the payment confirmation dialog.
-     */
     private void handleThanhToan() {
         if (txtName.getText().toString().isEmpty() ||
                 txtPhone.getText().toString().isEmpty() ||
@@ -119,19 +102,39 @@ public class ThanhToan extends Fragment {
         }
     }
 
-    /**
-     * Creates and returns a confirmation dialog for the payment process.
-     *
-     * @return AlertDialog instance.
-     */
     AlertDialog createDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setMessage("Bạn có muốn thanh toán")
                 .setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        // Show success message
                         Toast.makeText(getContext(), "Thanh toán thành công", Toast.LENGTH_SHORT).show();
-                        openFragment(new VeCuaToiFragment());
+
+                        // Create a new Bundle to pass selected film and seats
+                        Bundle bundle = new Bundle();
+
+                        // Assuming these values are passed to the fragment beforehand
+                        if (getArguments() != null) {
+
+                            // Get selected film and seats if available
+                            if (getArguments().containsKey("selectedFilm")) {
+                                bundle.putSerializable("selectedFilm", getArguments().getSerializable("selectedFilm"));
+
+                            }
+                            if (getArguments().containsKey("danhSachGheDuocChon")) {
+                                bundle.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
+                            }
+                        }
+
+                        // Pass the bundle to the VeCuaToiFragment
+                        VeCuaToiFragment veCuaToiFragment = VeCuaToiFragment.newInstance(bundle);
+
+                        // Start the VeCuaToiFragment with the passed data
+                        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_layout, veCuaToiFragment); // Replace with VeCuaToiFragment
+                        transaction.addToBackStack(null); // Allow back navigation
+                        transaction.commit();
                     }
                 })
                 .setNegativeButton("Không", new DialogInterface.OnClickListener() {
@@ -150,4 +153,6 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
+
+
 }

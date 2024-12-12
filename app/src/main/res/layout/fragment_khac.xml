@@ -54,7 +54,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="390dp"
             android:gravity="center">
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -102,9 +102,12 @@
         </TableRow>
 
         <!-- Dòng 3: Hàng hình ảnh Bỏng ngô & Lịch sử -->
+
+        <!-- Dòng 4: TextView Bỏng ngô & Lịch sử -->
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100px"
             android:gravity="center">
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -112,20 +115,19 @@
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/noto_popcorn"
-                app:shapeAppearanceOverlay="@style/circle" />
+                app:shapeAppearanceOverlay="@style/circle"
+                app:srcCompat="@drawable/noto_popcorn" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/vecuatoi"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
-                android:layout_weight="1"
                 android:layout_marginStart="24dp"
-                app:srcCompat="@drawable/ls_mua_ve"
-                app:shapeAppearanceOverlay="@style/circle" />
+                android:layout_weight="1"
+                app:shapeAppearanceOverlay="@style/circle"
+                app:srcCompat="@drawable/ls_mua_ve" />
         </TableRow>
 
-        <!-- Dòng 4: TextView Bỏng ngô & Lịch sử -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

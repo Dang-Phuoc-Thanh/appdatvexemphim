@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.a3t_appdatvexemphim.R;
@@ -70,14 +71,17 @@ public class DanhGiaFragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, new VeCuaToiFragment());
-                transaction.addToBackStack(null);
-                transaction.commit();
+                backpage();
             }
         });
 
 
         return view;
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }

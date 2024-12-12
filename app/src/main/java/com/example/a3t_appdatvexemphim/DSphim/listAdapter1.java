@@ -19,16 +19,13 @@ import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.SuatChieu;
-import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
 
 import java.util.ArrayList;
 
-public class listAdapter extends ArrayAdapter<dsFILMHH> {
-    private ArrayList<ClassPhim> danhsachphim; // Thêm biến thành viên
+public class listAdapter1 extends ArrayAdapter<dsFILMHH> {
 
-    public listAdapter(Context context, ArrayList<dsFILMHH> dsFILMHHArrayList, ArrayList<ClassPhim> danhsachphim) {
+    public listAdapter1(Context context, ArrayList<dsFILMHH> dsFILMHHArrayList) {
         super(context, R.layout.list_item_filmhoathinh, dsFILMHHArrayList);
-        this.danhsachphim = danhsachphim; // Khởi tạo biến thành viên
     }
 
     @NonNull
@@ -59,7 +56,6 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 // Tạo một Bundle để truyền dữ liệu
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", dsfilmhh); // Truyền mục đã chọn
-                bundle.putParcelableArrayList("danhsachphim", danhsachphim); // Truyền danh sách phim
 
                 // Tạo một instance của SuatChieu fragment
                 SuatChieu suatChieuFragment = new SuatChieu();
@@ -72,27 +68,17 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 transaction.commit();
             }
         });
-
-        // Thêm sự kiện click cho tên phim
         filmName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Tạo một Bundle để truyền dữ liệu
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("selectedFilm", dsfilmhh); // Truyền mục đã chọn
-                bundle.putParcelableArrayList("danhsachphim", danhsachphim); // Truyền danh sách phim
-
-                // Tạo một instance của CommentFilm_Fragment
-                CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
-                commentFilmFragment.setArguments(bundle);
-
-                // Thay thế fragment hiện tại bằng CommentFilm_Fragment
                 FragmentTransaction transaction = ((FragmentActivity)getContext()).getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, commentFilmFragment);
+                transaction.replace(R.id.frame_layout, new CommentFilm_Fragment());
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
+
+
 
         return convertView;
     }

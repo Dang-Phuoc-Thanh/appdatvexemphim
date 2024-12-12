@@ -2,6 +2,7 @@ package com.example.a3t_appdatvexemphim;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,8 @@ import android.graphics.drawable.AnimationDrawable;
 import androidx.core.view.ViewCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.WindowInsetsCompat;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -67,77 +70,69 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Xử lý chuyển đến màn hình đăng ký/-strong/-heart:>:o:-((:-h signUp.setOnClickListener(view -> {
-        // Thêm xử lý chuyển màn hình nếu cần
- //   });
+        // Xử lý chuyển đến màn hình đăng ký
+        signUp.setOnClickListener(view -> {
+            // Thêm xử lý chuyển màn hình nếu cần
+            Intent intent = new Intent(MainActivity.this, formSignIn.class);
+            startActivity(intent);
+        });
 
-    // Xử lý quên mật khẩu
+        // Xử lý quên mật khẩu
         forgotPassword.setOnClickListener(view -> {
-        // Thêm xử lý chuyển màn hình nếu cần
-    });
-}
+            // Thêm xử lý chuyển màn hình nếu cần
+            Intent intent = new Intent(MainActivity.this, QuenMK.class);
+            startActivity(intent);
+        });
+    }
 
-// Hàm tải Fragment Trang Chủ
-//    private void loadTrangChuFragment() {
-//        TrangChuFragment trangChuFragment = new TrangChuFragment();
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.main, trangChuFragment) // Use the container view ID here
-//                .commit();
-//        // Ensure the Action Bar is visible after fragment transition
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().show();
-// }
-//   }
+    private void navigateToHome(String userId) {
+        Intent intent = new Intent(MainActivity.this, Home.class);
+        intent.putExtra("USER_ID", userId); // Truyền userId qua Intent
+        startActivity(intent);
+        finish(); // Kết thúc MainActivity nếu không cần quay lại
+    }
 
-// Kiểm tra thông tin đăng nhập với Firebase
-private void checkLogin(String email, String password) {
-    DatabaseReference database = FirebaseDatabase.getInstance().getReference("TAIKHOAN");
-    database.orderByChild("Email").equalTo(email).addListenerForSingleValueEvent(new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            if (dataSnapshot.exists()) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    // Lấy giá trị Email và MatKhau
-                    String dbEmail = snapshot.child("Email").getValue(String.class);
-                    Object dbPasswordObj = snapshot.child("MatKhau").getValue();
+    private void fetchUserData(String userId) {
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("TAIKHOAN").child(userId);
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    // Chuyển đến Fragment TaiKhoan và truyền userId
 
-                    // Kiểm tra email khớp
-                    if (dbEmail != null && dbEmail.equals(email)) {
-                        if (dbPasswordObj instanceof Long) {
-                            // Nếu MatKhau là kiểu Long, chuyển sang String
-                            String dbPassword = String.valueOf(dbPasswordObj);
-                            if (dbPassword.equals(password)) {
-                                navigateToHome();
-                                return;
-                            }
-                        } else if (dbPasswordObj instanceof String) {
-                            // Nếu MatKhau là kiểu String (dự phòng)
-                            String dbPassword = (String) dbPasswordObj;
-                            if (dbPassword.equals(password)) {
-                                navigateToHome();
-                                return;
-                            }
-                        }
-                        Toast.makeText(MainActivity.this, "Sai mật khẩu!", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
+                } else {
+                    Toast.makeText(MainActivity.this, "Không tìm thấy thông tin tài khoản!", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText( MainActivity.this, "Tài khoản không tồn tại!", Toast.LENGTH_SHORT).show();
-            } else { Toast.makeText(MainActivity.this, "Tài khoản không tồn tại!", Toast.LENGTH_SHORT).show();
             }
-        }
 
-        @Override
-        public void onCancelled(DatabaseError databaseError) {
-            Toast.makeText(MainActivity.this, "Database error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    });
-}
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Lỗi kết nối cơ sở dữ liệu!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-private void navigateToHome() {
-    Intent intent = new Intent(MainActivity.this, Home.class);
-    startActivity(intent);
-    finish(); // Optional: finish MainActivity if you don't want to allow the user to go back to the login screen
-}
+
+
+
+
+    // Kiểm tra thông tin đăng nhập với Firebase
+    private void checkLogin(String email, String password) {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = auth.getCurrentUser();
+                        if (user != null) {
+                            String userId = user.getUid(); // Lấy userId
+                            Log.d("MainActivity", "Đăng nhập thành công với userId: " + userId);
+                            navigateToHome(userId); // Chuyển tới TrangChu
+                        }
+                    } else {
+                        Toast.makeText(MainActivity.this, "Đăng nhập thất bại. Vui lòng kiểm tra lại!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
 
 }

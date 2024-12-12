@@ -5,13 +5,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
+import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +27,8 @@ import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
  */
 public class SuatChieu extends Fragment {
     CardView rapchieu1;
-    private ImageView imageView2;
+    private LinearLayout linear1;
+    private ImageView butback;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -52,39 +60,74 @@ public class SuatChieu extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_suat_chieu, container, false);
+        linear1 = view.findViewById(R.id.linear1);
+        butback = view.findViewById(R.id.imageView2);
 
-        // Initialize the CardView
-        rapchieu1 = view.findViewById(R.id.rap1);
+        // Nhận dữ liệu từ Bundle
+        List<ClassPhim> danhsachphim = null;
+        final dsFILMHH selectedFilm; // Declare as final
+        if (getArguments() != null) {
+            selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+            danhsachphim = getArguments().getParcelableArrayList("danhsachphim");
+        } else {
+            selectedFilm = null; // Initialize to null if no arguments
+        }
 
-        // Set the OnClickListener for the CardView
-        rapchieu1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Navigate to another fragment
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_layout, new DatGheFragment()); // Ensure this ID matches the FrameLayout ID in your activity
-                transaction.addToBackStack(null);  // Add to backstack to allow navigation back
-                transaction.commit();
+        // Sử dụng dữ liệu của selectedFilm nếu cần thiết
+        if (danhsachphim != null && selectedFilm != null) {
+            int i = 0;
+            while (i < danhsachphim.size() && !selectedFilm.getName().equals(danhsachphim.get(i).TenPhim)) {
+                i++;
             }
-        });
-        imageView2=view.findViewById(R.id.imageView2);
-        imageView2.setOnClickListener(new View.OnClickListener() {
+
+            if (i < danhsachphim.size()) {
+                // Sử dụng dữ liệu của selectedFilm nếu cần thiết
+                TextView filmNameTextView = view.findViewById(R.id.textView8);
+                ImageView filmImage = view.findViewById(R.id.imageView3);
+                TextView Contenfilm = view.findViewById(R.id.textView9);
+
+                filmNameTextView.setText(danhsachphim.get(i).TenPhim);
+                Glide.with(this).load(danhsachphim.get(i).HinhAnh).into(filmImage); // Sử dụng Glide để tải hình ảnh
+                Contenfilm.setText(danhsachphim.get(i).NoiDung);
+                linear1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        // Tạo fragment mới
+                        Fragment newFragment = new DatGheFragment();
+
+                        // Tạo Bundle để truyền dữ liệu
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle
+
+                        // Đặt Bundle vào fragment
+                        newFragment.setArguments(bundle);
+
+                        // Chuyển sang fragment mới
+                        FragmentManager fragmentManager = getParentFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, newFragment); // Thay đổi Fragment
+                        fragmentTransaction.addToBackStack(null); // Thêm vào back stack
+                        fragmentTransaction.commit();
+                    }
+                });
+            }
+        }
+
+        butback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Fragment newFragment = new DSphimhhFragment();
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
+                backpage();
             }
         });
 
         return view;
     }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
+    }
+
 }

@@ -56,15 +56,16 @@ public class UuDai extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new VoucherFragment();
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment); // Ensure R.id.frame_layout matches the ID of your container layout
-                fragmentTransaction.addToBackStack(null); // Optional: add to back stack
-                fragmentTransaction.commit();
+                backpage();
             }
         });
         // Return the inflated view
         return view;
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }

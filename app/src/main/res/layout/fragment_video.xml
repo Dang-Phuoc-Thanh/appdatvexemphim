@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Video.VideoFragment"
+    tools:context="Video.Video_Fragment"
     android:background="@color/black">
 
     <!-- Thanh tiêu đề -->
@@ -23,6 +23,7 @@
 
         <!-- Tiêu đề -->
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,15 +49,17 @@
             android:padding="16dp">
 
             <!-- Video Preview -->
-            <ImageView
-                android:layout_width="match_parent"
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="389dp"
                 android:layout_height="200dp"
-                android:src="@drawable/phd2"
                 android:contentDescription="Video Preview"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/phd2" />
 
             <!-- Tên phim -->
             <TextView
+                android:id="@+id/tvTenPhim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -67,6 +70,7 @@
 
             <!-- Mô tả -->
             <TextView
+                android:id="@+id/tvMoTa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -80,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Phim cùng thể loại"
+                android:text="Có thể bạn thích"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />

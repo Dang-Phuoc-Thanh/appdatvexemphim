@@ -1,6 +1,9 @@
 package com.example.a3t_appdatvexemphim.Trangchu;
 
-public class ClassPhim {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ClassPhim implements Parcelable {
     public Integer MaPhim;
     public String TenPhim;
     public String NoiDung;
@@ -12,8 +15,8 @@ public class ClassPhim {
     public String HinhAnh;
     public String Video;
     public Float DiemDanhGia;
-    public String NgayKhoiChieu; // Thay đổi thành String
-    public String NgayKetThuc;   // Thay đổi thành String
+    public String NgayKhoiChieu;
+    public String NgayKetThuc;
     public String QuocGia;
     public Integer TrangThai;
 
@@ -37,4 +40,60 @@ public class ClassPhim {
         NoiDung = noiDung;
         TenPhim = tenPhim;
     }
+
+    protected ClassPhim(Parcel in) {
+        MaPhim = in.readInt();
+        TenPhim = in.readString();
+        NoiDung = in.readString();
+        ThoiLuong = in.readInt();
+        DaoDien = in.readString();
+        DienVien = in.readString();
+        GioiHanTuoi = in.readInt();
+        DonGia = in.readFloat();
+        HinhAnh = in.readString();
+        Video = in.readString();
+        DiemDanhGia = in.readFloat();
+        NgayKhoiChieu = in.readString();
+        NgayKetThuc = in.readString();
+        QuocGia = in.readString();
+        TrangThai = in.readInt();
+    }
+
+    public static final Creator<ClassPhim> CREATOR = new Creator<ClassPhim>() {
+        @Override
+        public ClassPhim createFromParcel(Parcel in) {
+            return new ClassPhim(in);
+        }
+
+        @Override
+        public ClassPhim[] newArray(int size) {
+            return new ClassPhim[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(MaPhim);
+        dest.writeString(TenPhim);
+        dest.writeString(NoiDung);
+        dest.writeInt(ThoiLuong);
+        dest.writeString(DaoDien);
+        dest.writeString(DienVien);
+        dest.writeInt(GioiHanTuoi);
+        dest.writeFloat(DonGia);
+        dest.writeString(HinhAnh);
+        dest.writeString(Video);
+        dest.writeFloat(DiemDanhGia);
+        dest.writeString(NgayKhoiChieu);
+        dest.writeString(NgayKetThuc);
+        dest.writeString(QuocGia);
+        dest.writeInt(TrangThai);
+    }
+
+
 }
