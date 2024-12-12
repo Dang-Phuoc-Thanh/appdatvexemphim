@@ -128,7 +128,7 @@
             android:id="@+id/nearbyRapTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Các rạp gần bạn (3)"
+            android:text="Các rạp gần bạn :"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_marginTop="16dp"
@@ -146,17 +146,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:padding="8dp" />
 
-        <Button
-            android:id="@+id/btn_chontinh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="153dp"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="148dp"
-            android:text="Chọn tỉnh"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nearbyRapRecyclerView" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_chontinh"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="153dp"-->
+<!--            android:layout_marginTop="52dp"-->
+<!--            android:layout_marginEnd="148dp"-->
+<!--            android:text="Chọn tỉnh"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/nearbyRapRecyclerView" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

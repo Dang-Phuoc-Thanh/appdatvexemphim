@@ -3,31 +3,52 @@ package com.example.a3t_appdatvexemphim.RAP;
 import java.io.Serializable;
 
 public class Rap implements Serializable {
-    private String name;
-    private String address;
-    private int imageResource;
-    private double distance; // Thêm trường khoảng cách
+    private String DiaChi;
+    private String HinhAnh;
+    private String KhoangCach;
+    private String MaTP;
+    private String TenRap;
+    private int TrangThai;
 
-    public Rap(String name, String address, int imageResource, double distance) {
-        this.name = name;
-        this.address = address;
-        this.imageResource = imageResource;
-        this.distance = distance; // Khởi tạo khoảng cách
+    // Default constructor required for calls to DataSnapshot.getValue(Rap.class)
+    public Rap() {
     }
 
-    public String getName() {
-        return name;
+    public Rap(String diaChi, String hinhAnh, String khoangCach, String maTP, String tenRap, int trangThai) {
+        DiaChi = diaChi;
+        HinhAnh = hinhAnh;
+        KhoangCach = khoangCach;
+        MaTP = maTP;
+        TenRap = tenRap;
+        TrangThai = trangThai;
     }
 
-    public String getAddress() {
-        return address;
+    public String getDiaChi() {
+        return DiaChi;
     }
 
-    public int getImageResource() {
-        return imageResource;
+    public String getHinhAnh() {
+        return HinhAnh;
     }
 
-    public double getDistance() {
-        return distance; // Phương thức lấy khoảng cách
+    public String getKhoangCach() {
+        return KhoangCach;
     }
+
+    public String getMaTP() {
+        return MaTP;
+    }
+
+    public String getTenRap() {
+        return TenRap;
+    }
+
+    public int getTrangThai() {
+        return TrangThai;
+    }
+
+    public void setHinhAnh(String hinhAnh) {
+        HinhAnh = hinhAnh;
+    }
+
 }
