@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -36,7 +37,7 @@ import java.util.List;
  * Use the {@link CinemaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CinemaFragment extends Fragment {
+public class CinemaFragment extends Fragment  {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private MaterialAutoCompleteTextView autoCompleteTextView;
@@ -47,9 +48,13 @@ public class CinemaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private ImageView arrowIcon;
+    private List<Rap> rapList;
+
+    private DatabaseReference databaseReference;
     public CinemaFragment() {
         // Required empty public constructor
     }
+
 
     public static CinemaFragment newInstance(String param1, String param2) {
         CinemaFragment fragment = new CinemaFragment();
@@ -67,6 +72,7 @@ public class CinemaFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        rapList = new ArrayList<>();
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,8 +80,12 @@ public class CinemaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cinema, container, false);
 
         // Lấy dữ liệu phim được chọn từ các đối số
-        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
-
+        Bundle args = getArguments();
+        if (args != null) {
+            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+        } else {
+            Log.e("CinemaFragment", "Arguments are null");
+        }
         autoCompleteTextView = view.findViewById(R.id.inputTV);
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
 
@@ -118,12 +128,15 @@ public class CinemaFragment extends Fragment {
                         SuatChieu suatChieuFragment = new SuatChieu();
 
                         // Truyền thông tin phim và rạp đã chọn
-                        Bundle bundle = new Bundle();
-                        bundle.putString("TenPhim", selectedFilm.getName());
-                        bundle.putString("NoiDung", selectedFilm.getNoidung());
-                        bundle.putString("HinhAnh", selectedFilm.getImageUrl());
 
-                        bundle.putSerializable("selectedFilm", selectedFilm);
+                        Bundle bundle = new Bundle();
+                        if (args != null) {
+                            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+                            bundle.putString("TenPhim", selectedFilm.getName());
+                            bundle.putString("NoiDung", selectedFilm.getNoidung());
+                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
+                            bundle.putSerializable("selectedFilm", selectedFilm);
+                        }
                         bundle.putSerializable("selectedRap", rap);
                         suatChieuFragment.setArguments(bundle);
 
@@ -140,10 +153,72 @@ public class CinemaFragment extends Fragment {
         fetchCitiesFromFirebase();
                 // Fetch dữ liệu rạp từ Firebase
                // fetchCinemasFromFirebase();
-
+        databaseReference = FirebaseDatabase.getInstance().getReference("Raps");
+        loadRapData();
 
         return view;
     }
+
+    private void loadRapData() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                rapList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Rap rap = dataSnapshot.getValue(Rap.class);
+                    if (rap != null) {
+                        rapList.add(rap);
+                    }
+                }
+                rapAdapter.updateRapList(rapList);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("CinemaFragment", "Lỗi khi tải dữ liệu: " + error.getMessage());
+            }
+        });
+    }
+
+    private void navigateToCtrapFragment(Rap selectedRap) {
+        // Create a new instance of CtrapFragment
+        CtrapFragment ctrapFragment = new CtrapFragment();
+
+        // Create a bundle to pass the selected cinema data
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("selectedRap", selectedRap);
+        ctrapFragment.setArguments(bundle);
+
+        // Navigate to CtrapFragment
+        FragmentManager fragmentManager = getParentFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.frame_layout, ctrapFragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    private void onRapClick(Rap rap) {
+        if (rap == null) {
+            Log.e("CinemaFragment", "Rạp được chọn bị null");
+            return;
+        }
+
+        try {
+            SuatChieu suatChieuFragment = new SuatChieu();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("Rap", rap); // Rap phải implement Serializable
+            suatChieuFragment.setArguments(bundle);
+
+            getParentFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, suatChieuFragment)
+                    .addToBackStack(null)
+                    .commit();
+        } catch (Exception e) {
+            Log.e("CinemaFragment", "Lỗi khi chuyển sang SuatChieuFragment", e);
+        }
+    }
+
 
     private void fetchCitiesFromFirebase() {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ThanhPho");

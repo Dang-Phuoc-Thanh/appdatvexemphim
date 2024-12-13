@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -24,7 +27,7 @@ public class CtrapFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private ActivityCtrapBinding binding;
-    private Rap rap;
+    private Rap selectedRap;
 
     public CtrapFragment() {
         // Required empty public constructor
@@ -47,13 +50,32 @@ public class CtrapFragment extends Fragment {
         }
     }
 
+
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        binding = ActivityCtrapBinding.inflate(inflater, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_ctrap, container, false);
+
+        // Lấy dữ liệu rạp từ Bundle
+        if (getArguments() != null) {
+            selectedRap = (Rap) getArguments().getSerializable("selectedRap");
+        }
+
+        // Hiển thị thông tin rạp
+        if (selectedRap != null) {
+            TextView textView = view.findViewById(R.id.textView3);
+            textView.setText(selectedRap.getTenRap());
+            // Hiển thị thêm các thông tin khác của rạp nếu cần
+        }
+
+
 
         // Nhận dữ liệu từ Bundle
         dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+
+
+
+
         final ArrayList<dsFILMHH> dsFILMHHArrayList;
 
         // Khôi phục danh sách phim từ Bundle nếu có
