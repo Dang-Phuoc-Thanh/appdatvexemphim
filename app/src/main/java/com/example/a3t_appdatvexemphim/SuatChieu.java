@@ -153,6 +153,28 @@ public class SuatChieu extends Fragment {
             filmNameTextView.setText(tenPhim);
             contentFilmTextView.setText(noiDung);
             Glide.with(this).load(hinhAnh).into(filmImage);
+            linear1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Tạo fragment mới
+                    Fragment newFragment = new DatGheFragment();
+
+                    // Tạo Bundle để truyền dữ liệu
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle
+
+
+                    // Đặt Bundle vào fragment
+                    newFragment.setArguments(bundle);
+
+                    // Chuyển sang fragment mới
+                    FragmentManager fragmentManager = getParentFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_layout, newFragment); // Thay đổi Fragment
+                    fragmentTransaction.addToBackStack(null); // Thêm vào back stack
+                    fragmentTransaction.commit();
+                }
+            });
         }
 
         return view;
