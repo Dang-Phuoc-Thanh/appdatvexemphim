@@ -1,5 +1,6 @@
 package com.example.a3t_appdatvexemphim.RAP;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
 public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
     private List<Rap> rapList;
     private OnItemClickListener listener;
+
 
     public interface OnItemClickListener {
         void onItemClick(Rap rap);
@@ -57,6 +59,7 @@ public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
         private TextView rapName;
         private TextView rapAddress;
         private TextView rapKhoangCach;
+        private ImageView arrowIcon;
 
         public RapViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +67,7 @@ public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
             rapName = itemView.findViewById(R.id.rapName);
             rapAddress = itemView.findViewById(R.id.rapAddress);
             rapKhoangCach = itemView.findViewById(R.id.rapKhoangCach);
+            arrowIcon = itemView.findViewById(R.id.arrowIcon);
         }
 
         public void bind(final Rap rap, final OnItemClickListener listener) {
@@ -80,6 +84,23 @@ public class RapAdapter extends RecyclerView.Adapter<RapAdapter.RapViewHolder> {
                     listener.onItemClick(rap);
                 }
             });
+
+
+            // Sự kiện khi click vào arrowIcon
+            arrowIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Truyền đối tượng Rap qua listener khi nhấn arrowIcon
+                    listener.onItemClick(rap);
+                }
+            });
+
         }
+
+
+
+
+
+
     }
 }

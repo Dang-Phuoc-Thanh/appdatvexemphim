@@ -15,7 +15,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.SuatChieu;
+import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.firebase.database.DataSnapshot;
@@ -43,7 +46,7 @@ public class CinemaFragment extends Fragment {
     private ImageView back;
     private String mParam1;
     private String mParam2;
-
+    private ImageView arrowIcon;
     public CinemaFragment() {
         // Required empty public constructor
     }
@@ -70,24 +73,27 @@ public class CinemaFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cinema, container, false);
 
+        // Lấy dữ liệu phim được chọn từ các đối số
+        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+
         autoCompleteTextView = view.findViewById(R.id.inputTV);
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
 
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Rap rap) {
-                CtrapFragment ctrapFragment = CtrapFragment.newInstance(rap);
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, ctrapFragment)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        nearbyRapRecyclerView.setAdapter(rapAdapter);
+//        rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(Rap rap) {
+//                CtrapFragment ctrapFragment = CtrapFragment.newInstance(rap);
+//                FragmentManager fragmentManager = getParentFragmentManager();
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.frame_layout, ctrapFragment)
+//                        .addToBackStack(null)
+//                        .commit();
+//            }
+//        });
+//        nearbyRapRecyclerView.setAdapter(rapAdapter);
 
-        fetchCitiesFromFirebase();
+
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -98,6 +104,43 @@ public class CinemaFragment extends Fragment {
                 fetchMaTPAndUpdateCinemas(thanhPho);
             }
         });
+        //  Lấy dữ liệu phim từ Bundle khi CinemaFragment được khởi tạo
+
+                // Thiết lập RecyclerView
+//                nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
+//                nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+                // Tạo adapter và thiết lập sự kiện khi nhấn vào rạp
+                rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Rap rap) {
+                        // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
+                        SuatChieu suatChieuFragment = new SuatChieu();
+
+                        // Truyền thông tin phim và rạp đã chọn
+                        Bundle bundle = new Bundle();
+                        bundle.putString("TenPhim", selectedFilm.getName());
+                        bundle.putString("NoiDung", selectedFilm.getNoidung());
+                        bundle.putString("HinhAnh", selectedFilm.getImageUrl());
+
+                        bundle.putSerializable("selectedFilm", selectedFilm);
+                        bundle.putSerializable("selectedRap", rap);
+                        suatChieuFragment.setArguments(bundle);
+
+                        // Chuyển sang SuatChieuFragment
+                        FragmentManager fragmentManager = getParentFragmentManager();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frame_layout, suatChieuFragment)
+                                .addToBackStack(null)
+                                .commit();
+                    }
+                });
+
+               nearbyRapRecyclerView.setAdapter(rapAdapter);
+        fetchCitiesFromFirebase();
+                // Fetch dữ liệu rạp từ Firebase
+               // fetchCinemasFromFirebase();
+
 
         return view;
     }
@@ -119,6 +162,7 @@ public class CinemaFragment extends Fragment {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
             }
         });
     }
@@ -140,6 +184,7 @@ public class CinemaFragment extends Fragment {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
             }
         });
     }
@@ -160,6 +205,7 @@ public class CinemaFragment extends Fragment {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
             }
         });
     }

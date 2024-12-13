@@ -16,7 +16,9 @@ import androidx.fragment.app.FragmentTransaction;
 import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
+import com.example.a3t_appdatvexemphim.RAP.Rap;
 import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
+import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 
 import java.util.List;
 
@@ -31,19 +33,26 @@ public class SuatChieu extends Fragment {
     private ImageView butback;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
+    private dsFILMHH selectedFilm;
+    private Rap selectedRap;
 
     private String mParam1;
     private String mParam2;
+    private String mParam3;
+
 
     public SuatChieu() {
         // Required empty public constructor
     }
 
-    public static SuatChieu newInstance(String param1, String param2) {
+    public static SuatChieu newInstance(String param1, String param2,String param3) {
         SuatChieu fragment = new SuatChieu();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+        args.putString(ARG_PARAM3, param3);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,6 +63,11 @@ public class SuatChieu extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam3 = getArguments().getString(ARG_PARAM3);
+            // Nhận thêm dữ liệu từ CinemaFragment
+            String tenPhim = getArguments().getString("TenPhim");
+            String noiDung = getArguments().getString("NoiDung");
+            String hinhAnh = getArguments().getString("HinhAnh");
         }
     }
 
@@ -68,11 +82,14 @@ public class SuatChieu extends Fragment {
         // Nhận dữ liệu từ Bundle
         List<ClassPhim> danhsachphim = null;
         final dsFILMHH selectedFilm; // Declare as final
+
         if (getArguments() != null) {
             selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+
             danhsachphim = getArguments().getParcelableArrayList("danhsachphim");
         } else {
             selectedFilm = null; // Initialize to null if no arguments
+
         }
 
         // Sử dụng dữ liệu của selectedFilm nếu cần thiết
@@ -101,6 +118,7 @@ public class SuatChieu extends Fragment {
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle
 
+
                         // Đặt Bundle vào fragment
                         newFragment.setArguments(bundle);
 
@@ -121,6 +139,21 @@ public class SuatChieu extends Fragment {
                 backpage();
             }
         });
+
+        TextView filmNameTextView = view.findViewById(R.id.textView8);
+        ImageView filmImage = view.findViewById(R.id.imageView3);
+        TextView contentFilmTextView = view.findViewById(R.id.textView9);
+
+        if (getArguments() != null) {
+            String tenPhim = getArguments().getString("TenPhim");
+            String noiDung = getArguments().getString("NoiDung");
+            String hinhAnh = getArguments().getString("HinhAnh");
+
+            // Hiển thị dữ liệu lên giao diện
+            filmNameTextView.setText(tenPhim);
+            contentFilmTextView.setText(noiDung);
+            Glide.with(this).load(hinhAnh).into(filmImage);
+        }
 
         return view;
     }
