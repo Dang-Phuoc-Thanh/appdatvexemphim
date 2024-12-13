@@ -10,15 +10,25 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
+import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.RAP.CinemaFragment;
 import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 import com.example.a3t_appdatvexemphim.Trangchu.FilmAdapter1;
 import com.google.firebase.database.DataSnapshot;
@@ -92,6 +102,39 @@ public class Video_Fragment extends Fragment {
         if (selectedFilm != null) {
             loadMoviesByGenreData(selectedFilm.getName());
         }
+        // Set click listener for btnBack
+        ImageView btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.popBackStack();
+            }
+        });
+
+        // Set click listener for btnDatVeNgay Và truyền dữ liệu qua CinemaFragment
+        Button btnDatVeNgay = view.findViewById(R.id.btnDatVeNgay);
+        btnDatVeNgay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang Video_Fragment
+                CinemaFragment cinemaFragment = new CinemaFragment();
+
+                // Tùy chọn: Truyền dữ liệu vào Video_Fragment nếu cần thiết
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("selectedFilm", selectedFilm); // Truyền thông tin phim nếu cần
+                cinemaFragment.setArguments(bundle);
+
+                // Thay thế fragment hiện tại bằng Video_Fragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frame_layout, cinemaFragment);
+                transaction.addToBackStack(null); // Quay lại khi nhấn Back
+                transaction.commit();
+            }
+        });
+
+
 
         return view;
     }

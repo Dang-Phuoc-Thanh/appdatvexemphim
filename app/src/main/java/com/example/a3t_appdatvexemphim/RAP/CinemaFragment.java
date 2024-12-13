@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -13,12 +15,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.SuatChieu;
+import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,7 +46,7 @@ public class CinemaFragment extends Fragment {
     private ImageView back;
     private String mParam1;
     private String mParam2;
-
+    private ImageView arrowIcon;
     public CinemaFragment() {
         // Required empty public constructor
     }
@@ -57,71 +68,146 @@ public class CinemaFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cinema, container, false);
 
-        btn = view.findViewById(R.id.btn_chontinh);
+        // Lấy dữ liệu phim được chọn từ các đối số
+        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
+
         autoCompleteTextView = view.findViewById(R.id.inputTV);
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
 
-        // Set up RecyclerView
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Rap rap) {
-                // Handle item click
-                CtrapFragment ctrapFragment = CtrapFragment.newInstance(rap);
-                FragmentManager fragmentManager = getParentFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout, ctrapFragment)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-        nearbyRapRecyclerView.setAdapter(rapAdapter);
+//        rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(Rap rap) {
+//                CtrapFragment ctrapFragment = CtrapFragment.newInstance(rap);
+//                FragmentManager fragmentManager = getParentFragmentManager();
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.frame_layout, ctrapFragment)
+//                        .addToBackStack(null)
+//                        .commit();
+//            }
+//        });
+//        nearbyRapRecyclerView.setAdapter(rapAdapter);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                String thanhPho = autoCompleteTextView.getText().toString();
-                Log.d("CinemaFragment", "Button clicked");
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String thanhPho = (String) parent.getItemAtPosition(position);
+                Log.d("CinemaFragment", "City selected: " + thanhPho);
                 Snackbar.make(view, "Thành phố đã chọn: " + thanhPho, Snackbar.LENGTH_LONG).show();
-
-                // Update the list of cinemas based on the selected city
-                List<Rap> nearbyRaps = getNearbyRapsForCity(thanhPho);
-                rapAdapter.updateRapList(nearbyRaps);
+                fetchMaTPAndUpdateCinemas(thanhPho);
             }
         });
+        //  Lấy dữ liệu phim từ Bundle khi CinemaFragment được khởi tạo
+
+                // Thiết lập RecyclerView
+//                nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
+//                nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+                // Tạo adapter và thiết lập sự kiện khi nhấn vào rạp
+                rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Rap rap) {
+                        // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
+                        SuatChieu suatChieuFragment = new SuatChieu();
+
+                        // Truyền thông tin phim và rạp đã chọn
+                        Bundle bundle = new Bundle();
+                        bundle.putString("TenPhim", selectedFilm.getName());
+                        bundle.putString("NoiDung", selectedFilm.getNoidung());
+                        bundle.putString("HinhAnh", selectedFilm.getImageUrl());
+
+                        bundle.putSerializable("selectedFilm", selectedFilm);
+                        bundle.putSerializable("selectedRap", rap);
+                        suatChieuFragment.setArguments(bundle);
+
+                        // Chuyển sang SuatChieuFragment
+                        FragmentManager fragmentManager = getParentFragmentManager();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frame_layout, suatChieuFragment)
+                                .addToBackStack(null)
+                                .commit();
+                    }
+                });
+
+               nearbyRapRecyclerView.setAdapter(rapAdapter);
+        fetchCitiesFromFirebase();
+                // Fetch dữ liệu rạp từ Firebase
+               // fetchCinemasFromFirebase();
+
 
         return view;
     }
 
-    // Method to get the list of cinemas based on the selected city
-    private List<Rap> getNearbyRapsForCity(String city) {
-        List<Rap> rapList = new ArrayList<>();
+    private void fetchCitiesFromFirebase() {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("ThanhPho");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<String> cityList = new ArrayList<>();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    String cityName = snapshot.child("TenTP").getValue(String.class);
+                    cityList.add(cityName);
+                }
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_dropdown_item_1line, cityList);
+                autoCompleteTextView.setAdapter(adapter);
+            }
 
-        if (city.equals("Đà Nẵng")) {
-            rapList.add(new Rap("CGV Vĩnh Trung Plaza", "255-257 đường Hùng Vương, Đà Nẵng", R.drawable.cgv, 1.2));
-            rapList.add(new Rap("Starlight Đà Nẵng", "T4-Tòa nhà Nguyễn Kim, Đà Nẵng", R.drawable.starlight, 0.8));
-        } else if (city.equals("Hà Nội")) {
-            rapList.add(new Rap("CGV Vincom Center", "191 Bà Triệu, Hà Nội", R.drawable.cgv, 2.5));
-            rapList.add(new Rap("Galaxy Nguyễn Du", "116 Nguyễn Du, Hà Nội", R.drawable.galaxy, 3.0));
-            rapList.add(new Rap("BHD Star Phạm Hùng", "Tầng 3, Vincom Center Phạm Hùng, Hà Nội", R.drawable.rio, 1.8));
-        } else if (city.equals("Hồ Chí Minh")) {
-            rapList.add(new Rap("CGV Vincom Đồng Khởi", "171 Đồng Khởi, Hồ Chí Minh", R.drawable.cgv, 5.0));
-            rapList.add(new Rap("Galaxy Nguyễn Huệ", "85 Nguyễn Huệ, Hồ Chí Minh", R.drawable.galaxy, 4.5));
-        } else if (city.equals("Hải Phòng")) {
-            rapList.add(new Rap("CGV Hải Phòng", "Số 2, Lê Hồng Phong, Hải Phòng", R.drawable.cgv, 2.0));
-            rapList.add(new Rap("BHD Star Hải Phòng", "Thành phố Hải Phòng", R.drawable.rio, 1.5));
-        } else if (city.equals("Quảng Trị")) {
-            rapList.add(new Rap("Rạp Quảng Trị", "Đường Hùng Vương, Quảng Trị", R.drawable.cgv, 2.0));
-            rapList.add(new Rap("Galaxy Quảng Trị", "Đường Trần Hưng Đạo, Quảng Trị", R.drawable.galaxy, 2.5));
-        }
-
-        return rapList;
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
+            }
+        });
     }
+
+    private void fetchMaTPAndUpdateCinemas(String cityName) {
+        DatabaseReference cityRef = FirebaseDatabase.getInstance().getReference("ThanhPho");
+        cityRef.orderByChild("TenTP").equalTo(cityName).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        String maTP = snapshot.child("MaTP").getValue(String.class);
+                        fetchCinemasByMaTP(maTP);
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void fetchCinemasByMaTP(String maTP) {
+        DatabaseReference rapRef = FirebaseDatabase.getInstance().getReference("RAP");
+        rapRef.orderByChild("MaTP").equalTo(maTP).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<Rap> rapList = new ArrayList<>();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Rap rap = snapshot.getValue(Rap.class);
+                    rapList.add(rap);
+                }
+                rapAdapter.updateRapList(rapList);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle possible errors.
+                Snackbar.make(nearbyRapRecyclerView, "Không thể tải dữ liệu. Vui lòng thử lại!", Snackbar.LENGTH_LONG).show();
+            }
+        });
+    }
+
 }

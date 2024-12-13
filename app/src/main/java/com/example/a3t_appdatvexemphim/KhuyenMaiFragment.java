@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.a3t_appdatvexemphim.Voucher;
 import com.example.a3t_appdatvexemphim.VoucherAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,12 +39,12 @@ public class KhuyenMaiFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_khuyen_mai, container, false);
-        lichsu=view.findViewById(R.id.lichsu);
-        but_back=view.findViewById(R.id.but_back);
+        lichsu = view.findViewById(R.id.lichsu);
+        but_back = view.findViewById(R.id.but_back);
 
         listView = view.findViewById(R.id.lv_voucher);
-        linear_nhap=view.findViewById(R.id.linear_nhap);
-        linear_uudai=view.findViewById(R.id.linearuudai);
+        linear_nhap = view.findViewById(R.id.linear_nhap);
+        linear_uudai = view.findViewById(R.id.linearuudai);
         // Khởi tạo danh sách và adapter
         ArrayList<Voucher> voucherList = new ArrayList<>();
         VoucherAdapter adapter = new VoucherAdapter(getContext(), voucherList);
@@ -77,7 +78,6 @@ public class KhuyenMaiFragment extends Fragment {
                 }
                 adapter.notifyDataSetChanged(); // Update ListView
             }
-
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -173,5 +173,4 @@ public class KhuyenMaiFragment extends Fragment {
             Log.e("openFragment", "Fragment truyền vào null.");
         }
     }
-
 }

@@ -19,12 +19,12 @@
         android:background="#BA28337E"
         android:gravity="center"
         android:text="@string/phim_hoat_hinh"
-    android:textColor="@color/white"
-    android:textSize="24sp"
-    android:contentDescription="@string/phim_hoat_hinh_desc"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:contentDescription="@string/phim_hoat_hinh_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/back"

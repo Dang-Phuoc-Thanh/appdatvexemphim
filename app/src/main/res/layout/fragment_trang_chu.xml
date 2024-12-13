@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="fitXY"
-            android:src="@drawable/nen"
+            android:src="@drawable/nen2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +35,7 @@
             android:padding="10dp"
             android:hint="Nhập phim bạn quan tâm"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

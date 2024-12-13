@@ -28,7 +28,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class MainActivity extends AppCompatActivity {
     private EditText emailEditText, passwordEditText;
     private Button buttonLogin;
-    private TextView forgotPassword, signUp;
+    private TextView forgotPassword, signUp, tvdsthanhvien;
     private View mainLayout;
 
     @Override
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLogin = findViewById(R.id.button_login_main);
         forgotPassword = findViewById(R.id.textViewForgotPassword);
         signUp = findViewById(R.id.textViewSignUp);
+        tvdsthanhvien = findViewById(R.id.tvdsthanhvien);
 
         // Cấu hình Insets để tránh che khuất thanh trạng thái và điều hướng
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout, (v, insets) -> {
@@ -77,12 +78,21 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Xử lý quên mật khẩu
+    // Xử lý quên mật khẩu
         forgotPassword.setOnClickListener(view -> {
             // Thêm xử lý chuyển màn hình nếu cần
             Intent intent = new Intent(MainActivity.this, QuenMK.class);
             startActivity(intent);
         });
+
+        tvdsthanhvien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, dsthanhvien.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void navigateToHome(String userId) {

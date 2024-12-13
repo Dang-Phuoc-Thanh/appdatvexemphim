@@ -1,5 +1,6 @@
 package com.example.a3t_appdatvexemphim.Trangchu;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +17,9 @@ import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder> {
-
+    private Context context;
     private List<FILM> nFilms;
-
+ 
     public void setData(List<FILM> list) {
         this.nFilms = list;
         notifyDataSetChanged();

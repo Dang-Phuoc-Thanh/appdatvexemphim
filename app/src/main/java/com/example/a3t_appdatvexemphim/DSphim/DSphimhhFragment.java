@@ -67,6 +67,7 @@ public class DSphimhhFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_d_sphimhh, container, false);
         butback=view.findViewById(R.id.back);
         // Nhận danh sách phim từ Bundle
@@ -89,11 +90,11 @@ public class DSphimhhFragment extends Fragment {
                         "Khởi chiếu: " + phim.NgayKhoiChieu, "Nội dung: " + phim.NoiDung,
                         "Đặt vé",
                         phim.HinhAnh, // Replace with the actual image URL
-                        phim.Video// Replace with the actual trailer URL
-
+                        phim.Video // Replace with the actual trailer URL
                 ));
             }
         }
+
 
         // Khởi tạo adapter với đủ ba tham số
         listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
@@ -104,6 +105,7 @@ public class DSphimhhFragment extends Fragment {
                 backpage();
             }
         });
+
         return view;
     }
     public void backpage() {
