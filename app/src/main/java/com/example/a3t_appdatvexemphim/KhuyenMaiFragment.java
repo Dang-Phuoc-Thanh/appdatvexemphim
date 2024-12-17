@@ -30,7 +30,7 @@ import java.util.List;
 public class KhuyenMaiFragment extends Fragment {
     ListView listView;
     private TextView lichsu;
-    private LinearLayout linear_nhap,linear_uudai;
+    private LinearLayout linear_nhap, linear_uudai;
     private ImageView but_back;
     List<Voucher> khuyenMaiList;
     VoucherAdapter adapter;
@@ -53,7 +53,7 @@ public class KhuyenMaiFragment extends Fragment {
         // Lấy tham chiếu Firebase
         data = FirebaseDatabase.getInstance().getReference("KHUYENMAI");
 
-// Đọc dữ liệu từ Firebase
+        // Đọc dữ liệu từ Firebase
         data.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -88,7 +88,7 @@ public class KhuyenMaiFragment extends Fragment {
         listView.setOnItemClickListener((parent, view1, position, id) -> {
             // Lấy mục được click
             Voucher selectedVoucher = voucherList.get(position);
-            Bundle bundle= new Bundle();
+            Bundle bundle = new Bundle();
             if (getArguments() != null) {
                 if (getArguments().containsKey("selectedFilm")) {
                     bundle.putSerializable("selectedFilm", getArguments().getSerializable("selectedFilm"));
@@ -97,20 +97,17 @@ public class KhuyenMaiFragment extends Fragment {
                     bundle.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
                 }
                 if (getArguments().containsKey("txtName")) {
-                    bundle.putString("txtName",getArguments().getString("txtName"));
-
+                    bundle.putString("txtName", getArguments().getString("txtName"));
                 }
                 if (getArguments().containsKey("txtPhone")) {
-                    bundle.putString("txtPhone",getArguments().getString("txtPhone"));
-
+                    bundle.putString("txtPhone", getArguments().getString("txtPhone"));
                 }
                 if (getArguments().containsKey("txtEmail")) {
-                    bundle.putString("txtEmail",getArguments().getString("txtEmail"));
-
+                    bundle.putString("txtEmail", getArguments().getString("txtEmail"));
                 }
             }
             Long discountAmount = selectedVoucher.getDiscountAmount(); // Lấy discountAmount từ đối tượng Voucher
-            bundle.putFloat("discountAmount",discountAmount);
+            bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
             // Tạo Fragment ThanhToan và truyền dữ liệu qua Bundle
             ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle); // Truyền giá trị discountAmount
 
@@ -120,10 +117,8 @@ public class KhuyenMaiFragment extends Fragment {
             transaction.addToBackStack(null);
             transaction.commit();
             // Chuyển sang Fragment ThanhToan
-
-
-
         });
+
         lichsu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -161,6 +156,7 @@ public class KhuyenMaiFragment extends Fragment {
             fragmentManager.popBackStack();
         }
     }
+
     private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

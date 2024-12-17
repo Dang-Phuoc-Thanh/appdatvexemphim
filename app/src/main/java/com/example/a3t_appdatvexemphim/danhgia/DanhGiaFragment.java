@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.VeCuaToiFragment;
 import com.google.android.material.snackbar.Snackbar;
@@ -29,6 +32,8 @@ public class DanhGiaFragment extends Fragment {
     private String mParam2;
     private Button gui;
     private ImageView back;
+    private ImageView hinh_anh;
+    private TextView ten_phim;
     public DanhGiaFragment() {
         // Required empty public constructor
     }
@@ -55,8 +60,20 @@ public class DanhGiaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_danhgia, container, false);
-
+        hinh_anh = view.findViewById(R.id.hinh_anh);
+        ten_phim = view.findViewById(R.id.ten_phim);
         gui = view.findViewById(R.id.gui);
+        if (getArguments() != null) {
+            String tenPhim = getArguments().getString("TenPhim1");
+            String hinhAnh = getArguments().getString("HinhAnh1");
+
+            // Hiển thị dữ liệu lên giao diện
+            ten_phim.setText(tenPhim);
+            Glide.with(this).load(hinhAnh).into(hinh_anh);
+        } else {
+            Toast.makeText(getContext(), "chưa gọi được Arguments", Toast.LENGTH_SHORT).show();
+        }
+
         gui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

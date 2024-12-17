@@ -1,4 +1,5 @@
 package com.example.a3t_appdatvexemphim;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
@@ -11,12 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 
 import java.util.ArrayList;
+
 public class BapNuocFragment extends Fragment {
 
     private Button tieptuc;
@@ -29,6 +28,7 @@ public class BapNuocFragment extends Fragment {
     private ArrayList<String> danhSachGheDuocChon;
     private dsFILMHH selectedFilm;
     private float discountAmount;
+    private int total;
 
     public BapNuocFragment() { }
 
@@ -77,7 +77,8 @@ public class BapNuocFragment extends Fragment {
         tieptuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // In BapNuocFragment
+                // Tính toán tổng tiền
+                int total = (quantity1 * 99000) + (quantity2 * 14900); // Replace prices with the correct values if needed
 
                 // Ensure the data is in the bundle
                 Bundle bundle = new Bundle();
@@ -89,8 +90,9 @@ public class BapNuocFragment extends Fragment {
                     bundle.putSerializable("selectedFilm", selectedFilm);
                 }
 
-                // Truyền dữ liệu giảm giá
+                // Truyền dữ liệu giảm giá và tổng tiền
                 bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
+                bundle.putInt("total", total);
 
                 // Open ThanhToanFragment and pass data
                 ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle);
@@ -131,7 +133,7 @@ public class BapNuocFragment extends Fragment {
     }
 
     private void updateTotal() {
-        int total = (quantity1 * 99000) + (quantity2 * 14900); // Replace prices with the correct values if needed
+        total = (quantity1 * 99000) + (quantity2 * 14900); // Replace prices with the correct values if needed
         tongtien.setText(total + " đ");
     }
 

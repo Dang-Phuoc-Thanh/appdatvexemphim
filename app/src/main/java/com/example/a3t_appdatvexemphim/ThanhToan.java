@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.bumptech.glide.disklrucache.DiskLruCache;
+import java.util.ArrayList;
 
 /**
  * A Fragment class representing the "Thanh Toan" (Payment) screen.
@@ -26,7 +25,7 @@ import com.bumptech.glide.disklrucache.DiskLruCache;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
-    private TextView txtPttt,discountTextView,txt_tongtien,txt_thanhtien;
+    private TextView txtPttt, discountTextView, txt_tongtien, txt_thanhtien;
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
@@ -40,7 +39,6 @@ public class ThanhToan extends Fragment {
         fragment.setArguments(bundle); // Gán trực tiếp Bundle được truyền vào
         return fragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -61,23 +59,41 @@ public class ThanhToan extends Fragment {
         // Lấy dữ liệu từ Bundle
         Bundle bundle = getArguments();
         float discountAmount = 0;
+        int giaMoiGhe = 9000; // Giá mỗi ghế
+        int giaBapNuoc = 0; // Giá bắp nước, bạn có thể thay đổi giá trị này
+
         if (bundle != null) {
-            discountAmount = bundle.getFloat("discountAmount", 0.0f);
-            // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
-            discountTextView.setText(String.format("%.0f" + " Vnd", discountAmount));
-            txt_thanhtien.setText("90000 Vnd");
-            String name=bundle.getString("txtName");
-            String email=bundle.getString("txtEmail");
-            String phone=bundle.getString("txtPhone");
+            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
+            discountTextView.setText(String.format("%.0f VND", discountAmount));
+
+            // Lấy danh sách ghế đã chọn từ bundle
+            ArrayList<String> danhSachGheDuocChon = bundle.getStringArrayList("danhSachGheDuocChon");
+            int soLuongGhe = (danhSachGheDuocChon != null) ? danhSachGheDuocChon.size() : 0;
+
+            // Tính tổng tiền ghế
+            int tongTienGhe = soLuongGhe * giaMoiGhe;
+
+            // Lấy giá bắp nước từ bundle
+            giaBapNuoc = bundle.getInt("total", 0);
+
+            // Tính tổng tiền
+            int tongTien = tongTienGhe + giaBapNuoc - (int) discountAmount;
+
+            // Hiển thị tổng tiền và các thông tin khác
+            txt_thanhtien.setText(String.format("%d VND", tongTienGhe + giaBapNuoc));
+            String name = bundle.getString("txtName");
+            String email = bundle.getString("txtEmail");
+            String phone = bundle.getString("txtPhone");
             txtPhone.setText(phone);
             txtName.setText(name);
             txtEmail.setText(email);
-            txt_tongtien.setText(String.format("%.0f" + " VND", 90000 - discountAmount));// Hiển thị số giảm giá với 2 chữ số thập phân
+            txt_tongtien.setText(String.format("%d VND", tongTien)); // Hiển thị tổng tiền sau khi giảm giá
         } else {
-            txt_tongtien.setText("90000 Vnd");
-            txt_thanhtien.setText("90000 Vnd");
-            discountTextView.setText("0 Vnd");
+            txt_tongtien.setText("90000 VND");
+            txt_thanhtien.setText("90000 VND");
+            discountTextView.setText("0 VND");
         }
+
 
         // Set click listener
         txtPttt.setOnClickListener(v -> openFragment(new PhuongThucThanhToan()));
@@ -182,6 +198,4 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
-
-
 }
