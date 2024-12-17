@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,10 +23,6 @@ import com.example.a3t_appdatvexemphim.databinding.ActivityCtrapBinding;
 import java.util.ArrayList;
 
 public class CtrapFragment extends Fragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private String mParam1;
-    private String mParam2;
     private ActivityCtrapBinding binding;
     private Rap selectedRap;
 
@@ -36,54 +33,36 @@ public class CtrapFragment extends Fragment {
     public static CtrapFragment newInstance(Rap rap) {
         CtrapFragment fragment = new CtrapFragment();
         Bundle args = new Bundle();
-        args.putSerializable("rap", rap); // Giả sử Rap implements Serializable
+        args.putSerializable("rap", rap); // Assuming Rap implements Serializable
         fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_ctrap, container, false);
+        // Initialize the binding object
+        binding = ActivityCtrapBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
 
-        // Lấy dữ liệu rạp từ Bundle
+        // Retrieve data from Bundle
         if (getArguments() != null) {
-            selectedRap = (Rap) getArguments().getSerializable("selectedRap");
+            selectedRap = (Rap) getArguments().getSerializable("rap");
         }
 
-        // Hiển thị thông tin rạp
+        // Display rap information
         if (selectedRap != null) {
-            TextView textView = view.findViewById(R.id.textView3);
+            TextView textView = binding.textView3;
             textView.setText(selectedRap.getTenRap());
-            // Hiển thị thêm các thông tin khác của rạp nếu cần
         }
 
-
-
-        // Nhận dữ liệu từ Bundle
-        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
-
-
-
-
-        final ArrayList<dsFILMHH> dsFILMHHArrayList;
-
-        // Khôi phục danh sách phim từ Bundle nếu có
+        // Retrieve film list from Bundle or create default list
+        ArrayList<dsFILMHH> dsFILMHHArrayList;
         if (getArguments() != null && getArguments().getSerializable("filmList") != null) {
             dsFILMHHArrayList = (ArrayList<dsFILMHH>) getArguments().getSerializable("filmList");
         } else {
             dsFILMHHArrayList = new ArrayList<>();
-            // Thêm dữ liệu mặc định vào dsFILMHHArrayList nếu cần
+            // Add default data to dsFILMHHArrayList if needed
             String[] imageUrls = {
                     "https://example.com/path/to/image1.jpg",
                     "https://example.com/path/to/image2.jpg",
@@ -136,35 +115,35 @@ public class CtrapFragment extends Fragment {
             }
         }
 
-        // Khởi tạo adapter
+        // Initialize adapter
         listAdapter1 ListAdapter = new listAdapter1(getContext(), dsFILMHHArrayList);
 
-        // Gán adapter cho ListView
+        // Set adapter to ListView
         binding.listview.setAdapter(ListAdapter);
 
-        // Bắt sự kiện click cho ListView
+        // Set click listener for ListView
         binding.listview.setClickable(true);
         binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Khi người dùng click vào một mục trong danh sách, chuyển đến CTRapFragment
+                // When an item is clicked, navigate to CTRapFragment
                 CtrapFragment ctrapFragment = new CtrapFragment();
 
-                // Truyền dữ liệu nếu cần thiết qua Bundle
+                // Pass data if needed through Bundle
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", dsFILMHHArrayList.get(position));
-                bundle.putSerializable("filmList", dsFILMHHArrayList); // Lưu trữ danh sách phim
+                bundle.putSerializable("filmList", dsFILMHHArrayList); // Save film list
                 ctrapFragment.setArguments(bundle);
 
-                // Thay thế Fragment hiện tại bằng CTRapFragment
+                // Replace current Fragment with CTRapFragment
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.frameRAP, ctrapFragment) // R.id.frameRAP là ID của View chứa Fragment
-                        .addToBackStack(null) // Thêm vào back stack để có thể quay lại
+                        .replace(R.id.frameRAP, ctrapFragment) // R.id.frameRAP is the ID of the View containing the Fragment
+                        .addToBackStack(null) // Add to back stack to allow back navigation
                         .commit();
             }
         });
 
-        // Thiết lập sự kiện nhấp chuột cho nút quay lại
+        // Set click listener for back button
         binding.icQuaylai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -173,13 +152,19 @@ public class CtrapFragment extends Fragment {
             }
         });
 
-        // Thiết lập padding cho button nếu cần
+        // Set padding for button if needed
         ViewCompat.setOnApplyWindowInsetsListener(binding.btnKHOIPHUC, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        return binding.getRoot();
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Avoid memory leaks
     }
 }

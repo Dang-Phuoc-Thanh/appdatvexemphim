@@ -79,13 +79,29 @@ public class CinemaFragment extends Fragment  {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cinema, container, false);
 
+       // dsFILMHH selectedFilm = null;
+//        Bundle args = getArguments();
+//        if (args != null) {
+//            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+//        } else {
+//            Log.e("CinemaFragment", "Arguments are null");
+//            navigateToCtrapFragment(null);
+//            return view;
+//        }
         // Lấy dữ liệu phim được chọn từ các đối số
-        Bundle args = getArguments();
+       Bundle args = getArguments();
+//        if (args != null) {
+//            selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+//        }
+
+        final dsFILMHH selectedFilm;
         if (args != null) {
-            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+            selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
         } else {
-            Log.e("CinemaFragment", "Arguments are null");
+            selectedFilm = null;
         }
+
+
         autoCompleteTextView = view.findViewById(R.id.inputTV);
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
 
@@ -124,7 +140,8 @@ public class CinemaFragment extends Fragment  {
                 rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(Rap rap) {
-                        // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
+                        if (selectedFilm != null){
+                            // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
                         SuatChieu suatChieuFragment = new SuatChieu();
 
                         // Truyền thông tin phim và rạp đã chọn
@@ -146,6 +163,59 @@ public class CinemaFragment extends Fragment  {
                                 .replace(R.id.frame_layout, suatChieuFragment)
                                 .addToBackStack(null)
                                 .commit();
+
+
+                        }else{
+                            // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
+                        CtrapFragment ctrapFragment = new CtrapFragment();
+
+                        // Truyền thông tin phim và rạp đã chọn
+
+                        Bundle bundle = new Bundle();
+//                        if (args != null) {
+//                            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+//                            bundle.putString("TenPhim", selectedFilm.getName());
+//                            bundle.putString("NoiDung", selectedFilm.getNoidung());
+//                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
+//                            bundle.putSerializable("selectedFilm", selectedFilm);
+//                        }
+                        bundle.putSerializable("selectedRap", rap);
+                        ctrapFragment.setArguments(bundle);
+
+                        // Chuyển sang SuatChieuFragment
+                        FragmentManager fragmentManager = getParentFragmentManager();
+                        fragmentManager.beginTransaction()
+                                .replace(R.id.frame_layout, ctrapFragment)
+                                .addToBackStack(null)
+                                .commit();
+                        }
+
+
+
+
+
+//                        // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
+//                        SuatChieu suatChieuFragment = new SuatChieu();
+//
+//                        // Truyền thông tin phim và rạp đã chọn
+//
+//                        Bundle bundle = new Bundle();
+//                        if (args != null) {
+//                            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
+//                            bundle.putString("TenPhim", selectedFilm.getName());
+//                            bundle.putString("NoiDung", selectedFilm.getNoidung());
+//                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
+//                            bundle.putSerializable("selectedFilm", selectedFilm);
+//                        }
+//                        bundle.putSerializable("selectedRap", rap);
+//                        suatChieuFragment.setArguments(bundle);
+//
+//                        // Chuyển sang SuatChieuFragment
+//                        FragmentManager fragmentManager = getParentFragmentManager();
+//                        fragmentManager.beginTransaction()
+//                                .replace(R.id.frame_layout, suatChieuFragment)
+//                                .addToBackStack(null)
+//                                .commit();
                     }
                 });
 
