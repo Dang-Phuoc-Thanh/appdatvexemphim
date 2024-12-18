@@ -49,6 +49,7 @@ public class CinemaFragment extends Fragment  {
     private String mParam2;
     private ImageView arrowIcon;
     private List<Rap> rapList;
+    private Rap selectedRap;
 
     private DatabaseReference databaseReference;
     public CinemaFragment() {
@@ -140,6 +141,7 @@ public class CinemaFragment extends Fragment  {
                 rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(Rap rap) {
+                        selectedRap = rap;
                         if (selectedFilm != null){
                             // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
                         SuatChieu suatChieuFragment = new SuatChieu();
@@ -154,7 +156,7 @@ public class CinemaFragment extends Fragment  {
                             bundle.putString("HinhAnh", selectedFilm.getImageUrl());
                             bundle.putSerializable("selectedFilm", selectedFilm);
                         }
-                        bundle.putSerializable("selectedRap", rap);
+                            bundle.putSerializable("rap", selectedRap);
                         suatChieuFragment.setArguments(bundle);
 
                         // Chuyển sang SuatChieuFragment
@@ -179,7 +181,7 @@ public class CinemaFragment extends Fragment  {
 //                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
 //                            bundle.putSerializable("selectedFilm", selectedFilm);
 //                        }
-                        bundle.putSerializable("selectedRap", rap);
+                            bundle.putSerializable("rap", selectedRap);
                         ctrapFragment.setArguments(bundle);
 
                         // Chuyển sang SuatChieuFragment

@@ -90,7 +90,9 @@ public class DSphimhhFragment extends Fragment {
                         "Khởi chiếu: " + phim.NgayKhoiChieu, "Nội dung: " + phim.NoiDung,
                         "Đặt vé",
                         phim.HinhAnh, // Replace with the actual image URL
-                        phim.Video // Replace with the actual trailer URL
+                        phim.Video, // Replace with the actual trailer URL
+                        phim.MaLich
+
                 ));
             }
         }
