@@ -53,6 +53,8 @@
     <string name="enter_phone">Nhập số điện thoại</string>
     <string name="enter_email">Nhập email</string>
     <string name="payment_button">Thanh Toán</string>
+    <string name="giave">Giá vé</string>
+    <string name="doan">Đồ ăn</string>
 
 
     <string-array name="city_list">

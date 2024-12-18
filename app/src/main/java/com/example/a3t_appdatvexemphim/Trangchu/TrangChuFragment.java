@@ -27,6 +27,7 @@ import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.THONGTINPHIM.TTPhimFragment;
 import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -61,7 +62,9 @@ public class TrangChuFragment extends Fragment {
     public Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     public DatabaseReference mData;
     private List<ClassPhim> danhsachphim = new ArrayList<>();
+
     private String getURLVideo;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -336,45 +339,23 @@ public class TrangChuFragment extends Fragment {
 
             @Override
             public void onFilmClick(dsFILMHH film) {
-                DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
-                mData.child("PHIM").orderByChild("TenPhim").equalTo(film.getName()).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()) {
-                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                String videoUrl = snapshot.child("Video").getValue(String.class);
-                                if (videoUrl != null) {
-                                    film.setTrailerUrl(videoUrl); // Cập nhật URL trailer cho phim
-                                } else {
-                                    Log.e("Video URL", "Video URL is null");
-                                }
-                            }
-                        } else {
-                            Log.e("Video URL", "No movie found with the name: " + film.getName());
-                        }
 
-                        // Sau khi truy vấn xong, truyền dữ liệu vào CommentFilm_Fragment
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("selectedFilm", film);
-                        bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Truyền danh sách phim
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("selectedFilm", film);
+                bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(dsPhim)); // Truyền danh sách phim
 
-                        CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
-                        commentFilmFragment.setArguments(bundle);
+                CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
+                commentFilmFragment.setArguments(bundle);
 
-                        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                        transaction.replace(R.id.frame_layout, commentFilmFragment);
-                        transaction.addToBackStack(null);
-                        transaction.commit();
-                    }
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, commentFilmFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Log.e("Video URL", "Database error: " + databaseError.getMessage());
-                    }
-                });
             }
         });
     }
+
     @Override
     public void onResume() {
         super.onResume();
