@@ -26,7 +26,9 @@ import java.util.ArrayList;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
+
     private TextView txtPttt, discountTextView, txt_tongtien, txtgiave,txtdoan;
+
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
@@ -60,6 +62,7 @@ public class ThanhToan extends Fragment {
 
         // Lấy dữ liệu từ Bundle
         Bundle bundle = getArguments();
+
 
         int giaMoiGhe = 90000;
         int giaBapNuoc = 0;
@@ -109,6 +112,8 @@ public class ThanhToan extends Fragment {
             }
 
             }
+
+
 
 
 

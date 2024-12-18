@@ -77,7 +77,11 @@ public class BapNuocFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // Tính toán tổng tiền
+
                 int total = (quantity1 * 99000) + (quantity2 * 149000); // Replace prices with the correct values if needed
+
+                
+
 
                 // Ensure the data is in the bundle
                 Bundle bundle = new Bundle();
@@ -90,7 +94,9 @@ public class BapNuocFragment extends Fragment {
                 }
 
 
-                bundle.putInt("total", total);
+                // Truyền dữ liệu giảm giá và tổng tiền
+                bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
+
 
                 // Open ThanhToanFragment and pass data
                 ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle);

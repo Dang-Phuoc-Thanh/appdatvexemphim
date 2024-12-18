@@ -40,13 +40,12 @@ public class KhuyenMaiFragment extends Fragment {
         linear_uudai = view.findViewById(R.id.linearuudai);
 
         ArrayList<Voucher> voucherList = new ArrayList<>();
-        VoucherAdapter adapter = new VoucherAdapter(getContext(), voucherList);
+        adapter = new VoucherAdapter(getContext(), voucherList);
         listView.setAdapter(adapter);
 
         // Firebase Reference
         data = FirebaseDatabase.getInstance().getReference("KHUYENMAI");
 
-        // Read data from Firebase
         data.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -111,10 +110,12 @@ public class KhuyenMaiFragment extends Fragment {
             transaction.commit();
         });
 
+        // Set up fragment navigation with simplified listeners
         lichsu.setOnClickListener(view1 -> openFragment(new VoucherLichSu()));
         linear_uudai.setOnClickListener(view1 -> openFragment(new UuDai()));
         linear_nhap.setOnClickListener(view1 -> openFragment(new AddVoucher()));
         but_back.setOnClickListener(view1 -> backpage());
+
         return view;
     }
 
@@ -132,4 +133,5 @@ public class KhuyenMaiFragment extends Fragment {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }
