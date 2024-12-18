@@ -69,11 +69,13 @@
             android:padding="8dp">
 
             <ImageView
+                android:id="@+id/hinh_anh"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/phh3" />
 
             <TextView
+                android:id="@+id/ten_phim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
