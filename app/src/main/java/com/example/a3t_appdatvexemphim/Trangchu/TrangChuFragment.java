@@ -62,6 +62,9 @@ public class TrangChuFragment extends Fragment {
     public Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     public DatabaseReference mData;
     private List<ClassPhim> danhsachphim = new ArrayList<>();
+
+    private String getURLVideo;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -336,6 +339,7 @@ public class TrangChuFragment extends Fragment {
 
             @Override
             public void onFilmClick(dsFILMHH film) {
+
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", film);
                 bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(dsPhim)); // Truyền danh sách phim
@@ -347,6 +351,7 @@ public class TrangChuFragment extends Fragment {
                 transaction.replace(R.id.frame_layout, commentFilmFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
+
             }
         });
     }

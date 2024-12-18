@@ -46,7 +46,7 @@ public class KhuyenMaiFragment extends Fragment {
         // Firebase Reference
         data = FirebaseDatabase.getInstance().getReference("KHUYENMAI");
 
-        // Read data from Firebase
+
         data.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -96,6 +96,7 @@ public class KhuyenMaiFragment extends Fragment {
                 }
                 if (getArguments().containsKey("txtEmail")) {
                     bundle.putString("txtEmail", getArguments().getString("txtEmail"));
+
                 }
                 if (getArguments().containsKey("total")) {
                     bundle.putInt("total", getArguments().getInt("total"));
@@ -103,12 +104,15 @@ public class KhuyenMaiFragment extends Fragment {
             }
             bundle.putLong("DISCOUNT_AMOUNT", selectedVoucher.getDiscountAmount());
 
+
             ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle);
             thanhToanFragment.setArguments(bundle);
             FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
             transaction.replace(R.id.frame_layout, thanhToanFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+
+         
         });
 
         lichsu.setOnClickListener(view1 -> openFragment(new VoucherLichSu()));
