@@ -23,6 +23,7 @@ public class dsFILMHH implements Serializable {
 
     }
 
+
     public dsFILMHH(String name, String time, String day, String datve, String imageUrl) {
         this.name = name;
         this.time = time;
@@ -77,6 +78,12 @@ public class dsFILMHH implements Serializable {
     public String getImageUrl() {
         return imageUrl;
     }
+//    public String getNoiDung() {
+//        return NoiDung;
+//    }
+//    public void setNoiDung(String NoiDung) {
+//        this.NoiDung = NoiDung;
+//    }
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;

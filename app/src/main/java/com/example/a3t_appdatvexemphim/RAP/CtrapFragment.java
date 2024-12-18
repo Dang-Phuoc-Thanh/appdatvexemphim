@@ -13,12 +13,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.DSphim.listAdapter;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
 import com.example.a3t_appdatvexemphim.databinding.FragmentCtrapBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -90,6 +94,8 @@ public class CtrapFragment extends Fragment {
         adapter = new listAdapter(getContext(), phimList, new ArrayList<>());
         listView.setAdapter(adapter);
 
+
+
         // Fetch movies by MaRap
         if (selectedRap != null && selectedRap.getMaLich() != null) {
             fetchMoviesByMaLich(selectedRap.getMaLich());
@@ -107,6 +113,9 @@ public class CtrapFragment extends Fragment {
             @Override
             public void onItemClick(LichChieu lichChieu) {
                 fetchMoviesByMaLich(lichChieu.getMaLich());
+
+
+
             }
         });
         recyclerView.setAdapter(dayAdapter);
@@ -149,23 +158,26 @@ public class CtrapFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 phimList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    dsFILMHH phim = snapshot.getValue(dsFILMHH.class);
+                    ClassPhim phim = snapshot.getValue(ClassPhim.class);
                     if (phim != null) {
-                        String noiDung = phim.getNoidung();
+                        String noiDung = phim.NoiDung;
                         if (noiDung == null) {
-                            noiDung = "Nội dung không có sẵn"; // Default message if Nội dung is null
+                            noiDung = "Nội dung không có sẵn huhuhu"; // Default message if Nội dung is null
                         }
                         phimList.add(new dsFILMHH(
-                                phim.getTenPhim(),
-                                "Thời lượng: " + phim.getThoiLuong() + " Phút",
-                                "Khởi chiếu: " + phim.getNgayKhoiChieu(),
+                                phim.TenPhim,
+                                "Thời lượng: " + phim.ThoiLuong + " Phút",
+                                "Khởi chiếu: " + phim.NgayKhoiChieu,
                                 "Nội dung: " + noiDung,
                                 "Đặt vé",
-                                phim.getHinhAnh(), // Replace with the actual image URL
-                                phim.getVideo(), // Replace with the actual trailer URL
-                                phim.getMaLich()
+                                phim.HinhAnh, // Replace with the actual image URL
+                                phim.Video, // Replace with the actual trailer URL
+                                phim.MaLich
                         ));
-                        Log.d(TAG, "Phim received: " + phim.getTenPhim());
+                        Log.d(TAG, "Phim received: " + phim.TenPhim);
+
+
+
                     } else {
                         Log.d(TAG, "Phim is null");
                     }
@@ -178,6 +190,12 @@ public class CtrapFragment extends Fragment {
                 Log.e(TAG, "Database error: " + databaseError.getMessage());
             }
         });
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }
 
