@@ -12,17 +12,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.R;
-import com.example.a3t_appdatvexemphim.Trangchu.FILM;
 
 import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder> {
     private Context context;
     private List<FILM> nFilms;
- 
+    private OnFilmClickListener filmClickListener;
+
+    public FilmAdapter(Context context) {
+        this.context = context;
+    }
+
     public void setData(List<FILM> list) {
         this.nFilms = list;
         notifyDataSetChanged();
+    }
+
+    public void setOnFilmClickListener(OnFilmClickListener listener) {
+        this.filmClickListener = listener;
     }
 
     @NonNull
@@ -39,15 +47,24 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
             return;
         }
         holder.tvTitle.setText(film.getTitle());
-        // Sử dụng Glide để tải hình ảnh từ URL
-        Glide.with(holder.itemView.getContext())
+        Glide.with(context)
                 .load(film.getImageUrl())
                 .into(holder.imgFilm);
+
+        holder.itemView.setOnClickListener(v -> {
+            if (filmClickListener != null) {
+                filmClickListener.onFilmClick(film);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return nFilms != null ? nFilms.size() : 0;
+    }
+
+    public interface OnFilmClickListener {
+        void onFilmClick(FILM film);
     }
 
     public class FilmViewHolder extends RecyclerView.ViewHolder {

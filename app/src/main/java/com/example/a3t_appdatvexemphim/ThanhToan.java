@@ -3,8 +3,8 @@ package com.example.a3t_appdatvexemphim;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.bumptech.glide.disklrucache.DiskLruCache;
+import java.util.ArrayList;
 
 /**
  * A Fragment class representing the "Thanh Toan" (Payment) screen.
@@ -26,7 +26,9 @@ import com.bumptech.glide.disklrucache.DiskLruCache;
 public class ThanhToan extends Fragment {
 
     private EditText txtPhone, txtName, txtEmail;
-    private TextView txtPttt,discountTextView,txt_tongtien,txt_thanhtien;
+
+    private TextView txtPttt, discountTextView, txt_tongtien, txtgiave,txtdoan;
+
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
@@ -37,10 +39,9 @@ public class ThanhToan extends Fragment {
 
     public static ThanhToan newInstance(Bundle bundle) {
         ThanhToan fragment = new ThanhToan();
-        fragment.setArguments(bundle); // Gán trực tiếp Bundle được truyền vào
+        fragment.setArguments(bundle);
         return fragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -55,29 +56,64 @@ public class ThanhToan extends Fragment {
         btnBack = view.findViewById(R.id.back);
         btnThanhToan = view.findViewById(R.id.button_ThanhToan);
         discountTextView = view.findViewById(R.id.txt_giamgia);
-        txt_thanhtien = view.findViewById(R.id.txt_thanhtien);
+        txtgiave = view.findViewById(R.id.txt_giave);
         txt_tongtien = view.findViewById(R.id.txt_tongtien);
+        txtdoan=view.findViewById(R.id.txtdoan);
 
         // Lấy dữ liệu từ Bundle
         Bundle bundle = getArguments();
-        float discountAmount = 0;
+
+
+        int giaMoiGhe = 90000;
+        int giaBapNuoc = 0;
+
         if (bundle != null) {
-            discountAmount = bundle.getFloat("discountAmount", 0.0f);
-            // Set giá trị giảm giá vào TextView, sử dụng String.format để hiển thị số một cách chính xác
-            discountTextView.setText(String.format("%.0f" + " Vnd", discountAmount));
-            txt_thanhtien.setText("90000 Vnd");
-            String name=bundle.getString("txtName");
-            String email=bundle.getString("txtEmail");
-            String phone=bundle.getString("txtPhone");
-            txtPhone.setText(phone);
-            txtName.setText(name);
-            txtEmail.setText(email);
-            txt_tongtien.setText(String.format("%.0f" + " VND", 90000 - discountAmount));// Hiển thị số giảm giá với 2 chữ số thập phân
-        } else {
-            txt_tongtien.setText("90000 Vnd");
-            txt_thanhtien.setText("90000 Vnd");
-            discountTextView.setText("0 Vnd");
-        }
+            Long discountAmount = bundle.getLong("DISCOUNT_AMOUNT", 0L);
+
+            if (discountAmount == null || discountAmount == 0L) {
+                discountTextView.setText("0 VND");
+                ArrayList<String> danhSachGheDuocChon = bundle.getStringArrayList("danhSachGheDuocChon");
+                int soLuongGhe = (danhSachGheDuocChon != null) ? danhSachGheDuocChon.size() : 0;
+
+                Integer doan=bundle.getInt("total");
+
+                txtdoan.setText(String.format("%d VND",doan));
+                txtgiave.setText(String.format("%d VND",soLuongGhe*giaMoiGhe));
+
+                txt_tongtien.setText(String.format("%d VND",doan+(soLuongGhe*giaMoiGhe)));
+            }
+            else {
+                discountTextView.setText(String.format("-%d VND", discountAmount));
+
+
+
+                // Lấy danh sách ghế đã chọn từ bundle
+                ArrayList<String> danhSachGheDuocChon = bundle.getStringArrayList("danhSachGheDuocChon");
+                int soLuongGhe = (danhSachGheDuocChon != null) ? danhSachGheDuocChon.size() : 0;
+
+                // Tính tổng tiền ghế
+                int tongTienGhe = soLuongGhe * giaMoiGhe;
+
+                // Lấy giá bắp nước từ bundle
+                giaBapNuoc = bundle.getInt("total");
+                txtdoan.setText(String.format("%d VND",giaBapNuoc));
+                // Tính tổng tiền
+                Long tongTien = tongTienGhe + giaBapNuoc - discountAmount;
+
+                // Hiển thị tổng tiền và các thông tin khác
+                txtgiave.setText(String.format("%d VND",soLuongGhe*giaMoiGhe));
+                String name = bundle.getString("txtName");
+                String email = bundle.getString("txtEmail");
+                String phone = bundle.getString("txtPhone");
+                txtPhone.setText(phone);
+                txtName.setText(name);
+                txtEmail.setText(email);
+                txt_tongtien.setText(String.format("%d VND", tongTien));
+            }
+
+            }
+
+
 
         // Set click listener
         txtPttt.setOnClickListener(v -> openFragment(new PhuongThucThanhToan()));
@@ -98,6 +134,10 @@ public class ThanhToan extends Fragment {
                     if (getArguments().containsKey("danhSachGheDuocChon")) {
                         bundle1.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
                     }
+                    if (getArguments().containsKey("total")) {
+                        bundle1.putInt("total", getArguments().getInt("total"));
+                    }
+
                 }
 
                 // Mở KhuyenMaiFragment và truyền bundle1
@@ -182,6 +222,4 @@ public class ThanhToan extends Fragment {
             fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
         }
     }
-
-
 }

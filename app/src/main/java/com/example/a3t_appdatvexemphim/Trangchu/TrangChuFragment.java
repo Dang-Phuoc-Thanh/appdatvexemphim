@@ -23,8 +23,11 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
+import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.THONGTINPHIM.TTPhimFragment;
 import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,6 +61,9 @@ public class TrangChuFragment extends Fragment {
     public List<ClassPhim> dsPhim = new ArrayList<>();
     public Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     public DatabaseReference mData;
+    private List<ClassPhim> danhsachphim = new ArrayList<>();
+
+    private String getURLVideo;
 
     @Nullable
     @Override
@@ -296,7 +302,6 @@ public class TrangChuFragment extends Fragment {
         rcvCategory.setLayoutManager(linearLayoutManager);
         rcvCategory.setAdapter(categoryAdapter);
 
-        // Thêm sự kiện click cho các mục trong RecyclerView
         categoryAdapter.setOnCategoryClickListener(new CategoryAdapter.OnCategoryClickListener() {
             @Override
             public void onCategoryClick(Category category) {
@@ -331,8 +336,26 @@ public class TrangChuFragment extends Fragment {
                 transaction.addToBackStack(null);  // Thêm vào backstack để quay lại TrangChuFragment nếu cần
                 transaction.commit();
             }
+
+            @Override
+            public void onFilmClick(dsFILMHH film) {
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("selectedFilm", film);
+                bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(dsPhim)); // Truyền danh sách phim
+
+                CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
+                commentFilmFragment.setArguments(bundle);
+
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frame_layout, commentFilmFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+            }
         });
     }
+
     @Override
     public void onResume() {
         super.onResume();

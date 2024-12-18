@@ -60,6 +60,9 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", dsfilmhh); // Truyền mục đã chọn
                 bundle.putParcelableArrayList("danhsachphim", danhsachphim); // Truyền danh sách phim
+                bundle.putString("TenPhim", dsfilmhh.name);
+                bundle.putString("NoiDung", "Cuộc Phiêu Lưu Dưới Lòng Đất là một tập phim trong loạt phim hoạt hình Doraemon. Trong tập này, nhóm bạn Doraemon, Nobita, Shizuka, Jaian và Suneo cùng nhau khám phá một thế giới kỳ lạ dưới lòng đất."); // Nội dung phim
+                bundle.putString("HinhAnh", dsfilmhh.imageUrl);
 
                 // Tạo một instance của SuatChieu fragment
                 SuatChieu suatChieuFragment = new SuatChieu();
@@ -73,7 +76,7 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
             }
         });
 
-        // Thêm sự kiện click cho tên phim
+        // Giữ nguyên sự kiện click cho tên phim
         filmName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +84,9 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", dsfilmhh); // Truyền mục đã chọn
                 bundle.putParcelableArrayList("danhsachphim", danhsachphim); // Truyền danh sách phim
-
+                bundle.putString("TenPhim", dsfilmhh.name);
+                bundle.putString("NoiDung", "Cuộc Phiêu Lưu Dưới Lòng Đất là một tập phim trong loạt phim hoạt hình Doraemon. Trong tập này, nhóm bạn Doraemon, Nobita, Shizuka, Jaian và Suneo cùng nhau khám phá một thế giới kỳ lạ dưới lòng đất."); // Nội dung phim
+                bundle.putString("HinhAnh", dsfilmhh.imageUrl);
                 // Tạo một instance của CommentFilm_Fragment
                 CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
                 commentFilmFragment.setArguments(bundle);

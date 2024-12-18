@@ -100,7 +100,6 @@ public class VeCuaToiFragment extends Fragment {
             if (selectedFilm != null) {
                 Glide.with(this).load(selectedFilm.getImageUrl()).into(image);
                 namefilm.setText(selectedFilm.getName());
-
             }
 
             selectedSeats = bundle.getStringArrayList("danhSachGheDuocChon");
@@ -144,6 +143,14 @@ public class VeCuaToiFragment extends Fragment {
             public void onClick(View view) {
                 Fragment newFragment = new DanhGiaFragment();
 
+                // Create a Bundle to hold the arguments
+                Bundle args = new Bundle();
+                args.putString("TenPhim1", selectedFilm.getName());
+                args.putString("HinhAnh1", selectedFilm.getImageUrl());
+
+                // Set the arguments on the new fragment
+                newFragment.setArguments(args);
+
                 // Replace the current fragment with the new fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -152,7 +159,6 @@ public class VeCuaToiFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
-
         // Handling the back button click
         back = view.findViewById(R.id.imageView4);
         back.setOnClickListener(new View.OnClickListener() {
