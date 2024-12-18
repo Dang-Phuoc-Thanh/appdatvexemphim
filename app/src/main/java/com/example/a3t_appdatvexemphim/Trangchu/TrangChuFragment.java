@@ -27,6 +27,7 @@ import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
+import com.example.a3t_appdatvexemphim.THONGTINPHIM.TTPhimFragment;
 import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -61,7 +62,9 @@ public class TrangChuFragment extends Fragment {
     public Map<Long, Long> phimTheLoaiMap = new HashMap<>();
     public DatabaseReference mData;
     private List<ClassPhim> danhsachphim = new ArrayList<>();
+
     private String getURLVideo;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -336,6 +339,7 @@ public class TrangChuFragment extends Fragment {
 
             @Override
             public void onFilmClick(dsFILMHH film) {
+
                 DatabaseReference mData = FirebaseDatabase.getInstance().getReference();
                 mData.child("PHIM").orderByChild("TenPhim").equalTo(film.getName()).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -372,9 +376,11 @@ public class TrangChuFragment extends Fragment {
                         Log.e("Video URL", "Database error: " + databaseError.getMessage());
                     }
                 });
+
             }
         });
     }
+
     @Override
     public void onResume() {
         super.onResume();

@@ -32,7 +32,7 @@ public class BapNuocFragment extends Fragment {
 
     public BapNuocFragment() { }
 
-    public static BapNuocFragment newInstance(ArrayList<String> danhSachGheDuocChon, dsFILMHH selectedFilm, float discountAmount) {
+    public static BapNuocFragment newInstance(ArrayList<String> danhSachGheDuocChon, dsFILMHH selectedFilm) {
         BapNuocFragment fragment = new BapNuocFragment();
         Bundle args = new Bundle();
 
@@ -42,8 +42,7 @@ public class BapNuocFragment extends Fragment {
         // Truyền thông tin phim đã chọn
         args.putSerializable("selectedFilm", selectedFilm); // selectedFilm phải implements Serializable
 
-        // Truyền dữ liệu giảm giá
-        args.putFloat("DISCOUNT_AMOUNT", discountAmount);
+
 
         fragment.setArguments(args);
         return fragment;
@@ -71,14 +70,18 @@ public class BapNuocFragment extends Fragment {
         if (bundle != null) {
             danhSachGheDuocChon = bundle.getStringArrayList("danhSachGheDuocChon");
             selectedFilm = (dsFILMHH) bundle.getSerializable("selectedFilm");
-            discountAmount = bundle.getFloat("DISCOUNT_AMOUNT", 0.0f);
+
         }
 
         tieptuc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Tính toán tổng tiền
-                int total = (quantity1 * 99000) + (quantity2 * 14900); // Replace prices with the correct values if needed
+
+                int total = (quantity1 * 99000) + (quantity2 * 149000); // Replace prices with the correct values if needed
+
+                
+
 
                 // Ensure the data is in the bundle
                 Bundle bundle = new Bundle();
@@ -90,9 +93,10 @@ public class BapNuocFragment extends Fragment {
                     bundle.putSerializable("selectedFilm", selectedFilm);
                 }
 
+
                 // Truyền dữ liệu giảm giá và tổng tiền
                 bundle.putFloat("DISCOUNT_AMOUNT", discountAmount);
-                bundle.putInt("total", total);
+
 
                 // Open ThanhToanFragment and pass data
                 ThanhToan thanhToanFragment = ThanhToan.newInstance(bundle);
