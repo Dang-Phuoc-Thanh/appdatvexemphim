@@ -19,11 +19,14 @@ public class ClassPhim implements Parcelable {
     public String NgayKetThuc;
     public String QuocGia;
     public Integer TrangThai;
+    public String MaLich;
+
+
 
     public ClassPhim() {
     }
 
-    public ClassPhim(Integer maPhim, Integer trangThai, String quocGia, String ngayKetThuc, String ngayKhoiChieu, Float diemDanhGia, String video, String hinhAnh, Float donGia, Integer gioiHanTuoi, String dienVien, String daoDien, Integer thoiLuong, String noiDung, String tenPhim) {
+    public ClassPhim(Integer maPhim, Integer trangThai, String quocGia, String ngayKetThuc, String ngayKhoiChieu, Float diemDanhGia, String video, String hinhAnh, Float donGia, Integer gioiHanTuoi, String dienVien, String daoDien, Integer thoiLuong, String noiDung, String tenPhim, String maLich) {
         MaPhim = maPhim;
         TrangThai = trangThai;
         QuocGia = quocGia;
@@ -39,6 +42,9 @@ public class ClassPhim implements Parcelable {
         ThoiLuong = thoiLuong;
         NoiDung = noiDung;
         TenPhim = tenPhim;
+        MaLich = maLich;
+
+
     }
 
     protected ClassPhim(Parcel in) {
@@ -57,6 +63,9 @@ public class ClassPhim implements Parcelable {
         NgayKetThuc = in.readString();
         QuocGia = in.readString();
         TrangThai = in.readInt();
+        MaLich = in.readString();
+
+
     }
 
     public static final Creator<ClassPhim> CREATOR = new Creator<ClassPhim>() {
@@ -93,6 +102,9 @@ public class ClassPhim implements Parcelable {
         dest.writeString(NgayKetThuc);
         dest.writeString(QuocGia);
         dest.writeInt(TrangThai);
+        dest.writeString(MaLich);
+
+
     }
 
 

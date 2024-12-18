@@ -1,30 +1,46 @@
 package com.example.a3t_appdatvexemphim.RAP;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.a3t_appdatvexemphim.CommentFilm_Fragment;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
-import com.example.a3t_appdatvexemphim.DSphim.listAdapter1;
+import com.example.a3t_appdatvexemphim.DSphim.listAdapter;
 import com.example.a3t_appdatvexemphim.R;
-import com.example.a3t_appdatvexemphim.databinding.ActivityCtrapBinding;
+import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
+import com.example.a3t_appdatvexemphim.databinding.FragmentCtrapBinding;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CtrapFragment extends Fragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-    private String mParam1;
-    private String mParam2;
-    private ActivityCtrapBinding binding;
-    private Rap rap;
+    private static final String TAG = "CtrapFragment";
+    private FragmentCtrapBinding binding;
+    private Rap selectedRap;
+    private ArrayList<LichChieu> lichChieuList;
+    private DayAdapter dayAdapter;
+    private ArrayList<dsFILMHH> phimList;
+    private listAdapter adapter;
 
     public CtrapFragment() {
         // Required empty public constructor
@@ -33,116 +49,37 @@ public class CtrapFragment extends Fragment {
     public static CtrapFragment newInstance(Rap rap) {
         CtrapFragment fragment = new CtrapFragment();
         Bundle args = new Bundle();
-        args.putSerializable("rap", rap); // Giả sử Rap implements Serializable
+        args.putSerializable("rap", rap); // Assuming Rap implements Serializable
         fragment.setArguments(args);
         return fragment;
     }
 
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Initialize the binding object
+        binding = FragmentCtrapBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+
+        // Get data from Bundle
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        binding = ActivityCtrapBinding.inflate(inflater, container, false);
-
-        // Nhận dữ liệu từ Bundle
-        dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
-        final ArrayList<dsFILMHH> dsFILMHHArrayList;
-
-        // Khôi phục danh sách phim từ Bundle nếu có
-        if (getArguments() != null && getArguments().getSerializable("filmList") != null) {
-            dsFILMHHArrayList = (ArrayList<dsFILMHH>) getArguments().getSerializable("filmList");
+            selectedRap = (Rap) getArguments().getSerializable("rap");
+            if (selectedRap != null) {
+                Toast.makeText(getContext(), "Đã nhận được rạp: " + selectedRap.getTenRap(), Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getContext(), "Không nhận được dữ liệu rạp", Toast.LENGTH_SHORT).show();
+            }
         } else {
-            dsFILMHHArrayList = new ArrayList<>();
-            // Thêm dữ liệu mặc định vào dsFILMHHArrayList nếu cần
-            String[] imageUrls = {
-                    "https://example.com/path/to/image1.jpg",
-                    "https://example.com/path/to/image2.jpg",
-                    "https://example.com/path/to/image3.jpg",
-                    "https://example.com/path/to/image4.jpg",
-                    "https://example.com/path/to/image5.jpg",
-                    "https://example.com/path/to/image6.jpg",
-                    "https://example.com/path/to/image7.jpg"
-            };
-            String[] name = {
-                    "SPY x FAMILY",
-                    "Xác ướp - Cuộc phiêu lưu đến LonDon",
-                    "Mèo béo siêu đẳng",
-                    "SPY x FAMILY",
-                    "Bản giao hưởng địa cầu",
-                    "Truyền thuyết nhẫn thuật ninja",
-                    "Sonic the Hedgehog 2 (2024)"
-            };
-            String[] time = {
-                    "Thời lượng: 180 Phút",
-                    "Thời lượng: 90 Phút",
-                    "Thời lượng: 150 Phút",
-                    "Thời lượng: 200 Phút",
-                    "Thời lượng: 90 Phút",
-                    "Thời lượng: 180 Phút",
-                    "Thời lượng: 150 Phút"
-            };
-            String[] day = {
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024",
-                    "Khởi chiếu: 20/09/2024"
-            };
-            String[] datve = {
-                    "Đặt vé",
-                    "Đặt vé",
-                    "Đặt vé",
-                    "Đặt vé",
-                    "Đặt vé",
-                    "Đặt vé",
-                    "Đặt vé"
-            };
-
-            for (int i = 0; i < imageUrls.length; i++) {
-                dsFILMHH dsfilmhh = new dsFILMHH(name[i], time[i], day[i], datve[i], imageUrls[i]);
-                dsFILMHHArrayList.add(dsfilmhh);
-            }
+            Toast.makeText(getContext(), "Không nhận được đối số truyền vào", Toast.LENGTH_SHORT).show();
         }
 
-        // Khởi tạo adapter
-        listAdapter1 ListAdapter = new listAdapter1(getContext(), dsFILMHHArrayList);
+        // Display rap information
+        if (selectedRap != null) {
+            TextView textView = binding.tenrap;
+            textView.setText(selectedRap.getTenRap());
+        }
 
-        // Gán adapter cho ListView
-        binding.listview.setAdapter(ListAdapter);
-
-        // Bắt sự kiện click cho ListView
-        binding.listview.setClickable(true);
-        binding.listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Khi người dùng click vào một mục trong danh sách, chuyển đến CTRapFragment
-                CtrapFragment ctrapFragment = new CtrapFragment();
-
-                // Truyền dữ liệu nếu cần thiết qua Bundle
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("selectedFilm", dsFILMHHArrayList.get(position));
-                bundle.putSerializable("filmList", dsFILMHHArrayList); // Lưu trữ danh sách phim
-                ctrapFragment.setArguments(bundle);
-
-                // Thay thế Fragment hiện tại bằng CTRapFragment
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.frameRAP, ctrapFragment) // R.id.frameRAP là ID của View chứa Fragment
-                        .addToBackStack(null) // Thêm vào back stack để có thể quay lại
-                        .commit();
-            }
-        });
-
-        // Thiết lập sự kiện nhấp chuột cho nút quay lại
+        // Set click listener for back button
         binding.icQuaylai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -151,13 +88,115 @@ public class CtrapFragment extends Fragment {
             }
         });
 
-        // Thiết lập padding cho button nếu cần
-        ViewCompat.setOnApplyWindowInsetsListener(binding.btnKHOIPHUC, (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Initialize the ListView and adapter
+        ListView listView = binding.listview;
+        phimList = new ArrayList<>();
+        adapter = new listAdapter(getContext(), phimList, new ArrayList<>());
+        listView.setAdapter(adapter);
+
+
+
+        // Fetch movies by MaRap
+        if (selectedRap != null && selectedRap.getMaLich() != null) {
+            fetchMoviesByMaLich(selectedRap.getMaLich());
+        } else {
+            Log.e(TAG, "MaLich is null");
+        }
+
+        // Initialize RecyclerView for LichChieu
+        RecyclerView recyclerView = binding.recyclerView;
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        // Initialize the list and adapter for days
+        lichChieuList = new ArrayList<>();
+        dayAdapter = new DayAdapter(lichChieuList, new DayAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(LichChieu lichChieu) {
+                fetchMoviesByMaLich(lichChieu.getMaLich());
+
+
+
+            }
+        });
+        recyclerView.setAdapter(dayAdapter);
+
+        // Fetch LichChieu data from Firebase
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("LichChieu");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                lichChieuList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    LichChieu lichChieu = snapshot.getValue(LichChieu.class);
+                    if (lichChieu != null) {
+                        lichChieuList.add(lichChieu);
+                    } else {
+                        Log.d(TAG, "LichChieu is null");
+                    }
+                }
+                dayAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e(TAG, "Database error: " + databaseError.getMessage());
+            }
         });
 
-        return binding.getRoot();
+        return view;
+    }
+
+    private void fetchMoviesByMaLich(String maLich) {
+        if (maLich == null || maLich.isEmpty()) {
+            Log.e(TAG, "MaLich is null or empty");
+            return;
+        }
+
+        DatabaseReference phimRef = FirebaseDatabase.getInstance().getReference("PHIM");
+        phimRef.orderByChild("MaLich").equalTo(maLich).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                phimList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    ClassPhim phim = snapshot.getValue(ClassPhim.class);
+                    if (phim != null) {
+                        String noiDung = phim.NoiDung;
+                        if (noiDung == null) {
+                            noiDung = "Nội dung không có sẵn huhuhu"; // Default message if Nội dung is null
+                        }
+                        phimList.add(new dsFILMHH(
+                                phim.TenPhim,
+                                "Thời lượng: " + phim.ThoiLuong + " Phút",
+                                "Khởi chiếu: " + phim.NgayKhoiChieu,
+                                "Nội dung: " + noiDung,
+                                "Đặt vé",
+                                phim.HinhAnh, // Replace with the actual image URL
+                                phim.Video, // Replace with the actual trailer URL
+                                phim.MaLich
+                        ));
+                        Log.d(TAG, "Phim received: " + phim.TenPhim);
+
+
+
+                    } else {
+                        Log.d(TAG, "Phim is null");
+                    }
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e(TAG, "Database error: " + databaseError.getMessage());
+            }
+        });
+    }
+    public void backpage() {
+        FragmentManager fragmentManager = getParentFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack(); // Quay lại Fragment trước đó mà không làm mới
+        }
     }
 }
+
+
