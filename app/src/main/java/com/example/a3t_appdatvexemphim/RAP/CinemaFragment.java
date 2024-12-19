@@ -107,19 +107,6 @@ public class CinemaFragment extends Fragment  {
         nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
 
         nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-//        rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(Rap rap) {
-//                CtrapFragment ctrapFragment = CtrapFragment.newInstance(rap);
-//                FragmentManager fragmentManager = getParentFragmentManager();
-//                fragmentManager.beginTransaction()
-//                        .replace(R.id.frame_layout, ctrapFragment)
-//                        .addToBackStack(null)
-//                        .commit();
-//            }
-//        });
-//        nearbyRapRecyclerView.setAdapter(rapAdapter);
-
 
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
