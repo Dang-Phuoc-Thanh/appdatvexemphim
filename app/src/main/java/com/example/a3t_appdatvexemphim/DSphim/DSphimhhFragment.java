@@ -4,6 +4,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +43,7 @@ public class DSphimhhFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
+    private String userId;
 
     public DSphimhhFragment() {
         // Required empty public constructor
@@ -51,6 +54,7 @@ public class DSphimhhFragment extends Fragment {
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+
         fragment.setArguments(args);
         return fragment;
     }
@@ -59,8 +63,10 @@ public class DSphimhhFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+            userId = getArguments().getString("USER_ID");
+            Log.d("DSphimhhFragment", "Received User ID: " + userId);
         }
     }
 
@@ -72,6 +78,7 @@ public class DSphimhhFragment extends Fragment {
         butback=view.findViewById(R.id.back);
         // Nhận danh sách phim từ Bundle
         Bundle myBundle = getArguments();
+
         ArrayList<ClassPhim> danhsachphim = new ArrayList<>();
         if (myBundle != null) {
             danhsachphim = myBundle.getParcelableArrayList("danhsachphim");
@@ -91,7 +98,8 @@ public class DSphimhhFragment extends Fragment {
                         "Đặt vé",
                         phim.HinhAnh, // Replace with the actual image URL
                         phim.Video, // Replace with the actual trailer URL
-                        phim.MaLich
+                        phim.MaLich,
+                        phim.MaPhim
 
                 ));
             }
@@ -99,7 +107,7 @@ public class DSphimhhFragment extends Fragment {
 
 
         // Khởi tạo adapter với đủ ba tham số
-        listAdapter adapter = new listAdapter(getContext(), list, danhsachphim);
+        listAdapter adapter = new listAdapter(getContext(), list, danhsachphim, userId);
         DSphim.setAdapter(adapter);
         butback.setOnClickListener(new View.OnClickListener() {
             @Override

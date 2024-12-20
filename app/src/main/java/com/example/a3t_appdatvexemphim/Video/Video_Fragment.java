@@ -46,6 +46,16 @@ public class Video_Fragment extends Fragment {
     private FilmAdapter1 filmAdapter;
     private List<FILM> phimDeXuat;
     private DatabaseReference mData;
+    private String userId;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("Video_Fragment", "Received User ID: " + userId);
+        }
+    }
 
     @Nullable
     @Override
@@ -122,7 +132,19 @@ public class Video_Fragment extends Fragment {
 
                 // Tùy chọn: Truyền dữ liệu vào Video_Fragment nếu cần thiết
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("selectedFilm", selectedFilm); // Truyền thông tin phim nếu cần
+                if (selectedFilm != null) {
+                    Integer maPhim = selectedFilm.getMaPhim(); // Lấy mã phim từ selectedFilm
+                    if (maPhim != null) {
+                        navigateToCinemaFragment(maPhim);
+                    } else {
+                        Toast.makeText(getContext(), "Mã phim không tồn tại", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getContext(), "Phim chưa được chọn", Toast.LENGTH_SHORT).show();
+                }
+                    bundle.putSerializable("selectedFilm", selectedFilm); // Truyền thông tin phim nếu cần
+
+                bundle.putString("USER_ID", userId); // Truyền userId
                 cinemaFragment.setArguments(bundle);
 
                 // Thay thế fragment hiện tại bằng Video_Fragment
@@ -152,11 +174,12 @@ public class Video_Fragment extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     String tenPhim = snapshot.child("TenPhim").getValue(String.class);
                     String hinhAnh = snapshot.child("HinhAnh").getValue(String.class);
+                    Integer maPhim= snapshot.child("MaPhim").getValue(Integer.class);
                     Log.d(TAG, "Checking movie: " + tenPhim); // Log tên phim để kiểm tra
                     Log.d(TAG, "Checking image: " + hinhAnh); // Log hình ảnh để kiểm tra
-
+                    Log.d(TAG, "Checking maPhim: " + maPhim); // Log hình ảnh để kiểm tra
                     // Tạo một đối tượng FILM mới và đặt các thuộc tính của nó
-                    FILM phim = new FILM(tenPhim, hinhAnh);
+                    FILM phim = new FILM(tenPhim, hinhAnh, maPhim);
                     phimDeXuat.add(phim);
 
                     if (tenPhim != null && tenPhim.equals(tenPhimInput)) {
@@ -180,4 +203,19 @@ public class Video_Fragment extends Fragment {
             }
         });
     }
+
+    private void navigateToCinemaFragment(Integer maPhim) {
+        CinemaFragment cinemaFragment = new CinemaFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("MaPhim_tuVideo", maPhim); // Truyền maPhim
+        bundle.putString("USER_ID", userId); // Truyền userId
+        cinemaFragment.setArguments(bundle);
+
+        FragmentManager fragmentManager = getParentFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, cinemaFragment);
+        transaction.addToBackStack(null); // Quay lại khi nhấn Back
+        transaction.commit();
+    }
+
 }

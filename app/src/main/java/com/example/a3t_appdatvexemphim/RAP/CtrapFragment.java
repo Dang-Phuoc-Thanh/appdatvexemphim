@@ -41,6 +41,7 @@ public class CtrapFragment extends Fragment {
     private DayAdapter dayAdapter;
     private ArrayList<dsFILMHH> phimList;
     private listAdapter adapter;
+    private String userId;
 
     public CtrapFragment() {
         // Required empty public constructor
@@ -52,6 +53,15 @@ public class CtrapFragment extends Fragment {
         args.putSerializable("rap", rap); // Assuming Rap implements Serializable
         fragment.setArguments(args);
         return fragment;
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("CtrapFragment", "Received User ID: " + userId);
+        }
     }
 
     @Nullable
@@ -91,7 +101,7 @@ public class CtrapFragment extends Fragment {
         // Initialize the ListView and adapter
         ListView listView = binding.listview;
         phimList = new ArrayList<>();
-        adapter = new listAdapter(getContext(), phimList, new ArrayList<>());
+        adapter = new listAdapter(getContext(), phimList, new ArrayList<>(),userId);
         listView.setAdapter(adapter);
 
 
@@ -172,7 +182,8 @@ public class CtrapFragment extends Fragment {
                                 "Đặt vé",
                                 phim.HinhAnh, // Replace with the actual image URL
                                 phim.Video, // Replace with the actual trailer URL
-                                phim.MaLich
+                                phim.MaLich,
+                                phim.MaPhim
                         ));
                         Log.d(TAG, "Phim received: " + phim.TenPhim);
 

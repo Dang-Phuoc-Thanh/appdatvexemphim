@@ -1,5 +1,8 @@
 package com.example.a3t_appdatvexemphim;
 
+import static android.content.ContentValues.TAG;
+
+import android.nfc.Tag;
 import android.os.Bundle;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
@@ -38,6 +43,7 @@ public class VeCuaToiFragment extends Fragment {
     private String selectedFilm;
     private ArrayList<String> selectedSeats;
     private ImageView back,image;
+    private String userId;
 
     private boolean isExpanded = false;
 
@@ -55,7 +61,9 @@ public class VeCuaToiFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            // You can extract the data here as well, but it's better to do it in onCreateView()
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("VeCuaToiFragment", "Received User ID: " + userId);
         }
     }
 
@@ -141,22 +149,35 @@ public class VeCuaToiFragment extends Fragment {
         comment_film.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new DanhGiaFragment();
+                if (selectedFilm != null) {
+                    Log.d(TAG, "selectedFilm is not null");
+                    if (selectedFilm.getMaPhim() != null) {
+                        Log.d(TAG, "MaPhim is not null: " + selectedFilm.getMaPhim());
+                        Fragment newFragment = new DanhGiaFragment();
 
-                // Create a Bundle to hold the arguments
-                Bundle args = new Bundle();
-                args.putString("TenPhim1", selectedFilm.getName());
-                args.putString("HinhAnh1", selectedFilm.getImageUrl());
+                        // Create a Bundle to hold the arguments
+                        Bundle args = new Bundle();
+                        args.putString("TenPhim1", selectedFilm.getName());
+                        args.putString("HinhAnh1", selectedFilm.getImageUrl());
+                        args.putInt("MaPhim", selectedFilm.getMaPhim()); // Ensure this value is correct
+                        args.putString("USER_ID", userId); // Pass userId
+                        // Set the arguments on the new fragment
+                        newFragment.setArguments(args);
 
-                // Set the arguments on the new fragment
-                newFragment.setArguments(args);
-
-                // Replace the current fragment with the new fragment
-                FragmentManager fragmentManager = getParentFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout, newFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                        // Replace the current fragment with the new fragment
+                        FragmentManager fragmentManager = getParentFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, newFragment);
+                        fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.commit();
+                    } else {
+                        Log.e(TAG, "MaPhim is null");
+                        Toast.makeText(getContext(), "MaPhim không hợp lệ", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Log.e(TAG, "selectedFilm is null");
+                    Toast.makeText(getContext(), "Phim không hợp lệ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         // Handling the back button click

@@ -6,15 +6,19 @@ import android.os.Parcelable;
 public class FILM implements Parcelable {
     private String title;
     private String imageUrl; // Thay đổi từ int resourceId sang String imageUrl
+    private Integer filmId; // Thêm trường filmId
 
-    public FILM(String title, String imageUrl) {
+    public FILM(String title, String imageUrl, Integer filmId) {
         this.title = title;
         this.imageUrl = imageUrl;
+        this.filmId = filmId;
+
     }
 
     protected FILM(Parcel in) {
         title = in.readString();
         imageUrl = in.readString();
+        filmId = in.readInt();
     }
 
     public static final Creator<FILM> CREATOR = new Creator<FILM>() {
@@ -38,6 +42,7 @@ public class FILM implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(title);
         dest.writeString(imageUrl);
+        dest.writeInt(filmId);
     }
 
     public String getTitle() {
@@ -47,4 +52,9 @@ public class FILM implements Parcelable {
     public String getImageUrl() {
         return imageUrl;
     }
+    public Integer getFilmId() {
+        return filmId;
+    }
+
+
 }

@@ -2,6 +2,7 @@ package com.example.a3t_appdatvexemphim.DSphim;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,12 +26,18 @@ import java.util.ArrayList;
 
 public class listAdapter extends ArrayAdapter<dsFILMHH> {
     private ArrayList<ClassPhim> danhsachphim; // Thêm biến thành viên
+    private String userId; // Thêm biến userId
 
+    public listAdapter(Context context, ArrayList<dsFILMHH> dsFILMHHArrayList, ArrayList<ClassPhim> danhsachphim, String userId) {
+        super(context, R.layout.list_item_filmhoathinh, dsFILMHHArrayList);
+        this.danhsachphim = danhsachphim;
+        this.userId = userId;
+    }
     public listAdapter(Context context, ArrayList<dsFILMHH> dsFILMHHArrayList, ArrayList<ClassPhim> danhsachphim) {
         super(context, R.layout.list_item_filmhoathinh, dsFILMHHArrayList);
-        this.danhsachphim = danhsachphim; // Khởi tạo biến thành viên
-    }
+        this.danhsachphim = danhsachphim;
 
+    }
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -51,6 +58,7 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
         filmTime.setText(dsfilmhh.time);
         filmDay.setText(dsfilmhh.day);
         filmDatVe.setText(dsfilmhh.datve);
+        Log.d("listAdapter", "Received User ma phim: " + dsfilmhh.MaPhim);
 
         // Thêm sự kiện click cho nút "Đặt vé"
         filmDatVe.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +71,8 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 bundle.putString("TenPhim", dsfilmhh.name);
                 bundle.putString("NoiDung", "Cuộc Phiêu Lưu Dưới Lòng Đất là một tập phim trong loạt phim hoạt hình Doraemon. Trong tập này, nhóm bạn Doraemon, Nobita, Shizuka, Jaian và Suneo cùng nhau khám phá một thế giới kỳ lạ dưới lòng đất."); // Nội dung phim
                 bundle.putString("HinhAnh", dsfilmhh.imageUrl);
+                bundle.putInt("MaPhim", dsfilmhh.MaPhim); // Truyền MaPhim
+                bundle.putString("USER_ID", userId); // Truyền userId
 
                 // Tạo một instance của SuatChieu fragment
                 SuatChieu suatChieuFragment = new SuatChieu();
@@ -87,6 +97,10 @@ public class listAdapter extends ArrayAdapter<dsFILMHH> {
                 bundle.putString("TenPhim", dsfilmhh.name);
                 bundle.putString("NoiDung", "Cuộc Phiêu Lưu Dưới Lòng Đất là một tập phim trong loạt phim hoạt hình Doraemon. Trong tập này, nhóm bạn Doraemon, Nobita, Shizuka, Jaian và Suneo cùng nhau khám phá một thế giới kỳ lạ dưới lòng đất."); // Nội dung phim
                 bundle.putString("HinhAnh", dsfilmhh.imageUrl);
+                bundle.putInt("MaPhim", dsfilmhh.MaPhim); // Truyền MaPhim
+
+                bundle.putString("USER_ID", userId); // Truyền userId
+                Log.d("tenphim_Fragment", "Received User ID: " + userId);
                 // Tạo một instance của CommentFilm_Fragment
                 CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
                 commentFilmFragment.setArguments(bundle);

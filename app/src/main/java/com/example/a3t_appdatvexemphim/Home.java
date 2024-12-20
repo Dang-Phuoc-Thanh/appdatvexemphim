@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.a3t_appdatvexemphim.RAP.CinemaFragment;
 import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
 import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
+import com.example.a3t_appdatvexemphim.danhgia.DanhGiaFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -41,14 +42,15 @@ public class Home extends AppCompatActivity {
             int itemId = item.getItemId();
 
             if (itemId == R.id.trangchu) {
-                selectedFragment = new TrangChuFragment();
+                selectedFragment = TrangChuFragment.newInstance(userId);
             } else if (itemId == R.id.voucher) {
                 selectedFragment = new KhuyenMaiFragment();
             } else if (itemId == R.id.rap) {
-                selectedFragment = new CinemaFragment();
+                selectedFragment = CinemaFragment.newInstance(userId);
             } else {
                 // Truyền userId tới KhacFragment
                 selectedFragment = KhacFragment.newInstance(userId);
+
             }
 
             replaceFragment(selectedFragment);

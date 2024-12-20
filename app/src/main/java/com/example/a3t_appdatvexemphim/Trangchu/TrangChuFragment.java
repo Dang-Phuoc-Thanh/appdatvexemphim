@@ -64,6 +64,26 @@ public class TrangChuFragment extends Fragment {
     private List<ClassPhim> danhsachphim = new ArrayList<>();
 
     private String getURLVideo;
+    private static final String ARG_USER_ID = "USER_ID"; // Key để truyền userId qua arguments
+    private String userId; // Biến lưu userId
+
+    public static TrangChuFragment newInstance(String userId) {
+        TrangChuFragment fragment = new TrangChuFragment();
+        Bundle args = new Bundle();
+        args.putString("USER_ID", userId);
+        fragment.setArguments(args);
+        return fragment;
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Lấy userId từ arguments
+        if (getArguments() != null) {
+            userId = getArguments().getString(ARG_USER_ID);
+            Log.d("TrangChuFragment", "Received User ID: " + userId); // Log to check if userId is received
+        }
+    }
 
     @Nullable
     @Override
@@ -87,7 +107,7 @@ public class TrangChuFragment extends Fragment {
                 // Tạo Bundle để truyền danh sách phim sang Fragment
                 Bundle mybundle = new Bundle();
                 mybundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Truyền danh sách phim hoạt hình
-
+                mybundle.putString("USER_ID", userId); // Truyền userId
                 // Khởi tạo Fragment DSphimhhFragment và gán dữ liệu
                 DSphimhhFragment fragment = new DSphimhhFragment();
                 fragment.setArguments(mybundle);
@@ -159,7 +179,7 @@ public class TrangChuFragment extends Fragment {
                             ClassPhim phim = snapshot.getValue(ClassPhim.class);
                             if (phim != null) {
                                 dsPhim.add(phim);
-                                FILM film = new FILM(phim.TenPhim, phim.HinhAnh); // Sử dụng URL hình ảnh từ Firebase
+                                FILM film = new FILM(phim.TenPhim, phim.HinhAnh, phim.MaPhim.intValue()); // Sử dụng URL hình ảnh từ Firebase
                                 switch (maTheLoaiPhim.intValue()) {
                                     case 6: // Hoạt hình
                                         listFilmhh.add(film);
@@ -323,7 +343,7 @@ public class TrangChuFragment extends Fragment {
 
                 Bundle mybundle = new Bundle();
                 mybundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Sử dụng putParcelableArrayList để truyền danh sách phim
-
+                mybundle.putString("USER_ID", userId); // Truyền userId
                 DSphimhhFragment fragment = new DSphimhhFragment();
                 fragment.setArguments(mybundle);
 
@@ -343,7 +363,7 @@ public class TrangChuFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("selectedFilm", film);
                 bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(dsPhim)); // Truyền danh sách phim
-
+                bundle.putString("USER_ID", userId); // Truyền userId
                 CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
                 commentFilmFragment.setArguments(bundle);
 

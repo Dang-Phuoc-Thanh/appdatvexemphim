@@ -6,75 +6,67 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.util.Log;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.Target;
 import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.DSphim.DSphimhhFragment;
 import com.example.a3t_appdatvexemphim.Trangchu.ClassPhim;
 import com.example.a3t_appdatvexemphim.Video.Video_Fragment;
+import com.example.a3t_appdatvexemphim.danhgia.BinhLuan;
+import com.example.a3t_appdatvexemphim.danhgia.BinhLuanAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CommentFilm_Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CommentFilm_Fragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
     private ImageView back;
     private ImageView imgFilm;
     private TextView nameFilm;
     private TextView contentFilm;
+    private String userId;
+    private int MaPhim;
 
     public CommentFilm_Fragment() {
         // Required empty public constructor
-    }
-
-    public static CommentFilm_Fragment newInstance(String param1, String param2) {
-        CommentFilm_Fragment fragment = new CommentFilm_Fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            userId = getArguments().getString("USER_ID");
+            MaPhim = getArguments().getInt("MaPhim");
+            Log.d("CommentFilm_Fragment", "Received User ID: " + userId + " MaPhim: " + MaPhim);
         }
     }
 
     @Override
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_comment_film_, container, false);
 
-        // Nhận dữ liệu từ Bundle
         dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
         ArrayList<ClassPhim> danhsachphim = getArguments().getParcelableArrayList("danhsachphim");
 
-        // Khởi tạo các thành phần giao diện
         imgFilm = view.findViewById(R.id.img_film);
         nameFilm = view.findViewById(R.id.name_film);
         contentFilm = view.findViewById(R.id.Content_film);
         back = view.findViewById(R.id.back);
-        TextView trailer = view.findViewById(R.id.trailer); // Ánh xạ TextView trailer
+        TextView trailer = view.findViewById(R.id.trailer);
 
         // Thiết lập dữ liệu cho các thành phần giao diện
         if (selectedFilm != null) {
@@ -83,39 +75,32 @@ public class CommentFilm_Fragment extends Fragment {
             contentFilm.setText(selectedFilm.getNoidung()); // Giả sử bạn muốn hiển thị thông tin đặt vé
         }
 
-        // Sự kiện click cho nút trailer
         trailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Chuyển sang Video_Fragment
                 Video_Fragment videoFragment = new Video_Fragment();
-
-                // Tùy chọn: Truyền dữ liệu vào Video_Fragment nếu cần thiết
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("selectedFilm", selectedFilm); // Truyền thông tin phim nếu cần
+                bundle.putSerializable("selectedFilm", selectedFilm);
+                bundle.putString("USER_ID", userId);
                 videoFragment.setArguments(bundle);
 
-                // Thay thế fragment hiện tại bằng Video_Fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.frame_layout, videoFragment);
-                transaction.addToBackStack(null); // Quay lại khi nhấn Back
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
 
-        // Sự kiện click cho nút quay lại
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new DSphimhhFragment(); // Replace with your target fragment
-
-                // Truyền lại danh sách phim nếu cần thiết
+                Fragment newFragment = new DSphimhhFragment();
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("danhsachphim", danhsachphim);
+                bundle.putString("USER_ID", userId);
                 newFragment.setArguments(bundle);
 
-                // Replace the current fragment with the new fragment
                 FragmentManager fragmentManager = getParentFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame_layout, newFragment);
@@ -124,7 +109,70 @@ public class CommentFilm_Fragment extends Fragment {
             }
         });
 
+        RecyclerView recyclerView = view.findViewById(R.id.nearbyBINHLUANRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        TextView emptyView = view.findViewById(R.id.empty_view); // Tham chiếu đến TextView thông báo
+
+        fetchComments(recyclerView, emptyView);
         return view;
     }
 
+    private void fetchComments(RecyclerView recyclerView, TextView emptyView) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference commentsRef = database.getReference("BINHLUAN");
+        DatabaseReference usersRef = database.getReference("TAIKHOAN");
+
+        commentsRef.orderByChild("maPhim").equalTo(String.valueOf(MaPhim)).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                List<BinhLuan> binhLuanList = new ArrayList<>();
+                Map<String, String> userNames = new HashMap<>();
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    BinhLuan binhLuan = snapshot.getValue(BinhLuan.class);
+                    if (binhLuan != null) {
+                        binhLuanList.add(binhLuan);
+                    }
+                }
+
+                if (binhLuanList.isEmpty()) {
+                    emptyView.setVisibility(View.VISIBLE);
+                    recyclerView.setVisibility(View.GONE);
+                } else {
+                    emptyView.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
+
+                    for (BinhLuan binhLuan : binhLuanList) {
+                        if (binhLuan.getId() != null) {
+                            usersRef.child(binhLuan.getId()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    String hoTen = dataSnapshot.child("hoten").getValue(String.class);
+                                    userNames.put(binhLuan.getId(), hoTen);
+
+                                    if (userNames.size() == binhLuanList.size()) {
+                                        BinhLuanAdapter adapter = new BinhLuanAdapter(binhLuanList, userNames);
+                                        recyclerView.setAdapter(adapter);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+                                    Log.e("CommentFilm_Fragment", "Failed to read user data", databaseError.toException());
+                                }
+                            });
+                        } else {
+                            Log.e("CommentFilm_Fragment", "BinhLuan id is null");
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("CommentFilm_Fragment", "Failed to read comments", databaseError.toException());
+            }
+        });
+    }
 }
