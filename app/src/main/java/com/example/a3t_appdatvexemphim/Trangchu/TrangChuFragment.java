@@ -358,11 +358,11 @@ public class TrangChuFragment extends Fragment {
             }
 
             @Override
-            public void onFilmClick(dsFILMHH film) {
+            public void onFilmClick(dsFILMHH selectedFilm) {
 
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("selectedFilm", film);
-                bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(dsPhim)); // Truyền danh sách phim
+                bundle.putSerializable("selectedFilm", selectedFilm);
+                bundle.putParcelableArrayList("danhsachphim", new ArrayList<>(danhsachphim)); // Truyền danh sách phim
                 bundle.putString("USER_ID", userId); // Truyền userId
                 CommentFilm_Fragment commentFilmFragment = new CommentFilm_Fragment();
                 commentFilmFragment.setArguments(bundle);
