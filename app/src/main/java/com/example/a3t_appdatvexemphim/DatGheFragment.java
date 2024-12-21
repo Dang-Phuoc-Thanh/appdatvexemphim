@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class DatGheFragment extends Fragment {
     private ImageView back;
     private Button datghe;
+    private String userId;
     private boolean isHighlighted = false;
     private ArrayList<String> danhSachGheDuocChon = new ArrayList<>();
 
@@ -41,9 +42,15 @@ public class DatGheFragment extends Fragment {
         return fragment;
     }
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("DatGheFragment", "Received User ID: " + userId);
+        }
     }
 
     @Override
@@ -60,6 +67,7 @@ public class DatGheFragment extends Fragment {
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putStringArrayList("danhSachGheDuocChon", danhSachGheDuocChon);
+                bundle.putString("USER_ID", userId); // Truyền userId
                 if (getArguments() != null) {
                     dsFILMHH selectedFilm = (dsFILMHH) getArguments().getSerializable("selectedFilm");
                     bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle

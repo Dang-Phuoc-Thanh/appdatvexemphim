@@ -65,7 +65,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         filmAdapter.setOnFilmClickListener(film -> {
             if (categoryClickListener != null) {
                 // Chuyển đổi FILM thành dsFILMHH
-                dsFILMHH dsfilmhh = new dsFILMHH(film.getTitle(), "", "", "", film.getImageUrl());
+                dsFILMHH dsfilmhh = new dsFILMHH(film.getTitle(), "", "", "", film.getImageUrl(), film.getFilmId());
                 categoryClickListener.onFilmClick(dsfilmhh);
             }
         });

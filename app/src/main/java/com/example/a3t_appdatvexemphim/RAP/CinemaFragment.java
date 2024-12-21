@@ -20,6 +20,7 @@ import com.example.a3t_appdatvexemphim.DSphim.dsFILMHH;
 import com.example.a3t_appdatvexemphim.R;
 import com.example.a3t_appdatvexemphim.SuatChieu;
 import com.example.a3t_appdatvexemphim.Trangchu.FILM;
+import com.example.a3t_appdatvexemphim.Trangchu.TrangChuFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.firebase.database.DataSnapshot;
@@ -50,8 +51,21 @@ public class CinemaFragment extends Fragment  {
     private ImageView arrowIcon;
     private List<Rap> rapList;
     private Rap selectedRap;
+    private String userId;
+    private static final String ARG_USER_ID = "USER_ID"; // Key để truyền userId qua arguments
+    private Integer maPhim;
 
     private DatabaseReference databaseReference;
+
+
+    public static CinemaFragment newInstance(String userId) {
+        CinemaFragment fragment = new CinemaFragment();
+        Bundle args = new Bundle();
+        args.putString("USER_ID", userId);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     public CinemaFragment() {
         // Required empty public constructor
     }
@@ -72,6 +86,10 @@ public class CinemaFragment extends Fragment  {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            userId = getArguments().getString("USER_ID");
+            Log.d("CinemaFragment", "Received User ID: " + userId);
+            maPhim = getArguments().getInt("MaPhim_tuVideo"); // Lấy maPhim từ arguments
+            Log.d("CinemaFragment", "Received MaPhim: " + maPhim);
         }
         rapList = new ArrayList<>();
     }
@@ -80,20 +98,9 @@ public class CinemaFragment extends Fragment  {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cinema, container, false);
 
-       // dsFILMHH selectedFilm = null;
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
-//        } else {
-//            Log.e("CinemaFragment", "Arguments are null");
-//            navigateToCtrapFragment(null);
-//            return view;
-//        }
-        // Lấy dữ liệu phim được chọn từ các đối số
+
        Bundle args = getArguments();
-//        if (args != null) {
-//            selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
-//        }
+
 
         final dsFILMHH selectedFilm;
         if (args != null) {
@@ -118,13 +125,7 @@ public class CinemaFragment extends Fragment  {
                 fetchMaTPAndUpdateCinemas(thanhPho);
             }
         });
-        //  Lấy dữ liệu phim từ Bundle khi CinemaFragment được khởi tạo
 
-                // Thiết lập RecyclerView
-//                nearbyRapRecyclerView = view.findViewById(R.id.nearbyRapRecyclerView);
-//                nearbyRapRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-                // Tạo adapter và thiết lập sự kiện khi nhấn vào rạp
                 rapAdapter = new RapAdapter(new ArrayList<>(), new RapAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(Rap rap) {
@@ -142,6 +143,7 @@ public class CinemaFragment extends Fragment  {
                             bundle.putString("NoiDung", selectedFilm.getNoidung());
                             bundle.putString("HinhAnh", selectedFilm.getImageUrl());
                             bundle.putSerializable("selectedFilm", selectedFilm);
+                            bundle.putString("USER_ID", userId); // Truyền userId
                         }
                             bundle.putSerializable("rap", selectedRap);
                         suatChieuFragment.setArguments(bundle);
@@ -161,14 +163,9 @@ public class CinemaFragment extends Fragment  {
                         // Truyền thông tin phim và rạp đã chọn
 
                         Bundle bundle = new Bundle();
-//                        if (args != null) {
-//                            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
-//                            bundle.putString("TenPhim", selectedFilm.getName());
-//                            bundle.putString("NoiDung", selectedFilm.getNoidung());
-//                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
-//                            bundle.putSerializable("selectedFilm", selectedFilm);
-//                        }
+
                             bundle.putSerializable("rap", selectedRap);
+                            bundle.putString("USER_ID", userId); // Truyền userId
                         ctrapFragment.setArguments(bundle);
 
                         // Chuyển sang SuatChieuFragment
@@ -180,31 +177,6 @@ public class CinemaFragment extends Fragment  {
                         }
 
 
-
-
-
-//                        // Khi người dùng chọn rạp, chuyển sang SuatChieuFragment
-//                        SuatChieu suatChieuFragment = new SuatChieu();
-//
-//                        // Truyền thông tin phim và rạp đã chọn
-//
-//                        Bundle bundle = new Bundle();
-//                        if (args != null) {
-//                            dsFILMHH selectedFilm = (dsFILMHH) args.getSerializable("selectedFilm");
-//                            bundle.putString("TenPhim", selectedFilm.getName());
-//                            bundle.putString("NoiDung", selectedFilm.getNoidung());
-//                            bundle.putString("HinhAnh", selectedFilm.getImageUrl());
-//                            bundle.putSerializable("selectedFilm", selectedFilm);
-//                        }
-//                        bundle.putSerializable("selectedRap", rap);
-//                        suatChieuFragment.setArguments(bundle);
-//
-//                        // Chuyển sang SuatChieuFragment
-//                        FragmentManager fragmentManager = getParentFragmentManager();
-//                        fragmentManager.beginTransaction()
-//                                .replace(R.id.frame_layout, suatChieuFragment)
-//                                .addToBackStack(null)
-//                                .commit();
                     }
                 });
 
@@ -246,6 +218,7 @@ public class CinemaFragment extends Fragment  {
         // Create a bundle to pass the selected cinema data
         Bundle bundle = new Bundle();
         bundle.putSerializable("selectedRap", selectedRap);
+        bundle.putString("USER_ID", userId); // Truyền userId
         ctrapFragment.setArguments(bundle);
 
         // Navigate to CtrapFragment
@@ -266,6 +239,7 @@ public class CinemaFragment extends Fragment  {
             SuatChieu suatChieuFragment = new SuatChieu();
             Bundle bundle = new Bundle();
             bundle.putSerializable("Rap", rap); // Rap phải implement Serializable
+            bundle.putString("USER_ID", userId); // Truyền userId
             suatChieuFragment.setArguments(bundle);
 
             getParentFragmentManager()

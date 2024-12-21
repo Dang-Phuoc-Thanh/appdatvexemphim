@@ -9,9 +9,10 @@ public class dsFILMHH implements Serializable {
     String name, time, day, noidung, datve, imageUrl, trailerURL, maLich;
     String NgayKhoiChieu, TenPhim,NoiDung, DienVien, NgayKetThuc, QuocGia, HinhAnh, Video, DaoDien;
     double DiemDanhGia;
-    int DonGia, GioiHanTuoi, MaPhim, ThoiLuong, TinhTrang;
+    Integer DonGia, GioiHanTuoi, MaPhim, ThoiLuong, TinhTrang;
+    Integer idphim;
 
-    public dsFILMHH(String name, String time, String day, String noidung, String datve, String imageUrl, String trailerURL, String maLich) {
+    public dsFILMHH(String name, String time, String day, String noidung, String datve, String imageUrl, String trailerURL, String maLich, Integer MaPhim) {
         this.name = name;
         this.time = time;
         this.day = day;
@@ -20,17 +21,27 @@ public class dsFILMHH implements Serializable {
         this.imageUrl = imageUrl;
         this.trailerURL = trailerURL;
         this.maLich = maLich;
+        this.MaPhim = MaPhim;
 
     }
 
 
-    public dsFILMHH(String name, String time, String day, String datve, String imageUrl) {
+    public dsFILMHH(String name, String time, String day, String datve, String imageUrl, Integer MaPhim) {
         this.name = name;
         this.time = time;
         this.day = day;
         this.datve = datve;
         this.imageUrl = imageUrl;
+        this.MaPhim = MaPhim;
     }
+//    public dsFILMHH(String name, String time, String day, String datve, String imageUrl, Integer MaPhim) {
+//        this.name = name;
+//        this.time = time;
+//        this.day = day;
+//        this.datve = datve;
+//        this.imageUrl = imageUrl;
+//        this.MaPhim = MaPhim;
+//    }
 
     public dsFILMHH() {
     }
@@ -196,11 +207,11 @@ public class dsFILMHH implements Serializable {
         this.GioiHanTuoi = gioiHanTuoi;
     }
 
-    public int getMaPhim() {
+    public Integer getMaPhim() {
         return MaPhim;
     }
 
-    public void setMaPhim(int maPhim) {
+    public void setMaPhim(Integer maPhim) {
         this.MaPhim = maPhim;
     }
 

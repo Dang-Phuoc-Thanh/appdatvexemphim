@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ public class ThanhToan extends Fragment {
     private ImageView btnBack;
     private Button btnThanhToan;
     private EditText select_voucher;
+    private String userId;
 
     public ThanhToan() {
         // Required empty public constructor
@@ -41,6 +43,15 @@ public class ThanhToan extends Fragment {
         ThanhToan fragment = new ThanhToan();
         fragment.setArguments(bundle);
         return fragment;
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("ThanhToan", "Received User ID: " + userId);
+        }
     }
 
     @Override
@@ -126,6 +137,7 @@ public class ThanhToan extends Fragment {
                 bundle1.putString("txtName", txtName.getText().toString());
                 bundle1.putString("txtPhone", txtPhone.getText().toString());
                 bundle1.putString("txtEmail", txtEmail.getText().toString());
+                bundle1.putString("USER_ID", userId); // Truyền userId
 
                 if (getArguments() != null) {
                     if (getArguments().containsKey("selectedFilm")) {
@@ -195,7 +207,7 @@ public class ThanhToan extends Fragment {
                                 bundle.putStringArrayList("danhSachGheDuocChon", getArguments().getStringArrayList("danhSachGheDuocChon"));
                             }
                         }
-
+                        bundle.putString("USER_ID", userId); // Truyền userId
                         // Pass the bundle to the VeCuaToiFragment
                         VeCuaToiFragment veCuaToiFragment = VeCuaToiFragment.newInstance(bundle);
 

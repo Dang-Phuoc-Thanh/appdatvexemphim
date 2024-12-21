@@ -284,118 +284,27 @@
             android:textStyle="bold">
 
         </TextView>
-        <ScrollView
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nearbyBINHLUANRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:background="@color/light"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/taikhoan"
-                            android:layout_marginEnd="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lê Minh"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="48dp"
-                        android:text="Kịch bản hay nhưng cái kết hơi buồn"
-                        android:textSize="15sp"
-                        android:textColor="#616161" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/light"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/taikhoan"
-                            android:layout_marginEnd="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Đặng Phước Thạnh"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="48dp"
-                        android:text="Xem phim cả  buổi  mà vẫn hông hiểu nội dung  nói về cái gì và cungx chả  biết nó có ý nghĩa gì"
-                        android:textSize="15sp"
-                        android:textColor="#616161" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:background="@color/light"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:src="@drawable/taikhoan"
-                            android:layout_marginEnd="8dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Trang Lê"
-                            android:textSize="25sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="48dp"
-                        android:text="Phim này đúng thể loại mình thích nhưng mà đi với  ny sẽ vui hơn "
-                        android:textSize="15sp"
-                        android:textColor="#616161" />
-                </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chưa có bình luận"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:padding="16dp" />
 
 
-
-
-
-            </LinearLayout>
-        </ScrollView>
     </LinearLayout>
+
 </RelativeLayout>

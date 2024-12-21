@@ -87,6 +87,7 @@
 
         <!-- Đánh giá sao -->
         <LinearLayout
+            android:id="@+id/danhgia_phim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -94,6 +95,7 @@
             android:padding="8dp">
 
             <RatingBar
+                android:id="@+id/danhgia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:numStars="5"
@@ -110,13 +112,7 @@
 
 
         <!-- Phần nhận xét -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nội dung : để lại đánh giá"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:paddingTop="8dp"/>
+
 
 
 
@@ -129,10 +125,10 @@
             android:paddingTop="4dp" />
 
         <EditText
+            android:id="@+id/nhanxet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Hãy chia sẻ nhận xét cho sản phẩm này bạn nhé!"
-
             android:textColor="@android:color/white"
             android:background="@drawable/bg_btn_datve"
             android:padding="12dp"

@@ -1,6 +1,7 @@
 package com.example.a3t_appdatvexemphim;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,8 @@ public class SuatChieu extends Fragment {
     private String mParam1;
     private String mParam2;
     private String mParam3;
+    private String userId;
+    private int maPhim;
 
     public SuatChieu() {
         // Required empty public constructor
@@ -65,6 +68,9 @@ public class SuatChieu extends Fragment {
             String tenPhim = getArguments().getString("TenPhim");
             String noiDung = getArguments().getString("NoiDung");
             String hinhAnh = getArguments().getString("HinhAnh");
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            maPhim= getArguments().getInt("MaPhim");
+            Log.d("SuatChieu", "Received User ID: " + userId + " MaPhim: " + maPhim);
         }
     }
 
@@ -117,7 +123,7 @@ public class SuatChieu extends Fragment {
                     // Tạo Bundle để truyền dữ liệu
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("selectedFilm", selectedFilm); // Truyền selectedFilm vào Bundle
-
+                    bundle.putString("USER_ID", userId); // Truyền userId
                     // Hiển thị thông báo
                     Toast.makeText(getContext(), "Thông tin phim đã được lưu vào Bundle", Toast.LENGTH_SHORT).show();
 

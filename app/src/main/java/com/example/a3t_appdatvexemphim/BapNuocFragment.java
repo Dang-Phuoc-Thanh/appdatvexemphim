@@ -3,6 +3,7 @@ package com.example.a3t_appdatvexemphim;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,8 +30,18 @@ public class BapNuocFragment extends Fragment {
     private dsFILMHH selectedFilm;
     private float discountAmount;
     private int total;
+    private String userId;
 
     public BapNuocFragment() { }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+            userId = getArguments().getString("USER_ID"); // Lấy userId từ arguments
+            Log.d("BapNuocFragment", "Received User ID: " + userId);
+        }
+    }
 
     public static BapNuocFragment newInstance(ArrayList<String> danhSachGheDuocChon, dsFILMHH selectedFilm) {
         BapNuocFragment fragment = new BapNuocFragment();
@@ -38,6 +49,7 @@ public class BapNuocFragment extends Fragment {
 
         // Truyền danh sách ghế đã chọn
         args.putStringArrayList("danhSachGheDuocChon", danhSachGheDuocChon);
+
 
         // Truyền thông tin phim đã chọn
         args.putSerializable("selectedFilm", selectedFilm); // selectedFilm phải implements Serializable
@@ -91,7 +103,7 @@ public class BapNuocFragment extends Fragment {
                     bundle.putSerializable("selectedFilm", selectedFilm);
                 }
 
-
+                bundle.putString("USER_ID", userId); // Truyền userId
                 bundle.putInt("total", total);
 
                 // Open ThanhToanFragment and pass data
